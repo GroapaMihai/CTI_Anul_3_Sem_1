@@ -1,0 +1,292 @@
+<Animation Name="MenosStance">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.014" V="0.025"/>
+			<UV Number="1" U="0.014" V="0.25"/>
+			<UV Number="2" U="0.1055" V="0.25"/>
+			<UV Number="3" U="0.1055" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.115" V="0.025"/>
+			<UV Number="1" U="0.115" V="0.25"/>
+			<UV Number="2" U="0.208" V="0.25"/>
+			<UV Number="3" U="0.208" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="2">
+		<UVS>
+			<UV Number="0" U="0.2126" V="0.025"/>
+			<UV Number="1" U="0.2126" V="0.25"/>
+			<UV Number="2" U="0.307" V="0.25"/>
+			<UV Number="3" U="0.307" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="3">
+		<UVS>
+			<UV Number="0" U="0.31" V="0.025"/>
+			<UV Number="1" U="0.31" V="0.25"/>
+			<UV Number="2" U="0.4025" V="0.25"/>
+			<UV Number="3" U="0.4025" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="4">
+		<UVS>
+			<UV Number="0" U="0.4057" V="0.025"/>
+			<UV Number="1" U="0.4057" V="0.25"/>
+			<UV Number="2" U="0.4962" V="0.25"/>
+			<UV Number="3" U="0.4962" V="0.025"/>
+		</UVS>
+	</Frame>
+  </Animation>
+  
+<Animation Name="MenosWalk">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.0132" V="0.275"/>
+			<UV Number="1" U="0.0132" V="0.508"/>
+			<UV Number="2" U="0.1074" V="0.508"/>
+			<UV Number="3" U="0.1074" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.1144" V="0.275"/>
+			<UV Number="1" U="0.1144" V="0.508"/>
+			<UV Number="2" U="0.2086" V="0.508"/>
+			<UV Number="3" U="0.2086" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="2">
+		<UVS>
+			<UV Number="0" U="0.2224" V="0.275"/>
+			<UV Number="1" U="0.2224" V="0.508"/>
+			<UV Number="2" U="0.3176" V="0.508"/>
+			<UV Number="3" U="0.3176" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="3">
+		<UVS>
+			<UV Number="0" U="0.3276" V="0.275"/>
+			<UV Number="1" U="0.3276" V="0.508"/>
+			<UV Number="2" U="0.4246" V="0.508"/>
+			<UV Number="3" U="0.4246" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="4">
+		<UVS>
+			<UV Number="0" U="0.4376" V="0.275"/>
+			<UV Number="1" U="0.4376" V="0.508"/>
+			<UV Number="2" U="0.5356" V="0.508"/>
+			<UV Number="3" U="0.5356" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="5">
+		<UVS>
+			<UV Number="0" U="0.5456" V="0.275"/>
+			<UV Number="1" U="0.5456" V="0.508"/>
+			<UV Number="2" U="0.6406" V="0.508"/>
+			<UV Number="3" U="0.6406" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="6">
+		<UVS>
+			<UV Number="0" U="0.6504" V="0.275"/>
+			<UV Number="1" U="0.6504" V="0.508"/>
+			<UV Number="2" U="0.7466" V="0.508"/>
+			<UV Number="3" U="0.7466" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="7">
+		<UVS>
+			<UV Number="0" U="0.7584" V="0.275"/>
+			<UV Number="1" U="0.7584" V="0.508"/>
+			<UV Number="2" U="0.8526" V="0.508"/>
+			<UV Number="3" U="0.8526" V="0.275"/>
+		</UVS>
+	</Frame>
+	<Frame Number="8">
+		<UVS>
+			<UV Number="0" U="0.8654" V="0.275"/>
+			<UV Number="1" U="0.8654" V="0.508"/>
+			<UV Number="2" U="0.9606" V="0.508"/>
+			<UV Number="3" U="0.9606" V="0.275"/>
+		</UVS>
+	</Frame>
+  </Animation>
+  
+<Animation Name="MenosAttack">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.0" V="0.78"/>
+			<UV Number="1" U="0.0" V="1.0"/>
+			<UV Number="2" U="0.1212" V="1.0"/>
+			<UV Number="3" U="0.1212" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.115" V="0.78"/>
+			<UV Number="1" U="0.115" V="1.0"/>
+			<UV Number="2" U="0.235" V="1.0"/>
+			<UV Number="3" U="0.235" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="2">
+		<UVS>
+			<UV Number="0" U="0.236" V="0.78"/>
+			<UV Number="1" U="0.236" V="1.0"/>
+			<UV Number="2" U="0.356" V="1.0"/>
+			<UV Number="3" U="0.356" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="3">
+		<UVS>
+			<UV Number="0" U="0.358" V="0.78"/>
+			<UV Number="1" U="0.358" V="1.0"/>
+			<UV Number="2" U="0.478" V="1.0"/>
+			<UV Number="3" U="0.478" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="4">
+		<UVS>
+			<UV Number="0" U="0.49" V="0.78"/>
+			<UV Number="1" U="0.49" V="1.0"/>
+			<UV Number="2" U="0.612" V="1.0"/>
+			<UV Number="3" U="0.612" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="5">
+		<UVS>
+			<UV Number="0" U="0.6375" V="0.78"/>
+			<UV Number="1" U="0.6375" V="1.0"/>
+			<UV Number="2" U="0.758" V="1.0"/>
+			<UV Number="3" U="0.758" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="6">
+		<UVS>
+			<UV Number="0" U="0.765" V="0.78"/>
+			<UV Number="1" U="0.765" V="1.0"/>
+			<UV Number="2" U="0.885" V="1.0"/>
+			<UV Number="3" U="0.885" V="0.78"/>
+		</UVS>
+	</Frame>
+	<Frame Number="7">
+		<UVS>
+			<UV Number="0" U="0.8838" V="0.78"/>
+			<UV Number="1" U="0.8838" V="1.0"/>
+			<UV Number="2" U="1.0" V="1.0"/>
+			<UV Number="3" U="1.0" V="0.78"/>
+		</UVS>
+	</Frame>
+  </Animation>
+  
+<Animation Name="MenosFall">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.232" V="0.51"/>
+			<UV Number="1" U="0.232" V="0.74"/>
+			<UV Number="2" U="0.387" V="0.74"/>
+			<UV Number="3" U="0.387" V="0.51"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.395" V="0.51"/>
+			<UV Number="1" U="0.395" V="0.74"/>
+			<UV Number="2" U="0.51" V="0.74"/>
+			<UV Number="3" U="0.51" V="0.51"/>
+		</UVS>
+	</Frame>
+	<Frame Number="2">
+		<UVS>
+			<UV Number="0" U="0.511" V="0.6"/>
+			<UV Number="1" U="0.511" V="0.8"/>
+			<UV Number="2" U="0.666" V="0.8"/>
+			<UV Number="3" U="0.666" V="0.6"/>
+		</UVS>
+	</Frame>
+	<Frame Number="3">
+		<UVS>
+			<UV Number="0" U="0.68" V="0.6"/>
+			<UV Number="1" U="0.68" V="0.8"/>
+			<UV Number="2" U="0.838" V="0.8"/>
+			<UV Number="3" U="0.838" V="0.6"/>
+		</UVS>
+	</Frame>
+	<Frame Number="4">
+		<UVS>
+			<UV Number="0" U="0.845" V="0.6"/>
+			<UV Number="1" U="0.845" V="0.8"/>
+			<UV Number="2" U="0.99" V="0.8"/>
+			<UV Number="3" U="0.99" V="0.6"/>
+		</UVS>
+	</Frame>
+  </Animation>
+  
+  <Animation Name="MenosGuard">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.0" V="0.56"/>
+			<UV Number="1" U="0.0" V="0.79"/>
+			<UV Number="2" U="0.128" V="0.79"/>
+			<UV Number="3" U="0.128" V="0.56"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.117" V="0.56"/>
+			<UV Number="1" U="0.117" V="0.79"/>
+			<UV Number="2" U="0.232" V="0.79"/>
+			<UV Number="3" U="0.232" V="0.56"/>
+		</UVS>
+	</Frame>
+  </Animation>
+
+  <Animation Name="MenosGuardReversed">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.117" V="0.56"/>
+			<UV Number="1" U="0.117" V="0.79"/>
+			<UV Number="2" U="0.232" V="0.79"/>
+			<UV Number="3" U="0.232" V="0.56"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.0" V="0.56"/>
+			<UV Number="1" U="0.0" V="0.79"/>
+			<UV Number="2" U="0.128" V="0.79"/>
+			<UV Number="3" U="0.128" V="0.56"/>
+		</UVS>
+	</Frame>
+  </Animation>
+  
+  <Animation Name="MenosTurn">
+	<Frame Number="0">
+		<UVS>
+			<UV Number="0" U="0.568" V="0.025"/>
+			<UV Number="1" U="0.568" V="0.25"/>
+			<UV Number="2" U="0.658" V="0.25"/>
+			<UV Number="3" U="0.658" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="1">
+		<UVS>
+			<UV Number="0" U="0.66" V="0.025"/>
+			<UV Number="1" U="0.66" V="0.25"/>
+			<UV Number="2" U="0.74" V="0.25"/>
+			<UV Number="3" U="0.74" V="0.025"/>
+		</UVS>
+	</Frame>
+	<Frame Number="2">
+		<UVS>
+			<UV Number="0" U="0.74" V="0.025"/>
+			<UV Number="1" U="0.74" V="0.25"/>
+			<UV Number="2" U="0.83" V="0.25"/>
+			<UV Number="3" U="0.83" V="0.025"/>
+		</UVS>
+	</Frame>
+  </Animation>

@@ -1,0 +1,27 @@
+﻿  CameraInput.cpp
+  SceneInput.cpp
+  SimpleScene.cpp
+  Engine.cpp
+  GPUBuffers.cpp
+  Mesh.cpp
+  Shader.cpp
+  Texture2D.cpp
+  TextureManager.cpp
+  InputController.cpp
+  WindowCallbacks.cpp
+  WindowObject.cpp
+  World.cpp
+  gl.cpp
+  Animation.cpp
+  Laborator9.cpp
+  Player.cpp
+  Main.cpp
+..\Source\Laboratoare\Laborator9\Animation.cpp(30): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+..\Source\Laboratoare\Laborator9\Player.cpp(75): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Framework_EGC.vcxproj -> E:\EGC\Tema4 EGC\Visual Studio\..\x64\Debug\Framework_EGC.exe
+  Framework_EGC.vcxproj -> ..\x64\Debug\Framework_EGC.pdb (Partial PDB)
+  A subdirectory or file E:\EGC\Tema4 EGC\Visual Studio\scripts\..\..\x64\Debug already exists.
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
+  0 File(s) copied
