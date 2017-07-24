@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-23T15:09:38+0300">
+<meta name="keywords" content="lab,cn2,lab02">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab02">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab02","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab02"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#microprocesorul">1. Microprocesorul</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#arhitecturi-de-microprocesoare">1.1. Arhitecturi de microprocesoare</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#arhitectura-von-neumann-pentru-sisteme-de-calcul">1.1.1. Arhitectura Von Neumann pentru sisteme de calcul</a></div></li>
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#arhitectura-harvard-pentru-sisteme-de-calcul">1.1.2. Arhitectura Harvard pentru sisteme de calcul</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#componentele-unui-microprocesor">1.2. Componentele unui microprocesor</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#microcontroller">2. Microcontroller</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#attiny20">2.1. ATTiny20</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#arhitectura-unui-set-de-instructiuni">3. Arhitectura unui set de instructiuni</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#instructiuni">3.1. Instructiuni</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#etapele-executarii-unei-instructiuni">3.2. Etapele executarii unei instructiuni</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#instructiuni-avr">3.3. Instructiuni AVR</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#exercitii">4. Exercitii</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#descrierea-instructiunilor">4.1. Descrierea instructiunilor</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#exercitii1">4.2. Exercitii</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#descrierea-scheletului-de-laborator">4.3. Descrierea scheletului de laborator</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#cum-testam">4.4. Cum testăm?</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#suplimentar">5. Suplimentar</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#exista-avantaje-in-definirea-si-implementarea-isa">5.1. Exista avantaje in definirea si implementarea ISA?</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#tipuri-de-isa">5.2. Tipuri de ISA</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#cisc-vs-risc">5.3. CISC vs RISC</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-2-instruction-set-architecture-1">Laboratorul 2 - Instruction Set Architecture 1</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:antoche.ioana@gmail.com" class="mail" title="antoche.ioana@gmail.com">Ioana Antoche</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 20.10.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 23.10.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="microprocesorul">1. Microprocesorul</h2>
+<div class="level2">
+
+<p>
+Microprocesorul este o componenta principala a unui sistem de calcul care are rolul de a executa instructiunile unui program. Instructiunile ce pot fi rulate de catre un procesor sunt de mai multe tipuri:
+</p>
+<ul>
+<li class="level1"><div class="li"> Aritmetice</div>
+</li>
+<li class="level1"><div class="li"> Logice</div>
+</li>
+<li class="level1"><div class="li"> De control</div>
+</li>
+<li class="level1"><div class="li"> De intrare/iesire</div>
+</li>
+</ul>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/intel_4004.jpg?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:intel_4004.jpg"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/intel_4004.jpg" class="mediacenter" title=" Intel 4004 " alt=" Intel 4004 " width="400"></a>
+</p>
+
+<p>
+Cele mai multe procesoare, dar si cele mai putin puternice, sunt cele facute pentru sisteme embedded, apoi cele pentru sisteme personale iar cele mai putine, dar si cele mai puternice, sunt procesoarele pentru sisteme specializate si servere.
+</p>
+
+</div>
+
+<h3 class="sectionedit3" id="arhitecturi-de-microprocesoare">1.1. Arhitecturi de microprocesoare</h3>
+<div class="level3">
+
+<p>
+O caracteristica foarte importanta a unui procesor este numarul de biti folositi pentru a reprezenta un numar intreg (lungimea unui cuvant sau latimea procesorului). Aceasta influenteaza cati biti pot fi cititi/scrisi intr-o singura operatie de citire/scriere si cata memorie poate fi adresata direct<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#fn__1" id="fnt__1" class="fn_top">1)</a></sup>. Cele mai intalnite arhitecturi din ziua de azi sunt pe 32 si pe 64 de biti dar exista si procesoare pe 4, 8, 12, 16 sau 24 de biti.
+</p>
+
+</div>
+
+<h4 class="sectionedit4" id="arhitectura-von-neumann-pentru-sisteme-de-calcul">1.1.1. Arhitectura Von Neumann pentru sisteme de calcul</h4>
+<div class="level4">
+
+<p>
+Introdusa in anul 1945 de catre matematicianul american <a href="http://en.wikipedia.org/wiki/John_von_Neumann" class="urlextern" title="http://en.wikipedia.org/wiki/John_von_Neumann" rel="nofollow">John von Neumann</a>, aceasta arhitectura descrie un sistem de calcul ce contine o unitate de procesare, o memorie pentru instructiuni si date, si unitati de intrare si iesire. Astfel un procesor pentru o astfel de arhitectura va avea o singura magistrala de adrese si o singura magistrala de date, pe care vor circula si date si instructiuni. Avantajele acestei arhitecturi sunt simplitatea si faptul ca, fiindca instructiunile si datele se afla in aceeasi memorie, codul se poate automodifica.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/von_neumann_architecture.png?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:von_neumann_architecture.png"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/von_neumann_architecture.png" class="mediacenter" title=" Arhitectura Von Neumann " alt=" Arhitectura Von Neumann " width="400"></a>
+</p>
+
+</div>
+
+<h4 class="sectionedit5" id="arhitectura-harvard-pentru-sisteme-de-calcul">1.1.2. Arhitectura Harvard pentru sisteme de calcul</h4>
+<div class="level4">
+
+<p>
+Spre deosebire de Von Neumann, arhitectura Harvard descrie un sistem de calcul unde memoria de date si memoria de program sunt separate. Asta inseamna ca procesoarele trebuie sa aiba doua magistrale de date si de adrese, una pentru instructiuni si una pentru date. Avantajul este ca aceste magistrale nu trebuie sa aiba aceeasi dimenisiune, deci putem avea un procesor pe 8 biti care adreseaza mai mult de 256 de octeti de memorie. Un alt avantaj este ca memoria de program poate fi facuta non-volatila, deci odata scris un program acesta nu mai trebuie reincarcat la fiecare pornire.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/harvard_architecture.png?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:harvard_architecture.png"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/harvard_architecture.png" class="mediacenter" title=" Arhitectura Harvard" alt=" Arhitectura Harvard" width="400"></a>
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="componentele-unui-microprocesor">1.2. Componentele unui microprocesor</h3>
+<div class="level3">
+
+<p>
+Un procesor este format din patru componente principale:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Unitatea aritmetica/logica (UAL)</strong>: executa operatiile aritmetice si logice.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Registre</strong>: cea mai mica unitate de stocare ce face parte dintr-un procesor, in general de dimensiunea unui cuvant. Registrele folosite pentru a stoca date de uz general se numesc <em>registre de uz general</em> (ex: AX, BX, CX, DX pe arhitectura x86). Totusi unele registre au un scop particular. Dintre acestea cele mai importante sunt <strong>Program Counter (PC)</strong>, <strong>Instruction Register (IR)</strong>, <strong>Stack Pointer (SP)</strong> si <strong>Flags Register</strong> (registru ce indica statusul curent al programului).</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Porturi de intrare/iesire (I/O)</strong>: linii prin intermediul carora procesorul se interfateaza cu periferice (inclusiv cu memoria). Prin intermediul acestora el poate transmite sau receptiona date.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Unitatea de control (UC)</strong>: decodifica instructiunea curenta, genereaza semnale de control pentru toate resursele procesorului (ex: registrele de intrare, iesire si operatia artimetica necesare unei instructiuni) si coordoneaza activarea acestor resurse.</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteimportant">
+In functie de arhitectura procesorului numarul si numele registrelor poate varia.<br>
+</div><p></p>
+<p></p>
+
+<p>
+Procesorul ce il vom implementa in cadrul laboratorului va avea urmatoarea structura:<br><a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/copy_of_cn2_lb3.png?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:copy_of_cn2_lb3.png"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/copy_of_cn2_lb3.png" class="mediacenter" title="Structura ATTiny20" alt="Structura ATTiny20" width="800"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="microcontroller">2. Microcontroller</h2>
+<div class="level2">
+
+<p>
+Un microcontroller este un chip care <em>contine un microprocesor</em>, memorie de date, memorie de program si dispozitive periferice. Accentul in design se pune pe consum redus de energie si costuri mici de productie. De aceea, in general, ruleaza la frecvente reduse (zeci, sute de <abbr title="Megahertz">MHz</abbr>). De asemenea pot fi specializate pe o anumita functionalitate.
+</p>
+
+<p>
+Majoritatea microcontroller-elor sunt formate din:
+</p>
+<ul>
+<li class="level1"><div class="li"> Unitatea centrala de procesare</div>
+</li>
+<li class="level1"><div class="li"> RAM (memorie volatila) si/sau Flash/EEPROM (memorie non-volatila)</div>
+</li>
+<li class="level1"><div class="li"> Porturi de intrare/iesire</div>
+</li>
+<li class="level1"><div class="li"> Timere</div>
+</li>
+<li class="level1"><div class="li"> Interfetele seriale si paralele</div>
+</li>
+<li class="level1"><div class="li"> Etc</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit8" id="attiny20">2.1. ATTiny20</h3>
+<div class="level3">
+
+<p>
+<a href="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" class="urlextern" title="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" rel="nofollow">ATTiny20</a> este un microcontroller produs de firma Atmel. El este construit pe arhitectura <a href="http://en.wikipedia.org/wiki/Atmel_AVR" class="urlextern" title="http://en.wikipedia.org/wiki/Atmel_AVR" rel="nofollow">AVR</a> si are urmatoarele caracteristici:
+</p>
+<ul>
+<li class="level1"><div class="li"> Arhitectura RISC</div>
+</li>
+<li class="level2"><div class="li"> 112 de instructiuni – majoritatea executate intr-un singur ciclu de ceas</div>
+</li>
+<li class="level2"><div class="li"> 16 registre generale de 8 biti</div>
+</li>
+<li class="level2"><div class="li"> 2048 de octeti de memorie programabila flash</div>
+</li>
+<li class="level2"><div class="li"> 128 octeti de memorie SRAM</div>
+</li>
+<li class="level2"><div class="li"> 12 pini de intrare/iesire programabili</div>
+</li>
+<li class="level2"><div class="li"> Frecventa de operare de pana la 12 <abbr title="Megahertz">MHz</abbr></div>
+</li>
+<li class="level2"><div class="li"> Tensiune de alimentare 1.8V - 5V</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit9" id="arhitectura-unui-set-de-instructiuni">3. Arhitectura unui set de instructiuni</h2>
+<div class="level2">
+
+<p>
+Orice microprocesor are definit un Instruction Set Architecture (ISA):
+</p>
+<ul>
+<li class="level1"><div class="li"> o interfata intre hardware si software. Asa cum la OOP rolul unei interfete era de a oferi o imagine de ansamblu, fara a oferi detalii de implementare, asa si aici ISA defineste operatiile, accestul la memorie, modul de stocare suportate de hardware, fara a da detalii de implementare. Acest lucru permite optimizari (low-level) fara a schimba modul propriu zis de interactiune</div>
+</li>
+<li class="level1"><div class="li"> cuprinde setul de instructiuni (instructiuni specifice hardware-ului: trebuie sa poata fi recunoscute de procesor)</div>
+</li>
+<li class="level1"><div class="li"> defineste tipurile de date care pot fi recunoscute de procesor.</div>
+</li>
+<li class="level1"><div class="li"> defineste contextul in care o instructiune opereaza.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit10" id="instructiuni">3.1. Instructiuni</h3>
+<div class="level3">
+
+<p>
+Instructiunile sunt reprezentate de un sir de biti, o parte dintre ei fiind codul operatiei. Instructiuniile pot fi codificate pe un numar egal de biti sau sa fie de dimensiune variabila.
+</p>
+
+<p>
+In cazul AVR instructiuniile au intotdeauna 16 biti, iar codul operatiei poate fi pe 4, 5, 6 pana la 16 biti (NOP). Din cauza faptului ca instructiunile au codul operatiei de dimensiune variabila acesta este situat la inceput sirului de biti, decodificarea realizandu-se bit cu bit pana in momentul in care procesorul considera ca instructiunea a fost detectata si se poate executa.
+</p>
+
+<p>
+Instructiunile pot fi imparite in:
+</p>
+<ul>
+<li class="level1"><div class="li"> Operatii cu date si memorie:  </div>
+<ul>
+<li class="level2"><div class="li"> LOAD</div>
+</li>
+<li class="level2"><div class="li"> MOVE</div>
+</li>
+<li class="level2"><div class="li"> STORE</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Operatii aritmetice si logice:</div>
+<ul>
+<li class="level2"><div class="li"> ADD</div>
+</li>
+<li class="level2"><div class="li"> SUB</div>
+</li>
+<li class="level2"><div class="li"> MUL</div>
+</li>
+<li class="level2"><div class="li"> AND</div>
+</li>
+<li class="level2"><div class="li"> OR</div>
+</li>
+<li class="level2"><div class="li"> NOT</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Operatii de control a programului:</div>
+<ul>
+<li class="level2"><div class="li"> GOTO</div>
+</li>
+<li class="level2"><div class="li"> JMP</div>
+</li>
+<li class="level2"><div class="li"> JMPZ</div>
+</li>
+<li class="level2"><div class="li"> HLT</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Operatii de lucru cu porturile de intrare/iesire:</div>
+<ul>
+<li class="level2"><div class="li"> IN</div>
+</li>
+<li class="level2"><div class="li"> OUT</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteimportant">
+Denumirile instructiunilor difera in functie de ISA.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit11" id="etapele-executarii-unei-instructiuni">3.2. Etapele executarii unei instructiuni</h3>
+<div class="level3">
+
+<p>
+Orice procesor poate avea un ciclu de prelucrare a instructiunilor diferit, in functie de ISA-ul pe care il implementeaza, insa toate vor urma urmatoarea structura:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Fetch</strong>: urmatoarea instructiune este adusa din memorie de la adresa catre care pointeaza registrul <em>Program Counter</em> (PC) si este stocata in registrul <em>Instruction Register</em> (IR). PC este apoi incrementat pentru a pointa catre urmatoarea instructiune de incarcat.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Decode</strong>: instructiunea din IR este decodificata.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Execute</strong>: executia efectiva a instructiunii. Aceasta etapa variaza in functie de tipul instructiunii curente.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Mem</strong>: ciclu folosit in cazul in care instructiunea acceseaza memoria. Are sens doar in proces pipeline cu unitati multiple de executie pentru a face toate instrucțiunile să fie “la fel de lungi”.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong>Write Back</strong>: Scrierea noilor valori in registre.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit12" id="instructiuni-avr">3.3. Instructiuni AVR</h3>
+<div class="level3">
+
+<p>
+Instructiunile pentru AVR sunt pe 16 biti sau 32 de biti. Desi procesorul este pe 8 biti, memoria este organizata in randuri de 16 biti lungime, procesorul putand citi cate un rand la fiecare ciclu de ceas din memoria de program. Astfel, memoria noastra de 2048 de octeti este definita ca 1024 * 16 (1024 de randuri, fiecare rand memorand 16 biti sau 2 octeti).
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/add.png?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:add.png"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/add.png" class="mediacenter" title="ADD" alt="ADD" width="600"></a>
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/lds32.png?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:lds32.png"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/lds32.png" class="mediacenter" title="LDS - 4 octeti" alt="LDS - 4 octeti" width="600"></a>
+</p>
+
+<p>
+Mai sus ati vazut un exemplu in care LOAD era instructiune pe 4 octeti sau 2 randuri de program motiv pentru care PC crestea cu 2 unitati dupa citirea instructiuni.
+</p>
+
+</div>
+
+<h2 class="sectionedit13" id="exercitii">4. Exercitii</h2>
+<div class="level2">
+
+<p>
+Scopul acestui laborator este de a intelege la nivel inalt modul in care functioneaza un procesor, de a va acomoda cu procesoarele AVR si de a implemena instructiunile de baza suiportate de acest procesor.
+</p>
+
+<p>
+In acest laborator veti implementa instructiuni care realizeaza operatii artimetice si logice de baza precum:
+</p>
+<ul>
+<li class="level1"><div class="li"> NOP</div>
+</li>
+<li class="level2"><div class="li"> ADD</div>
+</li>
+<li class="level2"><div class="li"> ADC</div>
+</li>
+<li class="level2"><div class="li"> SUB</div>
+</li>
+<li class="level2"><div class="li"> AND</div>
+</li>
+<li class="level2"><div class="li"> OR</div>
+</li>
+<li class="level2"><div class="li"> XOR</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit14" id="descrierea-instructiunilor">4.1. Descrierea instructiunilor</h3>
+<div class="level3">
+
+<p>
+O puteti gasi la <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow">http://www.atmel.com/images/doc0856.pdf</a> .
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="exercitii1">4.2. Exercitii</h3>
+<div class="level3">
+
+<p>
+Implementati instructiunile: AND, OR, NEG, EOR, ADC, SUB<br><a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet-lab2.zip" class="media mediafile mf_zip" title="lab:cn2:schelet-lab2.zip (1.4 MB)">Schelet</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="descrierea-scheletului-de-laborator">4.3. Descrierea scheletului de laborator</h3>
+<div class="level3">
+
+<p>
+Sunt practic cateva fisiere de interes: 
+</p>
+<ul>
+<li class="level1"><div class="li"> control_unit.v implementeaza logica de control</div>
+</li>
+<li class="level0"><div class="li"> decode_unit.v se ocupa de instruction decoding. <strong> ⇐ Incepeti de aici </strong></div>
+</li>
+<li class="level0"><div class="li"> register_file.v stocheaza valoarea REGISTRILOR</div>
+</li>
+<li class="level0"><div class="li"> alu.v implementeaza unitatea aritmetica logica. </div>
+</li>
+</ul>
+
+<p>
+Instruction mem actioneaza ca ROMul procesorului
+</p>
+
+</div>
+
+<h3 class="sectionedit17" id="cum-testam">4.4. Cum testăm?</h3>
+<div class="level3">
+
+<p>
+Instrucțiunile curente nu permit încărcarea de date în regiștri, doar lucrul cu ei.<br>Pentru a testa înlocuiți linia : 
+</p>
+<pre class="code">memory[i] &lt;= 0;</pre>
+
+<p>
+cu 
+</p>
+<pre class="code">memory[i] &lt;= i;</pre>
+
+<p>
+in reg_file.v<br>Acum instrucțiunile din rom.v ar trebui să rezulte valori diferite de 0.<br>—-
+</p>
+
+</div>
+
+<h2 class="sectionedit18" id="suplimentar">5. Suplimentar</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit19" id="exista-avantaje-in-definirea-si-implementarea-isa">5.1. Exista avantaje in definirea si implementarea ISA?</h3>
+<div class="level3">
+
+<p>
+DA. De ce?<br>1. ISA poate fi programata. Programarea poate fi facuta de<br>a) om: si in general oamenii prefera sa scrie puntin cod care sa faca multe lucruri (ganditi-va la CISC). Pana in (aprox) 1985 cand compilatoarele nu erau foarte evoluate se prefera un ISA cu instructiuni CISC (comoditate din partea programatorului).<br>b) compilator: dupa 1985, odata cu evolutia compilatoarelor, au aparut optimizari de compilator. Un compilator se descurca mult mai bine sa optimizeze instructiuni multe si mici (RISC).
+</p>
+
+<p>
+2. Un bun design initial poate oferi compatibilitate intre diverse versiuni. ex: X86 compatibil cu 8086, 286, 386, 486, Pentium*.<br>a) backward compatibility (procesoare noi pot rula cod vechi)<br>b) forward/upward compatibility (procesoare vechi pot rula cod nou)
+</p>
+
+</div>
+
+<h2 class="sectionedit20" id="tipuri-de-isa">5.2. Tipuri de ISA</h2>
+<div class="level2">
+
+<p>
+1. CISC<br>2. RISC<br>3. MISC
+</p>
+
+<p>
+La inceputul erei calculatoarelor, una din principalele probleme care stateau in calea dezvoltarii procesoarelor si a arhitecturilor de calcul era capacitatea limitata a memoriilor. Productia memoriilor de dimensiuni mari costa foarte mult si nu aducea neaparat castigul dorit. Asa ca, in schimb, accentul s-a pus pe minimizarea si eficientizarea dimensiunii programelor pentru ca acestea sa poata incapea in memoria limitata.
+</p>
+
+<p>
+Astfel a aparut modelul CISC (Complex Instruction Set Computers), care intr-o instructiune combina o operatie UAL de baza cu accesul la o memorie pentru a citi unul sau multi operanzi. Accesul la memorie se realizeaza folosind diferite tipuri de adresare: directa, indirecta, indexata, etc. Majoritatea arhitecturilor CISC permit maxim doi operanzi per instructiune, insa exista si arhitecturi care accepta mai mult de doi operanzi.
+</p>
+
+<p>
+Spre sfarsitul anilor '70, inceputul anilor '80, tehnologia a inceput sa permita fabricarea memoriilor la un pret mult mai mic, astfel ca si dimensiunea lor a inceput sa creasca. In aceasta perioada a aparut RISC (Reduced Instruction Set Computers).
+</p>
+
+<p>
+Deoarece dimensiunea memoriei nu mai prezenta o problema, optimizarea instructiunilor pentru a fi siguri ca programul incape in memorie nu mai era o necesitate. In schimb, se urmarea simplificarea circuitelor pentru a putea creste frecventa si pentru a implementa mai multe registre. Spre deosebire de CISC, operatiile executate de UAL nu mai accesau memoria. Acest acces era realizat doar prin operatii speciale (load/store), deoarece mai multe registre generale permiteau stocarea mai multor date in memoria locala a procesorului.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/risc_cisc.gif?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:risc_cisc.gif"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/risc_cisc.gif" class="mediacenter" alt="" width="400"></a>
+</p>
+
+<p>
+Un al treilea tip de arhitectura, MISC (Minimal Instruction Set Computer), este o structura asemanatoare unui stack machine: toate datele (operanzii) sunt tinute intr-o stiva, iar operatiile UAL se aplica pe datele din varful stivei. Core-urile MISC necesita foarte putina materie prima, asa ca sunt des folosite pentru FPGA-uri sau unele implementari de procesoare multi-core. Dimensiunea unui program pentru MISC este asemanatoare cu cea RISC.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/cisc-risc-nisc.gif?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:cisc-risc-nisc.gif"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/cisc-risc-nisc.gif" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+Asadar, putem clasifica ISA dupa numarul de operanzi specificati explicit in instructiune:
+</p>
+<ul>
+<li class="level1"><div class="li"> 0 operanzi (stack machines): singurele instructiuni in care se specifica un operand sunt push si pop (load si store), singurele instructiuni care acceseaza direct memoria. Restul instructiunilor folosesc datele din varful stivei.</div>
+</li>
+<li class="level1"><div class="li"> 1 operand (one-address machines, accumulator machines): aceste masini au un registru special – acumulator, ce reprezinta adresa destinatie implicita a operatiilor UAL. Operandul explicit specificat in instructiune este sursa. Exemplu: add bx – aduna valoarea din BX cu valoare acumulatorului si salveaza datele in acumulator. (unele microcontroller-e mai folosesc aceasta arhitectura)</div>
+</li>
+<li class="level1"><div class="li"> 2 operanzi – CISC, RISC: instructiunile specifica explicit operandul sursa si cel destinatie. In cazul CISC se executa direct instructiunea, ce include incarcarea din memorie a operanzilor, in timp ce la RISC se executa in prealabil LOAD pentru cei doi operanzi, dupa care se executa operatia si un STORE. </div>
+</li>
+<li class="level1"><div class="li"> mai multi operanzi: in general prezent la CISC, masini speciale ce permit moduri de adresare cu 3 sau mai multi operanzi.</div>
+</li>
+</ul>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/risc-vs.cisc-fig1.gif?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:risc-vs.cisc-fig1.gif"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/risc-vs.cisc-fig1.gif" class="mediacenter" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit21" id="cisc-vs-risc">5.3. CISC vs RISC</h2>
+<div class="level2">
+
+<p>
+In zilele noastre, arhitecturile cele mai populare sunt CISC (specific x86, Intel si AMD) si RISC (specific ARM, embedded systems). Desi ambele arhitecturi sunt intens folosite, ele urmaresc si aduc rezolvari pentru probleme diferite. Daca ar fi sa comparam, caracteristicile principale pentru fiecare ar fi:
+</p>
+
+<p>
+<strong>CISC</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> focus pe hardware (a aparut atunci cand memoria era o problema)</div>
+</li>
+<li class="level1"><div class="li"> are la baza instructiuni complexe ce dureaza pe mai multe cicluri de ceas</div>
+</li>
+<li class="level1"><div class="li"> abordare memory-to-memory: instructiunile de tip LOAD si STORE sunt incorporate in alte instructiuni si se lucreaza direct cu memoria</div>
+</li>
+<li class="level1"><div class="li"> numar mare de cicli pe secunda</div>
+</li>
+<li class="level1"><div class="li"> memorie folosita in principal pentru stocarea instructiunilor complexe</div>
+</li>
+</ul>
+
+<p>
+<strong>RISC</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> focus software (memoria nu mai prezinta o problema; circuite simple)</div>
+</li>
+<li class="level1"><div class="li"> instructiuni simple ce dureaza un ciclu de ceas</div>
+</li>
+<li class="level1"><div class="li"> abordare register-to-register: LOAD si STORE sunt instructiuni separate, datele sunt aduse in registre inainte de a fi folosite</div>
+</li>
+<li class="level1"><div class="li"> numar redus de cicli pe secunda</div>
+</li>
+<li class="level1"><div class="li"> numar mare de registre locale pentru a stoca mai multe date</div>
+</li>
+</ul>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/risc.gif?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:risc.gif"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/risc.gif" class="mediacenter" alt="" width="300"></a>
+</p>
+
+<p>
+Pentru a putea evalua performanta fiecarei arhitecturi, folosim o ecuatie:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/performanceeq.gif?id=lab%3Acn2%3Alab02" class="media" title="lab:cn2:performanceeq.gif"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/performanceeq.gif" class="media" alt=""></a>
+</p>
+
+<p>
+Observam ca in cazul CISC se urmareste minimizarea numarului de instructiuni dintr-un program, crescand numarul de cicli necesari pentru o instructiune. In cazul RISC, avem opusul: un numar mic de cicli necesari pentru o instructiune, dar un numar mare de instructiuni in program.
+</p>
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+nu intotdeauna; exista procesoare cu magistrale de date pe 8 biti si magistrale de adrese pe 16</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab02.txt</bdi> · Last modified: 23.10.2015 by <bdi>Adrian Nițu</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 2 - Instruction Set Architecture 1 [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

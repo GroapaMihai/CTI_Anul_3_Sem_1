@@ -1,0 +1,6 @@
+verilog work "state_machine.v"
+verilog work "reg_file_interface_unit.v"
+verilog work "decode_unit.v"
+verilog work "bus_interface_unit.v"
+verilog work "control_unit.v"
+verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,105 @@
+ISim log file
+Running: C:\Users\student\Desktop\334CA_BOSPY_SI_Alina\schelet\cpu_test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu_test_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Resetting program counter to 0
+Finished circuit initialization process.
+Program counter is now at: 1
+Program counter is now at: 2
+Program counter is now at: 3
+Program counter is now at: 4
+Program counter is now at: 5
+Program counter is now at: 6
+Program counter is now at: 7
+Program counter is now at: 8
+Program counter is now at: 9
+Program counter is now at: 10
+Program counter is now at: 11
+Program counter is now at: 12
+Program counter is now at: 13
+Program counter is now at: 14
+Program counter is now at: 15
+Program counter is now at: 16
+Program counter is now at: 17
+Program counter is now at: 18
+Program counter is now at: 19
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Resetting program counter to 0
+Finished circuit initialization process.
+Program counter is now at: 1
+Program counter is now at: 2
+Program counter is now at: 3
+Program counter is now at: 4
+Program counter is now at: 5
+Program counter is now at: 6
+Program counter is now at: 7
+Program counter is now at: 8
+Program counter is now at: 9
+Program counter is now at: 10
+Program counter is now at: 11
+Program counter is now at: 12
+Program counter is now at: 13
+Program counter is now at: 14
+Program counter is now at: 15
+Program counter is now at: 16
+Program counter is now at: 17
+Program counter is now at: 18
+Program counter is now at: 19
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Resetting program counter to 0
+Finished circuit initialization process.
+Program counter is now at: 1
+Program counter is now at: 2
+Program counter is now at: 3
+Program counter is now at: 4
+Program counter is now at: 5
+Program counter is now at: 6
+Program counter is now at: 7
+Program counter is now at: 8
+Program counter is now at: 9
+Program counter is now at: 10
+Program counter is now at: 11
+Program counter is now at: 12
+Program counter is now at: 13
+Program counter is now at: 14
+Program counter is now at: 15
+Program counter is now at: 16
+Program counter is now at: 17
+Program counter is now at: 18
+Program counter is now at: 19
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Resetting program counter to 0
+Finished circuit initialization process.
+Program counter is now at: 1
+Program counter is now at: 2
+Program counter is now at: 3
+Program counter is now at: 4
+Program counter is now at: 5
+Program counter is now at: 6
+Program counter is now at: 7
+Program counter is now at: 8
+Program counter is now at: 9
+Program counter is now at: 10
+Program counter is now at: 11
+Program counter is now at: 12
+Program counter is now at: 13
+Program counter is now at: 14
+Program counter is now at: 15
+Program counter is now at: 16
+Program counter is now at: 17
+Program counter is now at: 18
+Program counter is now at: 19

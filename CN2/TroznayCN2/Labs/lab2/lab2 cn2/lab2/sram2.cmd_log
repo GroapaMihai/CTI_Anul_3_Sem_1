@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/student/Desktop/lab2 CN2/lab2/sram2.xst" -ofn "C:/Users/student/Desktop/lab2 CN2/lab2/sram2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 "sram2.ngc" sram2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sram2_map.ncd sram2.ngd sram2.pcf 
+par -w -intstyle ise -ol high -mt off sram2_map.ncd sram2.ncd sram2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sram2.twx sram2.ncd -o sram2.twr sram2.pcf 

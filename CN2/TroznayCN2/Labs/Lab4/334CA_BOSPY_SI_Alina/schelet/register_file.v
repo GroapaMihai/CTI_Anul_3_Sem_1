@@ -1,0 +1,73 @@
+/* Traducerea si adaptarea:
+ * http://www.asic-world.com/examples/verilog/ram_dp_sr_sw.html
+ */
+module dual_port_sram #(
+        parameter DATA_WIDTH = 8,    // registers are 8 bits in width
+        parameter ADDR_WIDTH = 5     // 32 registers
+    )(
+        input  wire                  clk,
+        input  wire [ADDR_WIDTH-1:0] rr_addr,
+        input  wire [ADDR_WIDTH-1:0] rd_addr,
+        inout  wire [DATA_WIDTH-1:0] rr_data,
+        inout  wire [DATA_WIDTH-1:0] rd_data,
+        input  wire                  rr_cs,
+        input  wire                  rd_cs,
+        input  wire                  rr_we,
+        input  wire                  rd_we,
+        input  wire                  rr_oe,
+        input  wire                  rd_oe
+    );
+
+    reg [DATA_WIDTH-1:0] regs[0:(1<<ADDR_WIDTH)-1];
+    reg [ADDR_WIDTH-1:0] rr_addr_buf;
+    reg [ADDR_WIDTH-1:0] rd_addr_buf;
+
+    reg [ADDR_WIDTH:0] i;
+    initial begin
+        for (i = 0; i < (1<<ADDR_WIDTH); i = i + 1)
+            regs[i] <= 0;
+    end
+	 
+	 
+
+    /* Memory Write Block 
+     * Write Operation : When we = 1, cs = 1
+     */
+    always @(negedge clk)
+    begin : MEM_WRITE
+        if (rr_cs && rr_we) begin
+            regs[rr_addr] <= rr_data;
+        end else if (rd_cs && rd_we) begin 
+            regs[rd_addr] <= rd_data;
+        end
+    end
+
+    /* First port of RAM
+     * Memory Read Block
+     * Read Operation : When we_0 = 0, oe_0 = 1, cs_0 = 1
+     */
+    always @(negedge clk)
+    begin : RR_MEM_READ
+        if (rr_cs && !rr_we) begin
+            rr_addr_buf <= rr_addr;
+        end
+    end
+
+    /* Second port of RAM
+     * Memory Read Block 1 
+     * Read Operation : When we_1 = 0, oe_1 = 1, cs_1 = 1
+     */
+    always @(negedge clk)
+    begin : RD_MEM_READ
+        if (rd_cs && !rd_we) begin
+            rd_addr_buf <= rd_addr;
+        end
+    end
+
+    /* Tri-State Buffer control
+     * output : When we_0 = 0, oe_0 = 1, cs_0 = 1
+     */
+    assign rr_data = (rr_cs && rr_oe && !rr_we) ? regs[rr_addr_buf] : {DATA_WIDTH{1'bz}};
+    assign rd_data = (rd_cs && rd_oe && !rd_we) ? regs[rd_addr_buf] : {DATA_WIDTH{1'bz}};
+
+endmodule

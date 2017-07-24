@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sat Oct 17 17:35:24 2015
+# Process ID: 1188
+# Log file: C:/Users/student/Desktop/lab2 CN2/lab2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/student/Desktop/lab2 CN2/lab2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {C:/Users/student/Desktop/lab2 CN2/lab2/pa.fromHdl.tcl}
+# create_project -name lab2 -dir "C:/Users/student/Desktop/lab2 CN2/lab2/planAhead_run_1" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "led_game.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/student/Desktop/lab2 CN2/lab2/led_game.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {rom.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {fsm.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {led_game.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top led_game $srcset
+# add_files [list {led_game.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/student/Desktop/lab2 CN2/lab2/rom.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/lab2 CN2/lab2/fsm.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/lab2 CN2/lab2/led_game.v" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/student/Desktop/lab2 CN2/lab2/led_game.ucf]
+Finished Parsing UCF File [C:/Users/student/Desktop/lab2 CN2/lab2/led_game.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: d73ed74a
+open_rtl_design: Time (s): elapsed = 00:00:24 . Memory (MB): peak = 595.813 ; gain = 152.188
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin V16 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin T11 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports rst]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports clk]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {led[1]}]]
+set_property is_loc_fixed true [get_ports [list  {led[1]}]]
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/student/Desktop/lab2 CN2/lab2\planAhead_pid1188.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Oct 17 17:39:27 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

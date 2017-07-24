@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 6 - GPIO 1: Output [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-03-15T23:33:46+0200">
+<meta name="keywords" content="lab,cn2,lab06">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab06">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab06","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab06"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#obiective">Obiective</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#ce-este-gpio">1. Ce este GPIO?</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#ce-este-un-pin">1.1. Ce este un pin?</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#gpio-si-attiny20">2. GPIO si ATTiny20</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#registrele-de-control-al-perifericelor-si-ale-porturilor-io">2.1. Registrele de control al perifericelor si ale porturilor I/O</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#spatiul-de-adrese">2.2. Spatiul de adrese</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#alte-instructiuni-ce-opereaza-cu-io-space">3. Alte instructiuni ce opereaza cu I/O space</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#detalii-asupra-scheletului-de-laborator">4. Detalii asupra scheletului de laborator</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#exercitii">5. Exercitii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#resurse">6. Resurse</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-6-gpio-1output">Laboratorul 6 - GPIO 1: Output</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:tudor.visan@cti.pub.ro" class="mail" title="tudor.visan@cti.pub.ro"> Tudor Vișan</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 17.11.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 15.03.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="obiective">Obiective</h2>
+<div class="level2">
+
+<p>
+In acest laborator vom invata ce este GPIO, cum este implementat in microcontroller-ul ATTiny20 si il vom adauga implementarii noastre a acestui controller.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="ce-este-gpio">1. Ce este GPIO?</h2>
+<div class="level2">
+
+<p>
+GPIO (General-Purpose Input/Output) este calitatea unui pin al unui circuit integrat de a-i putea fi controlat comportamentul, adica directia de trecere a curentului electric prin el si valoarea acestuia, intr-un mod programatic.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="ce-este-un-pin">1.1. Ce este un pin?</h3>
+<div class="level3">
+
+<p>
+Un pin este o bucata de metal ce permite crearea unei legaturi intre o componenta electronica si alta. In cazul circuitelor integrate pinii pot sa protruda din capsulei integratului sau pot face parte dintr-una din fetele sale, caz in care ne referim la ei ca <em>pad-uri</em>.
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/attiny20.png?id=lab%3Acn2%3Alab06" class="media" title="lab:cn2:attiny20.png"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/attiny20.png" class="mediacenter" alt="" width="500"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="gpio-si-attiny20">2. GPIO si ATTiny20</h2>
+<div class="level2">
+
+<p>
+In <a href="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" class="urlextern" title="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" rel="nofollow">datasheet-ul ATTiny20</a>, la pagina 2, sunt descrise configuratiile pinilor. Observati ca exista mai multe configuratii, deoarece acest microcontroller vine in diferite capsule ce difera ca marime, cost si metoda de lipire. 
+</p>
+
+<p>
+Sa ne concentram pe prima varianta, descrisa in capitolul 1.1, SOIC (Small Outline Integrated Circuit) &amp; TSSOP (Thin-Shrink Small Outline Package). Primul lucru pe care il observam este ca aceasta capsula are 14 pini. Dintre acestia doi sunt necesari pentru alimentarea microcontroller-ului (VCC - pinul 1, si GND - pinul 14). Evident, acesti doi pini nu pot fi folositi ca GPIO, insa restul da. 
+</p>
+
+<p>
+Al doilea lucru pe care il observam este ca pinii, pentru a fi mai usor de folosit, au cate o denumire. Aceasta denumire ne indica si ce functii poate avea acel pin. In cazul pinilor 1 si 14 este simplu: VCC - alimentare de curent continuu, si GND - masa (ground). Denumirea celorlalti pini este de forma Pxn, unde X este in {A, B} si n este in {0, 1, 2, 3, 4, 5, 6, 7} (spre exemplu: PB0, PA5, PB4, PA7). Aceasta este denumirea principala a acestor pini. Intre paranteze gasim si denumiri auxiliare, care indica functii alternative ale pinilor (spre exemplu: pinul PA0 mai este numit si ADC0, ceea ce inseamna ca el poate servi ca si intrare pentru convertorul analog-digital).
+</p>
+
+<p>
+In microcontroller-ele Atmel, cum este si ATTiny20, pinii ce suporta GPIO sunt grupati in porturi. Un port are intotdeauna 8 pini logici (ce pot fi folositi intr-un program), dar poate avea mai putini pini fizici (ce pot fi folositi pentru a realiza legaturi fizice). Aceste porturi sunt denumite in ordine alfabetica: A, B, etc. De aici reies si numele pinilor: PA0 inseamna ca pinul face parte din portul A, si este pinul cu numarul 0 in acel port. Observati ca portul B nu are decat 4 pini fizici (PB0, PB1, PB2 si PB3). Totusi nu este o eroare sa atribuim intr-un program o valoare pinului PB4, doar ca aceasta atribuire nu va avea niciun efect in exteriorul controller-ului.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="registrele-de-control-al-perifericelor-si-ale-porturilor-io">2.1. Registrele de control al perifericelor si ale porturilor I/O</h3>
+<div class="level3">
+
+<p>
+In cadrul microprocesoarelor ca ATTiny20, avem de-a face cu doua tipuri de registre de control:
+</p>
+<ul>
+<li class="level1"><div class="li"> registre de control a modulelor periferice (e.g. timer, convertor analog-digital, controller USB, placa de retea, placa video, tastatura, etc.),</div>
+</li>
+<li class="level1"><div class="li"> registre de control a pinilor de intrare/iesire (pinii GPIO - tinta noastra in acest laborator)</div>
+</li>
+</ul>
+
+<p>
+Pentru modulele periferice, registrele de control sunt folosite pentru a efectua operatii precum: porneste/opreste modulul, schimba anumite setari (e.g. BAUD rate pentru portul serial), etc. Pe langa registre, pentru a interactiona cu aceste periferice, mai folosim registre de stare (pentru a afla care este starea perifericului), si registre de date (pentru a transmite/receptiona date catre/de la el).
+</p>
+
+<p>
+Daca un pin are functia de GPIO, atunci vom putea sa ii controlam directia si valoarea in mod programatic. Vom realiza acestea prin scrieri/citiri in/din registre speciale, ce controleaza exact acest comportament.
+</p>
+
+<p>
+Registrele care controleaza comportamentul unui port sunt:
+</p>
+<ul>
+<li class="level1"><div class="li"> DDRx: Data Direction Register (ie: DDRA si DDRB),</div>
+</li>
+<li class="level1"><div class="li"> PORTx: Data Register (ie: PORTA si PORTB),</div>
+</li>
+<li class="level1"><div class="li"> PINx: Data Input Register (ie: PINA si PINB).</div>
+</li>
+</ul>
+
+<p>
+Fiecare dintre aceste registre are 8 biti, cate unul pentru fiecare pin logic al portului. De exemplu, DDRA (pentru portul A) are bitii DDA0, DDA1, …, DDA7, PORTA are bitii PORTA0, …, PORTA7, si PINA are bitii PINA0, …, PINA7. In continuare ne vom limita doar la portul A al microncontroller-ului.
+</p>
+
+<p>
+Schimband un bit din 1 in 0 sau invers putem schimba comportamentul pinului. Astfel, registrele mentionate anterior au urmatoarea functionalitate:
+</p>
+<ul>
+<li class="level1"><div class="li"> PORTAn: daca bitul n este 0 atunci pinul respectiv va lua valoarea LOW (adica GND, care este in general 0V), iar daca bitul este 1 atunci pinul va lua valoarea HIGH (adica VCC, care poate fi 5V, 3.3V, etc.). Vedeti tabelul 10-1 (pag. 44) din datasheet pentru detalii despre ce se intampla cand DDAn era setat ca port de intrare.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit7" id="spatiul-de-adrese">2.2. Spatiul de adrese</h3>
+<div class="level3">
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/attiny20_data_memory.png?id=lab%3Acn2%3Alab06" class="media" title="lab:cn2:attiny20_data_memory.png"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/attiny20_data_memory.png" class="mediacenter" title="Organizarea spatiului de adresa pe ATTiny20" alt="Organizarea spatiului de adresa pe ATTiny20" width="300"></a>
+</p>
+
+<p>
+Figura precedenta descrie organizarea spatiului de adresa pentru ATTiny20. Observati ca memoria RAM nu ocupa decat o mica parte din acest spatiu si aceasta incepe de la adresa 0x40. In rest avem diferite zone ce servesc altor scopuri. Ce se intampla de fapt este ca toate perifericele, inclusiv memoria RAM si ROM (FLASH) sunt legate la aceeasi magistrala de adrese, pe 16 biti (noi vom considera ca are doar 8 biti). Fiecare dispozitiv este responsabil sa raspunda doar la adresele ce ii apartin. Deci, pentru orice adresa in intervalul [0x40:0xBF] memoria RAM este responsabila de tratarea citirii/scrierii iar celelalte periferice trebuie sa elibereze magistrala de date. La fel, pentru adrese in intervalul [0x3FC0:0x3FC3] putem citi dintr-o mica memorie non-volatila unde este retinut Device ID-ul.
+</p>
+
+<p>
+De la 0x00 la 0x3F gasim <em>I/O Space</em>. Aici se afla toate registrele de lucru cu periferice si, desigur, PORTA. In <a href="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" class="urlextern" title="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" rel="nofollow">datasheet</a>, la capitolul 22 (pagina 203) putem vedea adresele tuturor registrelor I/O din controller (care nu sunt de uz general). Registrul PORTA are adresa 0x02 deci pentru a scrie/citi date in/din el trebuie sa executam o instructiune STS/LDS cu adresa de scriere/citire 0x02.
+</p>
+<pre class="code asm"><span class="kw1">LDS</span> R16<span class="sy1">,</span> <span class="nu0">0x40</span>    <span class="co1">; se incarca date din RAM de la adresa 0x40 in registrul R16</span>
+STS <span class="nu0">0x02</span><span class="sy1">,</span> R16    <span class="co1">; se stocheaza datele din registrul R16 la adresa 0x02, adica in registrul PORTA</span></pre>
+
+<p>
+Pentru a lucra cu registrele din I/O Space putem folosi doua instructiuni speciale: IN si OUT. IN este echivalent cu LDS iar OUT este echivalent cu STS. Diferenta este ca, in vreme ce LDS/STS nu pot lucra decat cu registrele R16:R31, IN/OUT pot lucra cu toate cele 32 de registre. De asemenea, pe un core AVR adevarat, LDS/STS se executa in 2 cicli de ceas, iar IN/OUT intr-unul singur. Astfel, codul precedent poate fi rescris:
+</p>
+<pre class="code asm"><span class="kw1">LDS</span> R16<span class="sy1">,</span> <span class="nu0">0x40</span>
+<span class="kw1">OUT</span> <span class="nu0">0x02</span><span class="sy1">,</span> R16</pre>
+
+</div>
+
+<h2 class="sectionedit8" id="alte-instructiuni-ce-opereaza-cu-io-space">3. Alte instructiuni ce opereaza cu I/O space</h2>
+<div class="level2">
+
+<p>
+Pe langa instructiunile dedicate de load si store (denumite <code>in</code> si <code>out</code>), mai sunt si alte instructiuni ce acceseaza aceasta zona de memorie. 
+</p>
+
+<p>
+In primul rand, toate instructiunile aritmetice o vor accesa, fiindca vor avea nevoie sa citeasca/scrie in <code>SREG</code>, registru ce este mapat la adresa <code>0x3F</code> in I/O space.
+</p>
+<div class="table sectionedit9"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 centeralign">  Address  </th><th class="col1 centeralign">  Name  </th><th class="col2 centeralign">  Bit 7  </th><th class="col3 centeralign">  Bit 6  </th><th class="col4 centeralign">  Bit 5  </th><th class="col5 centeralign">  Bit 4  </th><th class="col6 centeralign">  Bit 3  </th><th class="col7 centeralign">  Bit 2  </th><th class="col8 centeralign">  Bit 1  </th><th class="col9 centeralign">  Bit 0  </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  0x3F  </td><td class="col1 centeralign">  SREG  </td><td class="col2 centeralign">  I  </td><td class="col3 centeralign">  T  </td><td class="col4 centeralign">  H  </td><td class="col5 centeralign">  S  </td><td class="col6 centeralign">  V  </td><td class="col7 centeralign">  N  </td><td class="col8 centeralign">  Z  </td><td class="col9 centeralign">  C  </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+In al doilea rand, toate instructiunile ce folosesc stiva vor accesa si ele I/O space, fiindca stack pointer-ul este mapat de asemenea in I/O space, la adresele <code>0x3E</code> pentru <code>SPH</code> si <code>0x3D</code> pentru <code>SPL</code>. In datasheet-ul procesorului ATtiny20 se specifica faptul ca doar <code>SPL</code> este implementat pentru reduced core AVR.
+</p>
+<div class="table sectionedit10"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 centeralign">  Address  </th><th class="col1 centeralign">  Name  </th><th class="col2 centeralign">  Bit 7  </th><th class="col3 centeralign">  Bit 6  </th><th class="col4 centeralign">  Bit 5  </th><th class="col5 centeralign">  Bit 4  </th><th class="col6 centeralign">  Bit 3  </th><th class="col7 centeralign">  Bit 2  </th><th class="col8 centeralign">  Bit 1  </th><th class="col9 centeralign">  Bit 0  </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  0x3E  </td><td class="col1 centeralign">  SPH  </td><td class="col2 centeralign" colspan="8">  Stack pointer high byte  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  0x3D  </td><td class="col1 centeralign">  SPL  </td><td class="col2 centeralign" colspan="8">  Stack pointer low byte  </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+Nu in ultimul rand, exista instructiunile <code>sbi</code> si <code>cbi</code> (set/clear bit in I/O register), a caror functionalitate o vom vedea in cele ce urmeaza. Sa presupunem ca vrem sa facem toggle la pinul cu indicele 3 de pe portul A:
+</p>
+<pre class="code C"><span class="kw1">while</span> <span class="br0">(</span><span class="nu0">1</span><span class="br0">)</span> <span class="br0">{</span>
+    PORTA <span class="sy0">|=</span>  <span class="br0">(</span><span class="nu0">1</span> <span class="sy0">&lt;&lt;</span> <span class="nu0">3</span><span class="br0">)</span><span class="sy0">;</span>
+    PORTA <span class="sy0">&amp;=</span> ~<span class="br0">(</span><span class="nu0">1</span> <span class="sy0">&lt;&lt;</span> <span class="nu0">3</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Am putea traduce secventa de mai sus in urmatorul cod assembly:
+</p>
+<pre class="code asm"><span class="nu0">0x00</span><span class="sy1">:</span>    ldi     R17<span class="sy1">,</span> 0b00001000
+<span class="nu0">0x01</span><span class="sy1">:</span>    ldi     R18<span class="sy1">,</span> 0b11110111
+         <span class="co1">; PORTA |= (1 &lt;&lt; 3)</span>
+<span class="nu0">0x02</span><span class="sy1">:</span>    <span class="kw1">in</span>      R16<span class="sy1">,</span> PORTA
+<span class="nu0">0x03</span><span class="sy1">:</span>    <span class="kw1">or</span>      R16<span class="sy1">,</span> R17
+<span class="nu0">0x04</span><span class="sy1">:</span>    <span class="kw1">out</span>     PORTA<span class="sy1">,</span> R16
+         <span class="co1">; PORTA &amp;= ~(1 &lt;&lt; 3)</span>
+<span class="nu0">0x05</span><span class="sy1">:</span>    <span class="kw1">in</span>      R16<span class="sy1">,</span> PORTA
+<span class="nu0">0x06</span><span class="sy1">:</span>    <span class="kw1">and</span>     R16<span class="sy1">,</span> R18
+<span class="nu0">0x07</span><span class="sy1">:</span>    <span class="kw1">out</span>     PORTA<span class="sy1">,</span> R16
+         # Jump back to <span class="nu0">0x00</span>
+         # PC = PC <span class="sy1">+</span> k <span class="sy1">+</span> <span class="nu0">1</span> =&gt; <span class="nu0">0x00</span> = <span class="nu0">0x08</span> <span class="sy1">+</span> k <span class="sy1">+</span> <span class="nu0">1</span> =&gt; k = <span class="sy1">-</span><span class="nu0">0x09</span>
+<span class="nu0">0x08</span><span class="sy1">:</span>    rjmp    <span class="sy1">-</span><span class="nu0">9</span></pre>
+
+<p>
+Asa cum se poate vedea, comportamentul de mai sus este unul de tip <em>read-modify-write</em>: pentru a modifica un singur bit dintr-un registru, el trebuie citit si scris inapoi prin instructiuni <code>in</code> si <code>out</code> separate. Pentru a economisi cicli de ceas (deci a mari frecventa maxima la care se poate face toggling pinilor de I/O) setul de instructiuni AVR beneficiaza de instructiunile dedicate I/O <code>sbi</code> (set bit in I/O register) si <code>cbi</code> (clear bit in I/O register). Sa vedem cum ar arata programul de mai sus utilizandu-le:
+</p>
+<pre class="code asm">         <span class="co1">; PORTA |= (1 &lt;&lt; 3)</span>
+<span class="nu0">0x00</span><span class="sy1">:</span>    sbi     PORTA<span class="sy1">,</span> <span class="nu0">3</span>
+         <span class="co1">; PORTA &amp;= ~(1 &lt;&lt; 3)</span>
+<span class="nu0">0x01</span><span class="sy1">:</span>    cbi     PORTA<span class="sy1">,</span> <span class="nu0">3</span>
+         <span class="co1">; jump back to 0x00</span>
+<span class="nu0">0x02</span><span class="sy1">:</span>    rjmp    <span class="sy1">-</span><span class="nu0">3</span></pre>
+
+<p>
+De asemenea, fiindca tot am mentionat stiva, intr-un program AVR ea trebuie sa aiba urmatorul cod de initializare:
+</p>
+<pre class="code asm"><span class="nu0">0x00</span><span class="sy1">:</span>    ldi     R16<span class="sy1">,</span> low<span class="br0">(</span>RAMEND<span class="br0">)</span>
+<span class="nu0">0x01</span><span class="sy1">:</span>    <span class="kw1">out</span>     <span class="kw4">SPL</span><span class="sy1">,</span> R16
+<span class="nu0">0x02</span><span class="sy1">:</span>    ldi     R16<span class="sy1">,</span> high<span class="br0">(</span>RAMEND<span class="br0">)</span>
+<span class="nu0">0x03</span><span class="sy1">:</span>    <span class="kw1">out</span>     SPH<span class="sy1">,</span> R16</pre>
+
+<p>
+<code>RAMEND</code> este un macro definit intr-o biblioteca standard AVR si indica ultima adresa valida din RAM (daca ne uitam peste imaginea cu spatiul de adresa, vom descoperi ca aceasta este <code>0xBF</code>). Din acest motiv pe reduced core AVR nu este necesar sa implementam decat <code>SPL</code>, fiindca <code>SPH</code> ar fi intotdeauna zero.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="detalii-asupra-scheletului-de-laborator">4. Detalii asupra scheletului de laborator</h2>
+<div class="level2">
+
+<p>
+Fata de laboratoarele precedente, scheletul a fost modificat astfel incat <code>decode_unit</code> sa realizeze o decodificare completa a instructiunilor, si sa exporte o serie de semnale de control catre restul modulelor (manunchiul de fire denumit <code>signals</code>). Aceste semnale sunt de tipul <a href="http://en.wikipedia.org/wiki/One-hot" class="urlextern" title="http://en.wikipedia.org/wiki/One-hot" rel="nofollow">one-hot</a> si cuprind:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>CONTROL_MEM_READ</code>, <code>CONTROL_MEM_WRITE</code>: semnale catre <code>bus_interface_unit</code> care se pun pe 1 in momentul decodificarii unui load/store, in functie de starea curenta (in acest caz, in <code>STATE_MEM</code> si, eventual, <code>STATE_WB</code> in cazul in care este o citire, care dureaza 2 cicli de ceas)</div>
+</li>
+<li class="level1"><div class="li"> <code>CONTROL_REG_RD_READ</code>, <code>CONTROL_REG_RD_WRITE</code>, <code>CONTROL_REG_RR_READ</code>: semnale catre <code>register_file_interface_unit</code> care ii semnaleaza, pe starile respective (citire pe <code>STATE_ID</code> si <code>STATE_EX</code>, respectiv scriere pe <code>STATE_WB</code>), faptul ca ar trebui sa acceseze register file-ul.</div>
+</li>
+<li class="level1"><div class="li"> <code>CONTROL_IO_READ</code>, <code>CONTROL_IO_WRITE</code>: semnale de asemenea catre <code>bus_interface_unit</code> care sunt active in momentul in care a fost decodificata o instructiune de acces explicit la I/O (cum ar fi <code>in</code>/<code>out</code>, <code>sbi</code>/<code>cbi</code>, <code>push</code>/<code>pop</code> etc, dar in mod notabil <strong>nu</strong> <code>lds</code>/<code>sts</code>/<code>ldd</code>/<code>std</code>). In cazul unei instructiuni load/store, este datoria lui <code>bus_interface_unit</code> sa decida daca destinatia comunicatiilor sale trebuie sa fie memoria RAM de date sau memoria I/O.</div>
+</li>
+</ul>
+
+<p>
+Sa exemplificam comportamentul pe stari al instructiunii <code>in Rd, A</code>:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>STATE_IF</code>: procesorul trimite <code>program_counter</code> pe linia de adrese a ROM-ului, asteapta raspuns</div>
+</li>
+<li class="level1"><div class="li"> <code>STATE_ID</code>: primeste raspuns de la ROM pe linia <code>instruction</code>, il buffereaza in registrul <code>instr_buffer</code> pe care il forwardeaza catre modulul <code>decode_unit</code>. Aceasta ar trebui sa deduca urmatoarele:</div>
+<ul>
+<li class="level3"><div class="li"> <code>opcode_type</code> va fi <code>TYPE_IN</code></div>
+</li>
+<li class="level3"><div class="li"> <code>opcode_rd</code> va fi decodificat din instructiune</div>
+</li>
+<li class="level3"><div class="li"> <code>opcode_imd</code> va fi decodificat din instructiune sa ia valoarea A</div>
+</li>
+<li class="level3"><div class="li"> <code>opcode_group</code> va fi <code>GROUP_IO_READ</code></div>
+</li>
+<li class="level3"><div class="li"> <code>signals</code> va avea urmatorii biti activati: <code>CONTROL_IO_READ</code>, <code>CONTROL_REG_RD_WRITE</code></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Tot in acest ciclu, <code>bus_interface_unit</code>, cu semnalul <code>CONTROL_IO_READ</code> primit de la unitatea de decodificare de instructiuni, sesizeaza ca trebuie sa citeasca date de la memoria I/O, asa ca seteaza semnalele de control <code>io_cs</code>, <code>io_we</code> si <code>io_oe</code>, iar pe linia <code>addr</code> plaseaza valoarea <code>opcode_imd</code>, asa cum este ea primita de la unitatea de decodificare (este fix A-ul din instructiune).</div>
+</li>
+<li class="level1"><div class="li"> <code>STATE_EX</code>: operatiunea de citire din I/O memory se finalizeaza, iar pe linia <code>data</code>, exportata si catre <code>control_unit</code>, se va afla valoarea din I/O memory, de la adresa A.</div>
+</li>
+<li class="level1"><div class="li"> <code>STATE_MEM</code>: nu se intampla nimic notabil in aceasta stare</div>
+</li>
+<li class="level1"><div class="li"> <code>STATE_WB</code>: <code>register_file_interface_unit</code> depisteaza ca instructiunea curenta necesita writeback in Rd, si pozitioneaza semnalele de <code>cs</code>, <code>we</code> si <code>oe</code> pentru o scriere, la adresa <code>opcode_rd</code> continuta in instructiune, a datelor <code>data</code> citite din memorie, similar cu instructiunea <code>load</code>.</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteimportant">
+Asa cum am vazut mai sus, in timp ce instructiunile load/store acceseaza memoria pe ciclul <code>STATE_MEM</code> (cu prelungire in <code>STATE_WB</code> pentru o citire), instructiunile de acces la I/O o acceseaza in acelasi mod ca si pe registre: in <code>STATE_ID</code> (cu prelungire in <code>STATE_EX</code>) pentru o citire, respectiv in <code>STATE_WB</code> pentru o scriere.<br>Doar astfel ne putem permite un read-modify-write intr-o singura instructiune pe registre din I/O space, precum modificarea SP-ului la operatiile cu stiva, sau a SREG-ului la operatiile aritmetice.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit12" id="exercitii">5. Exercitii</h2>
+<div class="level2">
+
+<p>
+1. <strong>(2.5p)</strong> Implementati logica de selectie a modulului de RAM si a celui de GPIO. Urmariti TODO-urile din modulul bus_interface_unit.<br>2. <strong>(2.5p)</strong> Adaugati logica necesara decodificarii si executarii instructiunilor IN si OUT. Urmariti TODO-urile din decode_unit.<br></p><p></p><div class="notetip">Atentie! In <code>decode_unit.v</code> trebuie realizate urmatoarele operatii:
+<p></p>
+<ul>
+<li class="level1"><div class="li"> Decodificati cele doua instructiuni. </div>
+</li>
+<li class="level1"><div class="li"> Definiti <code>opcode_group</code> pentru <code>IO_READ</code> si <code>IO_WRITE</code>.</div>
+</li>
+<li class="level1"><div class="li"> Implementati logica de interfatare a I/O.</div>
+</li>
+<li class="level1"><div class="li"> Augmentati logica de atribuire a semnalelor <code>CONTROL_REG_RD_WRITE</code> si <code>CONTROL_REG_RR_READ</code>.</div>
+</li>
+</ul>
+
+<p>
+
+</p></div><p></p>
+<p></p><div class="notewarning">
+Urmariti pasii care se executa pentru instructiunile <code>in</code> si <code>out</code>. S-ar putea sa fie nevoie sa mai faceti mici modificari in <code>control_unit</code> pentru a face forwarding corect din I/O memory in registre si invers.<br>
+</div><p></p>
+3. <strong>(2.5p) </strong> Scrieti un program care incarca valoarea 42 in registrul R19, apoi o scrie in PORTA, apoi incarca valoarea din PORTA in R20. Simulati-l.<br><p></p><div class="notetip">Din perspectiva programului, <code>PORTA</code> este doar o adresa de memorie din spatiul I/O. Identificati ce adresa corespunde lui <code>PORTA</code>.
+</div><p></p>
+4. <strong>(2.5p)</strong> Completati fișierul de constangeri <em>cpu.ucf</em> astfel incat pinii portului A sa legati la led-urile de pe <a href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf" rel="nofollow">placa de dezvoltare</a> atfel: PA0 - LED0, PA1 - LED1, …, PA7 - LED7. Sintetizati codul si incarcati-l pe placa.
+<p></p>
+<ol>
+<li class="level1"><div class="li"> <strong>(Bonus 2p)</strong> Scrieti un program care sa aprinda led-urile in urmatoarea secventa, apoi sintetizati-l si incarcati-l pe placa:<br>
+</div>
+</li>
+</ol>
+<pre class="code">  t0   *-------
+  t1   -*------
+  t2   --*-----
+  t3   ---*----
+  t4   ----*---
+  t5   -----*--
+  t6   ------*-
+  t7   -------*
+  </pre>
+
+<p>
+</p><p></p><div class="noteclassic">
+Pentru a vedea efectul programului va trebui sa incetiniti semnalul de ceas. Puteti realiza asta modificand modulul cpu astfel incat semnalul de ceas care intra, <code>clk</code>, sa comute un semnal <code>_clk</code> o data la fiecare 1000000 de fronturi pozitive. Toate modulele instantiate in cpu vor trebui sa primeasca semnalul <code>_clk</code> in loc de semnalul <code>clk</code>.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit13" id="resurse">6. Resurse</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet_lab_6.zip" class="media mediafile mf_zip" title="lab:cn2:schelet_lab_6.zip (799.4 KB)"> Schelet laborator</a></div>
+</li>
+</ul>
+
+
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow"> Datasheet ATTiny20</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow"> Setul de Instructiuni AVR</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf" rel="nofollow"> Datasheet Digilent Nexys</a></div>
+</li>
+</ul>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab06.txt</bdi> · Last modified: 15.03.2015 (external edit)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 6 - GPIO 1_ Output [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

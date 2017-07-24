@@ -1,0 +1,38 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu_test_isim_beh.exe" -prj "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu_test_beh.prj" "work.cpu_test" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/state_machine.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/reg_file_interface_unit.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/decode_unit.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/bus_interface_unit.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/sram.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/rom.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/register_file.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/control_unit.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/alu.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu.v" into library work
+Analyzing Verilog file "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu.v" Line 96: Port debug_opcode_group is not connected to this instance
+Completed static elaboration
+Compiling module state_machine
+Compiling module decode_unit(INSTR_WIDTH=16)
+Compiling module reg_file_interface_unit(INSTR_WI...
+Compiling module bus_interface_unit(INSTR_WIDTH=1...
+Compiling module control_unit(INSTR_WIDTH=16,DATA...
+Compiling module alu(DATA_WIDTH=8)
+Compiling module dual_port_sram(DATA_WIDTH=8,ADDR...
+Compiling module rom(DATA_WIDTH=16,ADDR_WIDTH=10)
+Compiling module sram(DATA_WIDTH=8,ADDR_WIDTH=7)
+Compiling module cpu
+Compiling module cpu_test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable C:/Users/student/Desktop/334CA_BOSPY_SI_Alina/schelet/cpu_test_isim_beh.exe
+Fuse Memory Usage: 28136 KB
+Fuse CPU Usage: 811 ms

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-11-02T00:56:45+0200">
+<meta name="keywords" content="lab,cn2,lab04">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab04">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab04","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab04"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#introducere">Introducere</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#program-counter-pc">Program Counter (PC)</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#salturi-neconditionate">Salturi neconditionate</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#salturi-conditionate-registrul-sreg">Salturi conditionate. Registrul SREG</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#instructiuni-de-salt-in-avr">Instructiuni de salt in AVR</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#exercitii">Exercitii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#resurse">Resurse</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-4-instruction-set-architecture-3">Laboratorul 4 - Instruction Set Architecture 3</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:andrei.musat@cti.pub.ro" class="mail" title="andrei.musat@cti.pub.ro">Mușat Andrei</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 02.11.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 02.11.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="introducere">Introducere</h2>
+<div class="level2">
+
+<p>
+In acest laborator vom studia o noua categorie de instructiuni din cadrul ISA: instructiunile de control. Aceste instructiuni sunt importante deoarece determina ordinea in care sunt executate celelalte instructiuni din cadrul unui program. Aceasta ordine de executie este determinata de salturi la diferite adrese in memoria ROM unde se afla secventele de program.
+</p>
+
+<p>
+In functie de modul in care se realizeaza acest salt, instructiunile de control pot fi impartite in mai multe categorii:
+</p>
+<ul>
+<li class="level1"><div class="li"> Salturi neconditionate (<code>jump</code>): cele care determina continuarea rularii de la o anumita adresa (instructiune)</div>
+</li>
+<li class="level1"><div class="li"> Salturi conditionate (<code>branch</code>/alegeri): continuarea executiei de la o anumita instructiune doar daca se indeplineste o anumita conditie</div>
+</li>
+<li class="level1"><div class="li"> Salturi relative: adresa la care se sare este calculata pe baza valorii curente a PC-ului</div>
+</li>
+<li class="level1"><div class="li"> Salturi absolute: adresa la care se sare este cea specificata in instructiune, indiferent de valoarea PC-ului</div>
+</li>
+<li class="level1"><div class="li"> Apel de functie/rutina (<code>call</code>, <code>ret</code>): un salt special la un anumit grup de instructiuni “indepartat”. Dupa terminarea executiei acelor instructiuni, se revine la executia normala a codului, continuand de la adresa unde s-a facut apelul de functie. Diferenta fata de tipurile precedente de salt este ca acelea erau “one-way”, pe cand acesta este si cu intoarcere.</div>
+</li>
+<li class="level1"><div class="li"> Oprirea rularii: oprirea neconditionata a executiei (<code>halt</code>) este considerata tot o instructiune de control.</div>
+</li>
+</ul>
+
+<p>
+In continuare, ne vom ocupa de instructiunile de salt neconditionat si salt conditionat.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="program-counter-pc">Program Counter (PC)</h2>
+<div class="level2">
+
+<p>
+Pentru a intelege efectul salturilor si modul in care acestea functioneaza, trebuie mai intai sa intelegem ce este un program counter si care este rolul sau.
+</p>
+
+<p>
+Secventa de cod pe care o are de executat un procesor se afla de cele mai multe ori stocata intr-o memorie de tip ROM conectata la acesta. Pentru a decodifica si executa corect instructiunile din acea memorie, procesorul trebuie sa stie tot timpul care este adresa de la care trebuie adusa o instructiune in etapa de fetch. Aceasta sarcina este indeplinita de registrul <code>PC</code> (program counter). Rolul acestui registru este de a retine adresa de la care trebuie adusa urmatoarea instructine din memorie. Mai este numit si Instruction Pointer deoarece functioneaza exact ca un pointer: retine o adresa si ajuta procesorul sa obtina datele stocate la acea adresa.
+</p>
+
+<p>
+In mod normal, de fiecare data cand procesorul se afla in stagiul <code>ID</code> al pipeline-ului, dupa ce instructiunea a fost adusa pentru decodificare, program counter-ul va fi incrementat. Totusi, exista si alte situatii in care valoarea program counter-ului poate fi modificata. De cele mai multe ori, instructiunile de salt sunt responsabile pentru modificarea PC-ului in afara stagiului de instruction decode.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="salturi-neconditionate">Salturi neconditionate</h2>
+<div class="level2">
+
+<p>
+Salturile neconditionate sunt instructiuni ce modifica valoarea program counter-ului cu o valoare fixa. Acest tip de salturi nu tine cont de evenimente produse in timpul rulari sau de anumite registre ce tin informatii legate de operatiile executate recent de catre procesor.
+</p>
+
+<p>
+In general, instructiunile de salt neconditionate sunt codificate ca instructiuni cu un singur operand, operandul fiind o constanta care determina cu cat se modifica program counter-ul (peste cate adrese va sari).
+</p>
+
+<p>
+Acest tip de salturi este in general folosit atunci cand dorim sa sarim peste o zona de memorie deoarece contine implementarea unei rutine pe care nu dorim sa o executam sau daca dorim sa evitam o serie de instructiuni ce prezinta un posibil hazard. In limbajele high level, saltul neconditionat este cel mai des reprezentat prin tag-uri <code>GOTO</code>.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="salturi-conditionate-registrul-sreg">Salturi conditionate. Registrul SREG</h2>
+<div class="level2">
+
+<p>
+La polul opus fata de salturile neconditionate se afla cele conditionate. Acestea au acelasi efect, acela de a modifica valoarea program counter-ului, insa nu il vor modifica de fiecare data. Atunci cand se executa o instructiune de salt conditionat, se verifica anumite criterii, in functie de tipul instructiunii. Daca acele criterii sunt indeplinite, se va realiza saltul. Altfel, program counter-ul continua sa fie incrementat in mod normal, in stagiul <code>ID</code>. Salturile conditionale sunt cel mai usor asemanate cu instructiunile de tip <code>if</code> din limbajele de programare de nivel inalt.
+</p>
+
+<p>
+Deoarece aceste instructiuni verifica indeplinirea unor conditii pentru a executa salturi, este nevoie de un mod de a retine starea parametrilor verificati. De cele mai multe ori, acesti parametrii reprezinta evenimente ce au avut loc in urma executarii unor operatii de catre UAL: rezultatul a fost egal sau nu cu zero, a avut loc un overflow, rezultatul este negativ sau pozitiv etc. Pentru a retine toate aceste evenimente se folosesc <code>flag-uri</code> grupate in ceea ce se numeste <code>processor status register</code> sau <code>SREG</code> (este oarecum echivalentul registrului <code>flags</code> din arhitectura x86).
+</p>
+
+<p>
+Printre flag-urile des folosite din SREG se afla:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>Z</code> (Zero) - indica daca rezultatul unei operatii aritmetice este zero</div>
+</li>
+<li class="level1"><div class="li"> <code>C</code> (Carry) - indica faptul ca s-a realizat un transport la nivelul bitului cel mai semnificativ in cazul unei operatii aritmetice. Altfel spus, a avut loc o depasire in aritmetica modulo N considerata. In procesorul nostru pe 8 biti, 255 + 1, desi ar trebui sa faca 256, face 0 din cauza aritmeticii modulo 256 (2<sup>8</sup>). Pentru a diferentia dintre un 0 aparut “pe bune” si unul cauzat de o depasire, se utilizeaza acest semnal de carry.</div>
+</li>
+<li class="level1"><div class="li"> <code>V</code> (Overflow) - arata ca, in cazul unei operatii aritmetice cu semn, complementul fata de doi al rezultatului nu ar incapea in numarul de biti folositi pentru a reprezenta operanzii. Cu alte cuvinte, se poate intampla ca adunand doua numere pozitive, sa obtinem unul negativ (<code>127<sub>signed</sub> + 1<sub>signed</sub> = -128<sub>signed</sub></code>), dar si adunand doua numere negative putem obtine unul pozitiv (<code>-128<sub>signed</sub> + (-1)<sub>signed</sub> = +127<sub>signed</sub></code>). Evident, rezultatul nu este corect in aceste situatii, si semnalarea se face prin flag-ul de overflow.</div>
+</li>
+<li class="level1"><div class="li"> <code>N</code> (Negative) - semnul rezultatului unei operatii aritmetice (este pur si simplu valoarea bitului de semn al rezultatului)</div>
+</li>
+<li class="level1"><div class="li"> <code>S</code> (Sign) - este un flag unic AVR, calculat dupa formula <code>S = N xor V</code>, ce reprezinta “care ar fi trebuit sa fie semnul corect al rezultatului”. Cu alte cuvinte, daca <code>N == 1</code>, dar si <code>V == 1</code>, inseamna ca rezultatul este negativ, dar din cauza unei depasiri. S este setat in acest caz pe 0, semnaland ca semnul “corect” al operatiei ar fi trebuit sa fie pozitiv.</div>
+</li>
+</ul>
+
+<p>
+Scrierea bitilor cu valorile corespunzatoare din <code>SREG</code> revine UAL-ului. La executia unei operatii, se calculeaza si valorile fiecarui flag ce poate fi afectat de acel tip de operatie.<br>Practic, ca si la arhitectura x86, putem considera ca <code>SREG</code> este un registru global, a carui valoare este setata de ultima instructiune aritmetico-logica executata de procesor.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Pentru a vedea specificatiile Atmel asupra <code>SREG</code>, consultati <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow">datasheet-ul ISA-ului</a>. Modul in care acesta este modificat de fiecare instructiune este de asemenea descris in pagina corespunzatoare acesteia.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit6" id="instructiuni-de-salt-in-avr">Instructiuni de salt in AVR</h2>
+<div class="level2">
+
+<p>
+Exista doua tipuri de salturi, in functie de adresa destinatie:
+</p>
+<ul>
+<li class="level1"><div class="li"> la adrese <em>absolute</em>, in care adresa destinatie a saltului este continuta in valoarea imediata din instructiune</div>
+</li>
+<li class="level1"><div class="li"> salturi <em>autorelative</em>, in care adresa destinatie este codificata ca fiind diferenta dintre program counter-ul curent (adresa instructiunii de salt) si adresa destinatiei. Avantajul este ca, pentru salturi apropiate, se salveaza biti pentru codificarea adresei, dar dezavantajul este ca nu se poate sari prea departe.</div>
+</li>
+</ul>
+
+<p>
+La AVR, salturile conditionate (branch-urile) sunt intotdeauna autorelative, iar cele neconditionate (jump-urile) vin in doua “arome”: unele relative (<code>rjmp</code> pe 16 biti), si altele absolute (<code>jmp</code> pe 32 de biti, pe care este dificil sa o implementam pe procesorul nostru cu instructiuni de 16 biti). In cazul instructiunii <code>jmp</code>, adresa destinatie este o valoare imediata pe 22 de biti, permitand saltul la orice adresa in spatiul de 4M (de fapt, 8 megabytes, tinand cont ca fiecare instructiune are 16 biti). Pe de alta parte, <code>rjmp</code> cu cei 12 biti de valoare imediata, poate executa un salt la “doar” +/- 2K instructiuni relativ la cea curenta.<br>Inca si mai ciudat, exista si <code>call</code>/<code>rcall</code>, prin care se poate specifica adresa unei functii atat ca valoare absoluta, cat si relativa. Considerentele sunt aceleasi: economisirea memoriei de instructiuni (32 de biti pentru <code>call</code> vs 16 pentru <code>rcall</code>), dar si simplificarea logicii de instruction fetch si decode.<br>Din alt considerent, exista jump-uri si branch-uri la adrese:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>imediate</em>, continute in instructiune</div>
+</li>
+<li class="level1"><div class="li"> <em>indirecte</em>, continute intr-un registru, care trebuie citit in prealabil.</div>
+</li>
+</ul>
+
+<p>
+In acest laborator vom implementa doar salturi la adrese <strong>imediate</strong>.
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="exercitii">Exercitii</h2>
+<div class="level2">
+
+<p>
+In laboratorul de astazi vom implementa cateva dintre instructiunile de jump si branching mentionate. Pentru fiecare instructiune va trebui sa aduceti modificari urmatoarelor fisiere:
+</p>
+<ul>
+<li class="level1"><div class="li"> <code>decode_unit.v</code> - aici se implementeaza logica pentru decodificarea instructiunilor</div>
+</li>
+<li class="level1"><div class="li"> <code>control_unit.v</code> - controller-ul este cel care se ocupa de modificarea program counter-ului. Pentru instructiunile de branch si jump, consideram ca aceasta modificare se face in starea de <code>EXECUTE</code></div>
+</li>
+<li class="level1"><div class="li"> <code>alu.v</code> - implementarea logicii de calcul a flag-urilor verificate la operatiile de branch.</div>
+</li>
+</ul>
+
+<p>
+De asemenea, folositi <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow">datasheet-ul</a> pentru a identifica opcode-ul instructiunilor si bitii corespunzatori operanzilor.
+</p>
+
+<p>
+1) <strong>2p</strong> Implementati instructiunea <code>JMP</code> - salt neconditionat. Aceasta operatie are un singur operand: numarul de instructiuni peste care trebuie sa sara program counter-ul.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Atentie! In ISA-ul de AVR, aceasta instructiune este codificata pe 32 de biti. Deoarece noi ne aflam pe arhitectura redusa ATTiny, ne vor interesa doar primii 16 bitii ce codifica instructiunea. Alternativ, (read <em>mai bine</em>) puteti opta pentru implementarea instructiunii <code>RJMP</code> care, in arhitectura redusa, poate adresa toata memoria, fiind astfel acelasi lucru cu <code>JMP</code> din punct de vedere functional.
+</div><p></p>
+<p></p>
+
+<p>
+2) <strong>2.5p</strong> Implementati instructiunea <code>BREQ</code> (<strong>BR</strong>anch <strong>EQ</strong>ual). Aceasta instructiune va face program counter-ul sa sara peste k instructiuni daca flag-ul <code>ZERO</code> din <code>SREG</code> are valoarea 1. Asigurati-va ca operatiile <code>ADD</code> si <code>SUB</code> din ALU calculeaza corect acest flag.
+</p>
+
+<p>
+3) <strong>2.5p</strong> Implementati instructiunea <code>BRVC</code> (<strong>BR</strong>anch o<strong>V</strong>erflow <strong>C</strong>lear). Asemanator cu BREQ, aceasta instructiune va realiza un branch doar daca flag-ul 'OVERFLOW' este 0.
+</p>
+
+<p>
+4) <strong>3p</strong> Implementati instructiunea <code>BRBS</code> (<strong>BR</strong>anch <strong>B</strong>it <strong>S</strong>et). BRBS este un exemplu de instructiune de control cu 2 operanzi. Operandul in plus este bit-ul (flag-ul) din <code>SREG</code> pe care dorim sa il verificam. Aceasta instructiune va face un salt doar daca bit-ul selectat este 1.
+</p>
+
+<p>
+<strong>BONUS 2p</strong> Consultati datasheet-ul pentru a gasi descrierea instructiunii <code>CP</code> (compare). CP ne spune daca doua numere sunt egale. Cu alte cuvinte, este un <code>SUB</code> care sare peste stagiile de MEM si de Write Back (adica nu salveaza rezultatul), dar care scrie bit-ul Z din SREG cu valoarea corespunzatoare in functie de rezultat. Aceasta instructiune este folosita pentru a implementa bucle (for, while, etc.).
+</p>
+
+<p>
+Implementati aceasta instructiune si scrieti in memoria ROM codul pentru o bucla for ce realizeaza 3-4 iteratii.
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="resurse">Resurse</h2>
+<div class="level2">
+
+<p>
+[0] <a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet_lab_4.zip" class="media mediafile mf_zip" title="lab:cn2:schelet_lab_4.zip (39.7 KB)"> Scheletul de lab</a>
+</p>
+
+<p>
+[1] <a href="http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf" class="urlextern" title="http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf" rel="nofollow"> We &lt;3 The Datasheet</a>
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab04.txt</bdi> · Last modified: 02.11.2015 by <bdi>Lucia Cojocaru</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 4 - Instruction Set Architecture 3 [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

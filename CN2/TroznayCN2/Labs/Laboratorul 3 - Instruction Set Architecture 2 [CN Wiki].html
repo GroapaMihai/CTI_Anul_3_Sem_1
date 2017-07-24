@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-28T21:47:03+0200">
+<meta name="keywords" content="lab,cn2,lab03">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab03">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab03","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab03"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#friendly-reminders">0. Friendly reminders</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#overview">1. Overview</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#ce-este-memoria">1.1. Ce este memoria?</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#ram">1.1.1. RAM</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#legatura-memorie-microprocesor">1.2. Legatura memorie-microprocesor</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#system-bus">System bus</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#scheletul-de-cod">2. Scheletul de cod</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#memoria-procesorului">2.1 Memoria procesorului</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#magistrala-de-acces-la-memoria-de-date">2.2 Magistrala de acces la memoria de date</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#stagii-de-pipeline">2.3 Stagii de pipeline</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#exercitii">3. Exercitii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#resurse">Resurse</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-3-instruction-set-architecture-2">Laboratorul 3 - Instruction Set Architecture 2</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:lucia.mcojocaru@gmail.com" class="mail" title="lucia.mcojocaru@gmail.com">Lucia Cojocaru</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 23.10.2015</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 28.10.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="friendly-reminders">0. Friendly reminders</h2>
+<div class="level2">
+
+<p>
+Cum citim un datasheet? <a href="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" class="urlextern" title="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" rel="nofollow">ATTiny20</a>
+</p>
+
+<p>
+Mai jos avem reprezentarea binara a instructiunii <code>add R5, R3</code> (sau, de fapt, <code>add R21, R19</code>, dupa cate vom vedea in continuare):
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 centeralign">  Bit index  </th><th class="col1 centeralign">  15  </th><th class="col2 centeralign">  14  </th><th class="col3 centeralign">  13  </th><th class="col4 centeralign">  12  </th><th class="col5 centeralign">  11  </th><th class="col6 centeralign">  10  </th><th class="col7 centeralign">  9  </th><th class="col8 centeralign">  8  </th><th class="col9 centeralign">  7  </th><th class="col10 centeralign">  6  </th><th class="col11 centeralign">  5  </th><th class="col12 centeralign">  4  </th><th class="col13 centeralign">  3  </th><th class="col14 centeralign">  2  </th><th class="col15 centeralign">  1  </th><th class="col16 centeralign">  0  </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  Bit value  </td><td class="col1 centeralign">  0  </td><td class="col2 centeralign">  0  </td><td class="col3 centeralign">  0  </td><td class="col4 centeralign">  1  </td><td class="col5 centeralign">  1  </td><td class="col6 centeralign">  1  </td><td class="col7 centeralign">  1  </td><td class="col8 centeralign">  1  </td><td class="col9 centeralign">  0  </td><td class="col10 centeralign">  1  </td><td class="col11 centeralign">  0  </td><td class="col12 centeralign">  1  </td><td class="col13 centeralign">  0  </td><td class="col14 centeralign">  0  </td><td class="col15 centeralign">  1  </td><td class="col16 centeralign">  1  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  Bit significance  </td><td class="col1 centeralign" colspan="6">  opcode  </td><td class="col7 centeralign">  Rd  </td><td class="col8 centeralign">  Rr  </td><td class="col9 centeralign" colspan="4">  Rd  </td><td class="col13 centeralign" colspan="4">  Rr  </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+Fiindca register file-ul procesorului nostru (ATtiny20) are doar 16 registre, putem ignora bitii <code>Rr</code> si <code>Rd</code> de pe pozitiile 9 si 8 (Atmel garanteaza ca, din motive de compatibilitate, vor fi mereu setati pe 1, sau, echivalent, vor fi folosite numai registrele <code>R16</code> → <code>R31</code>).
+</p>
+
+<p>
+Mereu filtrati de la instructiunile cele mai generale (cele care au partea constanta cea mai mare) pana la cele mai putin generale (au partea constanta mai mica).<br>Adica? dintre opcode-ul 1) 0000 1111 1010 0101 si opcode-ul 2) 1111 0101 10rr rddd mai putin generala este 1.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Veti observa ca in datasheet veti gasi opcode-uri pe 16 si pe 32 de biti (pentru instructiuni). In cadrul labratoarelor de CN veti folosi doar instructiuni pe 16 biti. De ce? Pentru ca noi implementam o versiune mai restransa a procesorului, care nu are acces la toate resursele procesorului. De exemplu nu avem 32 de registre locale, ci doar 16;
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit4" id="overview">1. Overview</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit5" id="ce-este-memoria">1.1. Ce este memoria?</h3>
+<div class="level3">
+
+<p>
+Memoria este un circuit capabil sa stocheze date pentru o anumita perioada de timp. In general, ierarhia de memorii intr-un calculator are urmatoarea structura:<br><a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/computer_memory_hierarchy.svg.png?id=lab%3Acn2%3Alab03" class="media" title="lab:cn2:computer_memory_hierarchy.svg.png"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/computer_memory_hierarchy.svg.png" class="mediacenter" alt="" width="500"></a>
+</p>
+
+<p>
+De-a lungul anilor s-au dezvoltat mai multe tehnologii. La inceput se foloseau lampi, tuburi Williams, linii de mercur, miez de ferita. Acestea insa s-au dovedit ineficiente: consumau mult, degajau multa caldura, ocupau mult spatiu etc. In momentul in care tehnologia a permis, s-a trecut la condensatoare si tranzistori.
+</p>
+
+<p>
+Exemple de memorii
+</p>
+<ul>
+<li class="level1"><div class="li"> statice: SRAM (pe acestea le vom folosi in cadrul laboratoarelor de CN).</div>
+</li>
+<li class="level1"><div class="li"> dinamice (DRAM)</div>
+</li>
+<li class="level1"><div class="li"> </div>
+</li>
+</ul>
+
+<p>
+Mai multe detalii: <a href="http://en.wikipedia.org/wiki/Dynamic_random-access_memory" class="urlextern" title="http://en.wikipedia.org/wiki/Dynamic_random-access_memory" rel="nofollow">http://en.wikipedia.org/wiki/Dynamic_random-access_memory</a>
+</p>
+
+</div>
+
+<h4 class="sectionedit6" id="ram">1.1.1. RAM</h4>
+<div class="level4">
+
+<p>
+</p><p></p><div class="noteclassic">
+Reminder: <a href="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" rel="nofollow">https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01</a>
+
+</div><p></p>
+<p></p>
+
+<p>
+Inca de la inceputurile calculatoarelor s-a pus problema cum sa fie stocate datele si instructiunile unui program. Printre primele solutii gasite au fost cartelele de hartie perforate, apoi benzile magnetice iar, dupa mari progrese tehnologice, chip-uri integrate. Din aceasta categorie trebuie mentionate doua ramuri: SRAM si DRAM. SRAM (static RAM) este foarte rapid dar are un consum de putere si pret foarte mare, deci are dimensiuni mici, fiind folosit in general pentru memoria cache. DRAM (dynamic RAM) este mai lent insa are un consum de putere si pret mult mai mic, deci poate avea si dimensiuni foarte mari, deci este folosit in memoria principala. Numele de <em>dynamic</em> RAM vine de la faptul ca datele se sterg dupa o perioada de timp, chiar daca alimentarea nu este intrerupta, si ele trebuie reimprospatate (refresh) periodic. 
+</p>
+
+<p>
+S-a pus si problema transportului datelor intre procesor si memoria RAM. Pentru aceasta au fost dezvoltate mai multe interfete. O astfel de interfata folosita in sistemele cu procesor Intel a fost <strong>Front Side Bus</strong>. Desi arhitectura magistralei a fost schimbata (<a href="http://en.wikipedia.org/wiki/HyperTransport" class="urlextern" title="http://en.wikipedia.org/wiki/HyperTransport" rel="nofollow">HyperTransport</a>, <a href="http://en.wikipedia.org/wiki/Intel_QuickPath_Interconnect" class="urlextern" title="http://en.wikipedia.org/wiki/Intel_QuickPath_Interconnect" rel="nofollow">QuickPathInterconnect</a>) numele de Front Side Bus a ramas pentru magistrala ce leaga procesorul de memoria principala a sistemului. <br>
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="legatura-memorie-microprocesor">1.2. Legatura memorie-microprocesor</h3>
+<div class="level3">
+
+</div>
+
+<h4 class="sectionedit8" id="system-bus">System bus</h4>
+<div class="level4">
+
+<p>
+<a href="http://en.wikipedia.org/wiki/System_bus" class="urlextern" title="http://en.wikipedia.org/wiki/System_bus" rel="nofollow">System bus</a> este, pe scurt, este o magistrala care conecteaza procesorul de memoria principala si de periferice. Magistrala de sistem trebuie sa aiba, in general, 3 componente:
+</p>
+<ul>
+<li class="level1"><div class="li"> linii de <strong>control</strong></div>
+</li>
+<li class="level1"><div class="li"> linii de <strong>adrese</strong></div>
+</li>
+<li class="level1"><div class="li"> linii de <strong>date</strong>.</div>
+</li>
+</ul>
+
+<p>
+Pentru a asigura comunicatia dintre procesor si memorie+periferice, solutia pe care o vom adopta este de a le lega pe toate intr-o topologie de <strong>magistrala</strong>.<br>Aceasta este un mediu <em>partajat</em> de comunicatie, in sensul ca exista un singur set de semnale (de control, date si adrese) la care au acces toate modulele conectate (spre deosebire de o topologie <strong>point-to-point</strong>, unde comunicatia este “privata” si nu “publica”, adica exista o legatura separata intre fiecare modul care doreste sa comunice cu altul).<br>In general, pentru comunicatia mai multor module pe o magistrala, trebuie stabilit un protocol de comunicatie (trebuie evitata situatia in care exista mai multi vorbitori concomitenti pe aceeasi linie, fiindca <a href="http://wiki.nesdev.com/w/index.php/Bus_conflict" class="urlextern" title="http://wiki.nesdev.com/w/index.php/Bus_conflict" rel="nofollow">acest gen de conflicte</a> poate conduce catre scurtcircuite si alte probleme de natura electrica.<br>In practica, exista un <em>bus master</em> (care, nu intamplator, in cazul nostru va fi CPU-ul), si mai multi <em>bus slaves</em>. Momentan, in laboratorul de astazi, singurul slave de pe system bus este memoria, insa, asa cum spuneam anterior, atat register file-ul, cat si perifericele si modulele de I/O <a href="http://en.wikipedia.org/wiki/Memory-mapped_I/O" class="urlextern" title="http://en.wikipedia.org/wiki/Memory-mapped_I/O" rel="nofollow">sunt mapate in spatiul de adresa</a>.<br>Un exemplu de system bus este <a href="http://en.wikipedia.org/wiki/Wishbone_%28computer_bus%29" class="urlextern" title="http://en.wikipedia.org/wiki/Wishbone_%28computer_bus%29" rel="nofollow">Wishbone</a>, un standard open-source folosit in multe <a href="http://en.wikipedia.org/wiki/Semiconductor_intellectual_property_core" class="urlextern" title="http://en.wikipedia.org/wiki/Semiconductor_intellectual_property_core" rel="nofollow">design-uri IP</a> de pe site-ul <a href="http://opencores.org/" class="urlextern" title="http://opencores.org/" rel="nofollow">OpenCores</a>. De asemenea, <a href="http://en.wikipedia.org/wiki/Industry_Standard_Architecture" class="urlextern" title="http://en.wikipedia.org/wiki/Industry_Standard_Architecture" rel="nofollow">ISA bus</a> este un exemplu de system bus, folosit in stramosul calculatoarelor desktop moderne, <a href="http://en.wikipedia.org/wiki/IBM_Personal_Computer" class="urlextern" title="http://en.wikipedia.org/wiki/IBM_Personal_Computer" rel="nofollow">IBM PC</a>.<br>Mai multe detalii despre cum se leaga componentele intr-un procesor veti studia la PM semestrul viitor.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+<strong>Not important, just FYI</strong>: In sistemele desktop, system bus-ul, adica o singura magistrala general-purpose, a fost demult inlocuita cu o ierarhie de magistrale (unele locale, altele externe) de viteze si latimi de banda diferite. Astfel, pentru asigurarea conectivitatii la memorie, un CPU x86 foloseste un <strong>memory controller hub</strong>, care se ocupa de interfatarea propriu-zisa (generarea semnalelor de control) pentru memoria SDRAM conectata pe placa de baza.<br>Istoric, acest controller de memorie s-a aflat pe un chip extern procesorului, dar situat pe placa de baza in apropierea acestuia, numit <a href="http://en.wikipedia.org/wiki/Northbridge_%28computing%29" class="urlextern" title="http://en.wikipedia.org/wiki/Northbridge_%28computing%29" rel="nofollow">northbridge</a>.<br>Magistrala de mare viteza dintre CPU si northbridge se numeste <a href="http://en.wikipedia.org/wiki/Front-side_bus" class="urlextern" title="http://en.wikipedia.org/wiki/Front-side_bus" rel="nofollow">front-side bus</a> (sau FSB, pe scurt) pentru sistemele Intel, sau <a href="http://en.wikipedia.org/wiki/Athlon#General_architecture" class="urlextern" title="http://en.wikipedia.org/wiki/Athlon#General_architecture" rel="nofollow">EV6</a>, pentru implementarea cu acelasi rol de la AMD (aceasta este referita, totusi, informal, tot ca FSB).
+<p></p>
+
+<p>
+Despre FSB putem afirma urmatoarele:
+</p>
+<ol>
+<li class="level1"><div class="li"> viteza este de ordinul <abbr title="Megahertz">MHz</abbr> sau <abbr title="Gigahertz">GHz</abbr>: exemplu: pentru un Pentium 4 care ruleaza la o frecventa de 2.4 <abbr title="Gigahertz">GHz</abbr>, FSB-ul poate rula la 400Mhz. Diferenta dintre CPU si FSB este in cazul acesta de 6:1.</div>
+</li>
+<li class="level1"><div class="li"> cu cat diferenta dintre frecventa CPU si frecventa FSB este mai mica, cu atat bottleneck-ul este mai mic, iar performantele procesorului in cadrul sistemului sunt mai mari.</div>
+</li>
+<li class="level1"><div class="li"> la ce va ajuta in viata reala? Degeaba va cumparati un procesor performant daca liniile prin care comunica acesta cu celelalte dispozitive sunt lente. Daca faceti designul unui sistem gandindu-va si la magistrale.</div>
+</li>
+</ol>
+
+<p>
+Mai nou (as of 2014), atat Intel, cat si AMD au renuntat la ideea cu controller-ul de memorie extern, situat pe northbridge, si au trecut la integrarea acestuia pe aceeasi pastila de siliciu ca si CPU-ul.<br>Efectele acestei decizii au fost, insa, diferite pentru cele doua companii.
+</p>
+<ul>
+<li class="level1"><div class="li"> Intel a renuntat de tot la northbridge, facand “repurposing” si pentru <a href="http://en.wikipedia.org/wiki/Southbridge_%28computing%29" class="urlextern" title="http://en.wikipedia.org/wiki/Southbridge_%28computing%29" rel="nofollow">southbridge</a> ca singurul chip din chipset, pe care l-a transformat in <a href="http://en.wikipedia.org/wiki/Platform_Controller_Hub" class="urlextern" title="http://en.wikipedia.org/wiki/Platform_Controller_Hub" rel="nofollow">platform controller hub</a>.</div>
+</li>
+<li class="level1"><div class="li"> AMD, pe de alta parte, a mentinut arhitectura northbridge-southbridge, pastrand din functionalitatea northbridge-ului doar aceea de controller de <a href="http://en.wikipedia.org/wiki/PCI_Express" class="urlextern" title="http://en.wikipedia.org/wiki/PCI_Express" rel="nofollow">PCI express</a>.</div>
+</li>
+</ul>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit9" id="scheletul-de-cod">2. Scheletul de cod</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit10" id="memoria-procesorului">2.1 Memoria procesorului</h3>
+<div class="level3">
+
+<p>
+Procesorul pe care il implementam la laborator are o arhitectura de tip <a href="https://en.wikipedia.org/wiki/Harvard_architecture" class="urlextern" title="https://en.wikipedia.org/wiki/Harvard_architecture" rel="nofollow"> Harvard</a>. Asta inseamna ca vom avea 2 memorii separate pentru instructiuni si date.
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong> Memoria de instructiuni</strong> este de tip ROM (512 bytes) si se gaseste <em>rom.v</em></div>
+<ul>
+<li class="level1"><div class="li"> adresele sunt pe 8 biti</div>
+</li>
+<li class="level1"><div class="li"> datele au 16 biti (adica lungimea unei instructiuni)</div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <strong> Memoria de date</strong> este un SRAM sincron de tip pipeline (128 bytes) si se gaseste in <em>sram.v</em></div>
+<ul>
+<li class="level1"><div class="li"> adresele sunt pe 7 biti</div>
+</li>
+<li class="level1"><div class="li"> datele au 8 biti (= dimensiunea unui registru)</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Procesorul lucreaza cu 16 registre “general purpose” de 8 biti pe care le gasiti declarate in <em>register_file.v</em>. Teoretic exista 32 registre, insa primele 16 nu pot fi folosite. Astfel cand scriem cod AVR vom putea folosi numai registrele din intervalul R16 → R31.
+</p>
+
+<p>
+Totusi, dupa cum ati vazut in laboratorul trecut, nu vom lucra direct cu aceste registre, ci vom folosi registrul sursa Rr si registrul sursa/destinatie Rd. Acestia in spate adreseaza cele 16 R. Puteti vedea acest lucru in sursa <em>register_file.v</em> in care este implementat un <a href="https://en.wikipedia.org/wiki/Dual-ported_RAM" class="urlextern" title="https://en.wikipedia.org/wiki/Dual-ported_RAM" rel="nofollow"> Dual Port SRAM</a>. Acesta garanteaza accesul concomitent (intr-un ciclu de ceas) atat la Rd, cat si la Rr.
+</p>
+
+<p>
+Driver-ul de memorie pentru modulul dual_port_sram este reg_file_interface_unit definit in fisierul <em>reg_file_interface_unit.v</em>. Aici vom seta bitii de cs, we si oe, precum si liniile de date si adrese ce sunt necesare pentru lucrul cu memoria.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">
+Accesul la o memorie SRAM cu magistrala de date multiplexata se facea cu setarea urmatorilor biti:
+<p></p>
+<ul>
+<li class="level1"><div class="li"> cs : stabileste daca chip-ul este activ sau nu;</div>
+</li>
+<li class="level0"><div class="li"> we : cand este activ, se scriu date in RAM;</div>
+</li>
+<li class="level0"><div class="li"> oe : cand este activ si nu se scrie in RAM, se citesc date din RAM;</div>
+</li>
+</ul>
+
+<p>
+In cazul memoriei Dual Port SRAM din laborator, vom avea acesti biti atat pentru Rd, cat si pentru Rr (rr_cs, rd_cs, etc). Similar, vor exista linii de date si adrese distincte pentru fiecare din Rd si Rr.<br>
+</p></div><p></p>
+<p></p>
+
+<p>
+Veti observa in datasheet mentionate o serie de registre index: X, Y si Z. Aceastea corespund unor perechi de registre generale astfel: X (R27:R26), Y (R29:R28) and Z (R31:R30).
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="magistrala-de-acces-la-memoria-de-date">2.2 Magistrala de acces la memoria de date</h3>
+<div class="level3">
+
+<p>
+Similar cu modul in care se face accesul la dual_port_sram, vom defini logica de interfatare cu memoria de date (<em>sram.v</em>) in fisierul <em>bus_interface_unit.v</em> Trebuie sa setam corespunzator cs, we, oe, linia de adrese si cea de date.
+</p>
+
+<p>
+Se va tine cont de urmatoarele:
+</p>
+<ul>
+<li class="level1"><div class="li"> instructiunea curenta (lucreaza cu memoria? incarca sau citeste date din memorie?)</div>
+</li>
+<li class="level0"><div class="li"> stagiul de pipeline (in ce stagii este permis lucrul cu memoria? cand citim/scriem datele?)</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="notetip">
+Pentru detalii despre cum este accesata memoria si tipurile de acces la memorie, va recomandam sa cititi <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow">datasheet-ul</a> incepand cu pagina 3.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit12" id="stagii-de-pipeline">2.3 Stagii de pipeline</h3>
+<div class="level3">
+
+<p>
+Reminder - procesorul nostru are 5 stagii de pipeline (hint: <em>fsm.v</em>):
+</p>
+<ul>
+<li class="level1"><div class="li"> IF (instruction fetch): ciclu in care procesorul citeste din memorie instructiunea care trebuie executata.</div>
+</li>
+<li class="level0"><div class="li"> ID (instruction decode): instructiunea este “recunoscuta” de procesor. Tot acum se aduc in memorie eventualii operanzi (pentru aceasta se calculeaza adresa operanzilor si se citeste adresa respectiva de memorie. Instructiunile pe care le veti implementa vor avea maxim 2 operanzi. Accesul la memorie va luat un ciclu de ceas, chiar si atunci cand sunt 2 operanzi. De ce? Modulul de memorie este proiectat sa citeasca 2 valori intr-un ciclu de ceas. Ce se intampla daca aveti un singur operand? Semnalele de ceas pentru cel de-al doilea operand vor face linia respectiva inactiva.). </div>
+</li>
+<li class="level0"><div class="li"> EX (execute): in aceasta faza procesorul are toate datele necesare executarii unei instructiuni, deci o executa.</div>
+</li>
+<li class="level0"><div class="li"> MEM (memory): se fac citiri / scrieri in memorie (in cazul instructiunilor LOAD si STORE).</div>
+</li>
+<li class="level0"><div class="li"> WB (write back): dupa executarea instructiunii curente rezultatul obtinut este scris in registrul destinatie. </div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit13" id="exercitii">3. Exercitii</h2>
+<div class="level2">
+
+<p>
+Descarcati <a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/lab3_schelet.zip" class="media mediafile mf_zip" title="lab:cn2:lab3_schelet.zip (37.2 KB)">scheletul de laborator</a> si implementati TODO-urile din acesta.
+</p>
+
+<p>
+Pasii pe care trebuie sa ii urmati sunt:
+</p>
+<ul>
+<li class="level1"><div class="li"> Decodificati instructiunile (<em>decode.v</em>)</div>
+</li>
+<li class="level0"><div class="li"> Interfatati memoria cu procesorul (<em>bus_interface_unit.v</em>)</div>
+</li>
+<li class="level0"><div class="li"> Modificati flag-urile de lucru cu registrele generale astfel incat noile instructiuni sa se execute corect (<em>reg_file_interface_unit.v</em>)</div>
+</li>
+<li class="level0"><div class="li"> Faceti legatura intre registre si RAM prin unitatea de control (hint: cum scriem valorile?) (<em>control_unit.v</em>)</div>
+</li>
+</ul>
+
+<p>
+Pentru testare se va face o simulare. Scrieti cateva instructiuni relevante in memoria de instructiuni.
+</p>
+
+<p>
+1. [2p] LoaD Immediate (LDI)<br>2. [2p] Load direct from Data Space (LDS)<br>3. [2p] LoaD indirect from Data space to register using index Y (LDD) <br>4. [2p] STore direct to data Space (STS)<br>5. [2p] MOVe (MOV)
+</p>
+
+<p>
+</p><p></p><div class="notetip"> Amintiti-va instructiunea mov de la IOCLA:<br>mov AX,0    → corespunde instructiunii LDI din ISA curent<br>mov AX,BX   → corespunde instructiunii MOV<br>mov AX,[BX] → corespunde instructiunii LDS<br>mov AX,[BX+5]<br>mov AX,[5]
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit14" id="resurse">Resurse</h2>
+<div class="level2">
+
+<p>
+[0] <a href="http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf" class="urlextern" title="http://www.atmel.com/images/Atmel-0856-AVR-Instruction-Set-Manual.pdf" rel="nofollow"> We &lt;3 The Datasheet</a>
+</p>
+
+<p>
+[1] <a href="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" class="urlextern" title="http://www.atmel.com/images/atmel-8235-8-bit-avr-microcontroller-attiny20_datasheet.pdf" rel="nofollow"> Datasheet++</a>
+</p>
+
+<p>
+[2] <a href="https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set" class="urlextern" title="https://en.wikipedia.org/wiki/Atmel_AVR_instruction_set" rel="nofollow"> Atmel AVR instruction set</a>
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab03.txt</bdi> · Last modified: 28.10.2015 by <bdi>Lucia Cojocaru</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 3 - Instruction Set Architecture 2 [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

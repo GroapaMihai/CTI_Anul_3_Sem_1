@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 10 - Intreruperi [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-12-14T09:11:05+0200">
+<meta name="keywords" content="lab,cn2,lab10">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab10">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 10 - Intreruperi [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab10","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab10"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#obiective">Obiective</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#descriere-generala">1. Descriere generala</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#mecanism-de-functionare">2. Mecanism de functionare</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#interrupt-service-routines-isr">3. Interrupt service routines (ISR)</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#mod-de-generare-pe-avr">4. Mod de generare pe AVR</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#mod-de-tratare-pe-avr">5. Mod de tratare pe AVR</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#tabela-vectorilor-de-intrerupere-pe-avr">6. Tabela vectorilor de intrerupere pe AVR</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#alte-particularitati-pe-avr">7. Alte particularitati pe AVR</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#exemplu">8. Exemplu</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#exercitii">9. Exercitii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#resurse">10. Resurse</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-10-intreruperi">Laboratorul 10 - Intreruperi</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:olteanv@gmail.com" class="mail" title="olteanv@gmail.com"> Vladimir Oltean</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 14.12.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 14.12.2015</div>
+</li>
+</ul>
+
+<p>
+Inainte de parcurgerea acestui laborator, se presupune ca sunteti oarecum familiari cu conceptul de <a href="http://elf.cs.pub.ro/asm/wiki/lab/lab08" class="urlextern" title="http://elf.cs.pub.ro/asm/wiki/lab/lab08" rel="nofollow">intreruperi de pe x86</a> si cu <a href="http://elf.cs.pub.ro/asm/wiki/lab/lab09" class="urlextern" title="http://elf.cs.pub.ro/asm/wiki/lab/lab09" rel="nofollow">structura controllerului acestuia de intreruperi</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="obiective">Obiective</h2>
+<div class="level2">
+
+<p>
+In acest laborator ne dorim sa intelegem cum functioneaza si sa implementam un sistem minimal de intreruperi pentru procesorul nostru AVR, precum si sa programam cateva rutine de tratare a intreruperilor de timer.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="descriere-generala">1. Descriere generala</h2>
+<div class="level2">
+
+<p>
+Intreruperile sunt evenimente generate asincron fata de codul nostru, care trebuie sa capteze atentia procesorului pentru a fi rezolvate. Tratarea intreruperilor se face in functii dedicate, numite rutine (RTI sau, in engleza, ISR).<br>Intreruperile sunt folosite pentru a evita polling-ul si reprezinta fundamentul <a href="http://en.wikipedia.org/wiki/Computer_multitasking" class="urlextern" title="http://en.wikipedia.org/wiki/Computer_multitasking" rel="nofollow">multitasking-ului</a> preemptiv pe un sistem cu un singur procesor si un singur set de resurse hardware (registre, program counter, spatiu de adrese). Un alt mod, mai primitiv, de a face multitasking este cel cooperativ (care foloseste <a href="http://en.wikipedia.org/wiki/Coroutine" class="urlextern" title="http://en.wikipedia.org/wiki/Coroutine" rel="nofollow">corutine</a>), insa acesta este mult mai putin fiabil si adaptabil la sisteme mari.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="mecanism-de-functionare">2. Mecanism de functionare</h2>
+<div class="level2">
+
+<p>
+Desi polling-ul software este evitat, acum procesorul va trebui sa aiba logica aditionala pentru a verifica, la fiecare instructiune, daca nu cumva ar trebui sa trateze cereri de intreruperi mai intai (interrupt requests sau <strong>IRQ</strong>). Daca acest lucru este adevarat, atunci starea curenta a procesorului este salvata (pe stiva) si se transfera executia catre o rutina de tratare a intreruperii respective, dupa un mecanism foarte asemanator unei instructiuni <code>call</code> initiate din hardware.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="interrupt-service-routines-isr">3. Interrupt service routines (ISR)</h2>
+<div class="level2">
+
+<p>
+Acestea sunt functiile care sunt apelate la aparitia unei intreruperi. Ceea ce caracterizeaza o rutina de tratare a intreruperilor este ca ea se incheie intotdeauna cu instructiunea <code>reti</code> (echivalentul <code>iret</code> de pe x86).<br>In literatura de specialitate, prin <strong>vector de intrerupere</strong> se intelege adresa din memorie la care se afla inceputul unei astfel de rutine de tratare a intreruperilor.<br>Ce anume face o rutina de tratare a intreruperilor chiar sa trateze intreruperile procesorului este faptul ca ea este inscrisa intr-o <a href="http://en.wikipedia.org/wiki/Interrupt_vector_table" class="urlextern" title="http://en.wikipedia.org/wiki/Interrupt_vector_table" rel="nofollow">tabela a vectorilor de intrerupere</a>, o zona speciala a memoriei de instructiuni, situata la inceputul acesteia. In aceasta zona procesorul este preprogramat sa caute rutine de tratare, creind astfel asocierea dintre un request hardware si o rutina software de tratare a lui.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="mod-de-generare-pe-avr">4. Mod de generare pe AVR</h2>
+<div class="level2">
+
+<p>
+In primul rand, trebuie completat laboratorul anterior (cel de timere) prin a spune ca arhitectura AVR are mai multe registre I/O dedicate intreruperilor. Ele se grupeaza, in principiu, in:
+</p>
+<ul>
+<li class="level1"><div class="li"> registre de <strong>status</strong>. Acestea contin <strong>flag-uri</strong> de intrerupere, biti care spun daca o intrerupere a fost sau nu generata. Exemplu de registru cu flag-uri <code>TIFR</code> pentru timer, <code>GIFR</code> (general interrupt flag register), etc.</div>
+</li>
+<li class="level1"><div class="li"> registre de <strong>control</strong>. Acestea contin biti de <strong>interrupt enable</strong>, care pot masca in mod selectiv anumite flag-uri de intrerupere (chiar daca un flag de intrerupere este pus pe 1, el nu va genera un interrupt request catre procesor cat timp bitul de interrupt enable corespunzator lui nu este si el pus pe 1). Exemplu de registru de control: <code>TMSK</code>.</div>
+</li>
+</ul>
+
+<p>
+Asa cum am vazut mai sus, un flag de intrerupere activ inseamna doar un potential <em>candidat</em> pentru a deveni interrupt request pentru procesor. In realitate, pentru ca procesorul sa vada un request de intrerupere (deci sa poata intra in procedura de apelare a unei rutine de tratare), sunt necesare 3 lucruri:
+</p>
+<ul>
+<li class="level1"><div class="li"> interrupt flag-ul sa fie activ (pe 1)</div>
+</li>
+<li class="level1"><div class="li"> interrupt enable-ul corespunzator acelui flag, din registrul de masca, sa fie activ (pe 1)</div>
+</li>
+<li class="level1"><div class="li"> intreruperile sa fie activate la nivel global (exista bitul <code>I</code> din registrul <code>SREG</code>, echivalent cu <code>IF</code> de la x86). Ele se pot activa cu instructiunea dedicata <code>sei</code> (set interrupts), respectiv se pot dezactiva cu <code>cli</code> (clear interrupts).</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+In principiu, aceste instructiuni <code>sei</code> si <code>cli</code> ar trebui sa aiba acelasi comportament ca si:<br>
+
+<code>sei</code> → <code>sbi SREG, I</code><br>
+
+<code>cli</code> → <code>cbi SREG, I</code><br>
+
+Din pacate, exista mici diferente intre cele doua variante, motiv pentru care nu putem folosi instructiunile <code>sbi</code> si <code>cbi</code> pe care le avem deja implementate, si va trebui sa cream logica aditionala pentru decodificarea acestor noi forme.<br>Daca studiem opcode-ul instructiunilor <code>sbi</code>/<code>cbi</code>, remarcam ca doar primele 32 de registre I/O pot fi destinatie a acestor operatii. <code>SREG</code> are, insa, adresa <code>0x3F</code>, ceea ce il face inaccesibil acestei instructiuni. Mai multe detalii puteti gasi <a href="http://www.avrfreaks.net/forum/sreg-i-bit-and-sei-instruction" class="urlextern" title="http://www.avrfreaks.net/forum/sreg-i-bit-and-sei-instruction" rel="nofollow">aici</a>.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit7" id="mod-de-tratare-pe-avr">5. Mod de tratare pe AVR</h2>
+<div class="level2">
+
+<p>
+Procesorul nostru va trebui sa aiba un nou submodul legat la memoria I/O. Acest modul va reprezenta controller-ul de intreruperi, fiind similar ca rol PIC-ului de pe sistemele PC cu procesor x86. Un alt rol, mai subtil, al controllerului este acela de a <strong>prioritiza</strong> intreruperile, dupa anumite criterii interne, in momentul in care mai multe surse de intrerupere cer atentia simultana a procesorului.<br>La fiecare ciclu de ceas, controllerul de intreruperi va trebui sa inspecteze valorile tuturor flag-urilor de intreruperi (in cazul laboratorului nostru, din registrul <code>TIFR0</code>), precum si interrupt enable-urile asociate (<code>TMSK0</code> in cazul de fata). De asemenea, controller-ul de intreruperi va trebui sa citeasca periodic si registrul <code>SREG</code>, pentru a se asigura ca intreruperile nu au fost dezactivate global.<br>Daca rezultatul operatiei de “si” logic intre cele trei valori citite este 1, inseamna ca micul controller de intreruperi trebuie sa genereze un interrupt request (<strong>irq</strong>) catre procesor (in speta, catre unitatea de control). Impreuna cu semnalizarea ca o intrerupere trebuie tratata, controllerul trebuie sa ii specifice procesorului si <strong>tipul</strong> intreruperii, iar acest lucru il face transmitandu-i o adresa, care reprezinta insusi <strong>vectorul</strong> de intrerupere in care procesorul trebuie sa caute dupa un ISR.<br>Pe cealalta parte, procesorul verifica linia de <strong>irq</strong> doar intre terminarea unei instructiuni si incarcarea alteia noi, fiindca nu ar dori intreruperea fix in mijlocul instructiunii curente. Daca a primit un irq, el semnaleaza acest lucru si unitatilor sale de decodificare si de generare a semnalelor. Acestea, la randul lor, in acest caz special, produc semnale pentru executia unei instructiuni virtuale, care nu este luata din memoria de instructiuni: in laborator, o vom numi <code>TYPE_CALL_ISR</code>. Dupa cum ii spune si numele, aceasta instructiune este foarte asemanatoare cu un <code>call</code> executat la adresa primita de la controller-ul de intreruperi (vectorul de intrerupere asociat irq-ului).
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="tabela-vectorilor-de-intrerupere-pe-avr">6. Tabela vectorilor de intrerupere pe AVR</h2>
+<div class="level2">
+
+<p>
+Am vorbit despre tabela vectorilor de intrerupere fara a prezenta cum arata ea in realitate. Din fericire, instalarea unui ISR in ea este mult mai simpla decat la x86.<br>In datasheet-ul ATtiny20, la capitolul <em>9. Interrupts</em>, pagina 36, este prezentata tabela vectorilor de intrerupere a acestui procesor:
+</p>
+<div class="table sectionedit9"><table class="inline">
+	<tbody><tr class="row0">
+		<th class="col0 centeralign">  Vector No.  </th><th class="col1 centeralign">  Program Address  </th><th class="col2 centeralign">  Label  </th><th class="col3 centeralign">  Interrupt Source  </th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign">  1  </td><td class="col1 centeralign">  0x0000  </td><td class="col2 centeralign">  RESET  </td><td class="col3 centeralign">  External Pin, Power-on Reset, Brown-Out Reset, Watchdog Reset  </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign">  2  </td><td class="col1 centeralign">  0x0001  </td><td class="col2 centeralign">  INT0  </td><td class="col3 centeralign">  External Interrupt Request 0  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 centeralign">  3  </td><td class="col1 centeralign">  0x0002  </td><td class="col2 centeralign">  PCINT0  </td><td class="col3 centeralign">  Pin Change Interrupt Request 0  </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 centeralign">  4  </td><td class="col1 centeralign">  0x0003  </td><td class="col2 centeralign">  PCINT1  </td><td class="col3 centeralign">  Pin Change Interrupt Request 1  </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0 centeralign">  5  </td><td class="col1 centeralign">  0x0004  </td><td class="col2 centeralign">  WDT  </td><td class="col3 centeralign">  Watchdog Time-out  </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 centeralign">  6  </td><td class="col1 centeralign">  0x0005  </td><td class="col2 centeralign">  TIM1_CAPT  </td><td class="col3 centeralign">  Timer/Counter1 Input Capture  </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0 centeralign">  7  </td><td class="col1 centeralign">  0x0006  </td><td class="col2 centeralign">  TIM1_COMPA  </td><td class="col3 centeralign">  Timer/Counter1 Compare Match A  </td>
+	</tr>
+	<tr class="row8">
+		<td class="col0 centeralign">  8  </td><td class="col1 centeralign">  0x0007  </td><td class="col2 centeralign">  TIM1_COMPB  </td><td class="col3 centeralign">  Timer/Counter1 Compare Match B  </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0 centeralign">  9  </td><td class="col1 centeralign">  0x0008  </td><td class="col2 centeralign">  TIM1_OVF  </td><td class="col3 centeralign">  Timer/Counter1 Overflow  </td>
+	</tr>
+	<tr class="row10">
+		<td class="col0 centeralign">  10  </td><td class="col1 centeralign">  0x0009  </td><td class="col2 centeralign">  TIM0_COMPA  </td><td class="col3 centeralign">  Timer/Counter0 Compare Match A  </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0 centeralign">  11  </td><td class="col1 centeralign">  0x000A  </td><td class="col2 centeralign">  TIM0_COMPB  </td><td class="col3 centeralign">  Timer/Counter0 Compare Match B  </td>
+	</tr>
+	<tr class="row12">
+		<td class="col0 centeralign">  12  </td><td class="col1 centeralign">  0x000B  </td><td class="col2 centeralign">  TIM0_OVF  </td><td class="col3 centeralign">  Timer/Counter0 Overflow  </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0 centeralign">  13  </td><td class="col1 centeralign">  0x000C  </td><td class="col2 centeralign">  ANA_COMP  </td><td class="col3 centeralign">  Analog Comparator  </td>
+	</tr>
+	<tr class="row14">
+		<td class="col0 centeralign">  14  </td><td class="col1 centeralign">  0x000D  </td><td class="col2 centeralign">  ADC  </td><td class="col3 centeralign">  ADC Conversion Complete  </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0 centeralign">  15  </td><td class="col1 centeralign">  0x000E  </td><td class="col2 centeralign">  TWI_SLAVE  </td><td class="col3 centeralign">  Two-Wire Interface  </td>
+	</tr>
+	<tr class="row16">
+		<td class="col0 centeralign">  16  </td><td class="col1 centeralign">  0x000F  </td><td class="col2 centeralign">  SPI  </td><td class="col3 centeralign">  Serial Peripheral Interface  </td>
+	</tr>
+	<tr class="row17">
+		<td class="col0 centeralign">  17  </td><td class="col1 centeralign">  0x0010  </td><td class="col2 centeralign">  QTRIP  </td><td class="col3 centeralign">  Touch Sensing  </td>
+	</tr>
+</tbody></table></div>
+
+<p>
+Desi majoritatea acestor vectori de intrerupere nu ne intereseaza, i-am mentionat de dragul completitudinii, si pentru a ilustra simplitatea acestuia <a href="http://elf.cs.pub.ro/asm/wiki/lab/lab08#sistemul-de-intreruperi" class="urlextern" title="http://elf.cs.pub.ro/asm/wiki/lab/lab08#sistemul-de-intreruperi" rel="nofollow">comparativ cu cel Intel x86</a>.<br>Sa vedem cum arata tabela vectorilor de intrerupere in cod:<br>
+</p>
+<pre class="code asm"><span class="sy1">.</span>org <span class="nu0">0x0000</span>                               <span class="co1">;Set address of next</span>
+statement
+        rjmp        RESET                 <span class="co1">; Address 0x0000</span>
+        rjmp        INT0_ISR              <span class="co1">; Address 0x0001</span>
+        rjmp        PCINT0_ISR            <span class="co1">; Address 0x0002</span>
+        rjmp        PCINT1_ISR            <span class="co1">; Address 0x0003</span>
+        rjmp        WDT_ISR               <span class="co1">; Address 0x0004</span>
+        rjmp        TIM1_CAPT_ISR         <span class="co1">; Address 0x0005</span>
+        rjmp        TIM1_COMPA_ISR        <span class="co1">; Address 0x0006</span>
+        rjmp        TIM1_COMPB_ISR        <span class="co1">; Address 0x0007</span>
+        rjmp        TIM1_OVF_ISR          <span class="co1">; Address 0x0008</span>
+        rjmp        TIM0_COMPA_ISR        <span class="co1">; Address 0x0009</span>
+        rjmp        TIM0_COMPB_ISR        <span class="co1">; Address 0x000A</span>
+        rjmp        TIM0_OVF_ISR          <span class="co1">; Address 0x000B</span>
+        rjmp        ANA_COMP_ISR          <span class="co1">; Address 0x000C</span>
+        rjmp        ADC_ISR               <span class="co1">; Address 0x000D</span>
+        rjmp        TWI_SLAVE_ISR         <span class="co1">; Address 0x000E</span>
+        rjmp        SPI_ISR               <span class="co1">; Address 0x000F</span>
+        rjmp        QTRIP_ISR             <span class="co1">; Address 0x0010</span>
+&nbsp;
+RESET<span class="sy1">:</span>                                    <span class="co1">; Main program start</span>
+        &lt;instr&gt;                           <span class="co1">; Address 0x0011</span>
+        <span class="sy1">...</span></pre>
+
+<p>
+Pornind de la bucata de cod de mai sus putem trage urmatoarele concluzii:
+</p>
+<ul>
+<li class="level1"><div class="li"> pentru un anumit tip de intrerupere, procesorul primeste de la controllerul de intreruperi un anumit vector (sa spunem ca, pentru intreruperea <code>TOV0</code>, controllerul trimite procesorului vectorul <code>TIM0_OVF_ISR</code>, care este definit ca <code>0x000B</code>.</div>
+</li>
+<li class="level1"><div class="li"> procesorul executa un “call” virtual catre vectorul primit de la controllerul de intreruperi, ajungand astfel sa execute codul de la adresa <code>0x000B</code>.</div>
+</li>
+<li class="level1"><div class="li"> la aceasta adresa, procesorul efectiv gaseste cod executabil. Printre lucrurile plauzibile pe care le poate gasi aici sunt:</div>
+<ul>
+<li class="level3"><div class="li"> o instructiune <code>rjmp</code> catre rutina efectiva de tratare, daca aceasta este implementata</div>
+</li>
+<li class="level3"><div class="li"> o instructiune <code>reti</code> daca aceasta nu este implementata</div>
+</li>
+<li class="level3"><div class="li"> daca tabela vectorilor de intrerupere ar contine orice altceva, codul de acolo ar fi pur si simplu executat, iar procesorul va continua sa coboare in tabela executand ce gaseste, si potential executand aiurea rutine ale altor intreruperi.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> faptul ca procesorul este pre-programat ca, la pornire, sa inceapa sa execute cod de la adresa <code>0x00</code> merge numai bine cu faptul ca la acea adresa se afla vectorul de intrerupere pentru reset: functia noastra <code>main()</code> nu este, asadar, nimic altceva decat rutina de tratare a intreruperii de reset.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit10" id="alte-particularitati-pe-avr">7. Alte particularitati pe AVR</h2>
+<div class="level2">
+
+<p>
+O situatie foarte delicata este aceea in care apar irq-uri in timp ce procesorul se afla deja intr-o rutina de tratare. Fiindca intreruperile sunt, prin natura lor, evenimente exceptionale, ele ar trebui sa consume un timp absolut minimal din timpul procesorului, fiindca acesta le trateaza pe ele in loc sa execute fluxul normal al codului.<br>Din acest motiv, designerii Atmel AVR au decis ca una din diferentele dintre “call”-ul virtual de ISR pomenit anterior si un call obisnuit de functie este aceea ca flag-ul global de intreruperi (bitul <code>I</code> din <code>SREG</code>) trebuie dezactivat. De aici rezulta si diferenta dintre instructiunile <code>ret</code> si <code>reti</code>: cea din urma seteaza pe 1 flagul <code>I</code> din <code>SREG</code>.<br>In mod implicit si normal, acest lucru inseamna ca, pe parcursul unui ISR, intreruperile aditionale sunt blocate de catre CPU. Pe de alta parte, asta nu inseamna ca ele nu pot fi reactivate din cod, folosind instructiunile <code>sei</code> respectiv <code>cli</code>, insa acest lucru ar trebui facut cu extrem de mare grija, fiindca poate foarte usor conduce la situatii de stack overflow.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="exemplu">8. Exemplu</h2>
+<div class="level2">
+<dl class="code">
+<dt><a href="http://elf.cs.pub.ro/cn/wiki/_export/code/lab/cn2/lab10?codeblock=1" title="Download Snippet" class="mediafile mf_asm">interrupt_demo.asm</a></dt>
+<dd><pre class="code asm">            SREG        <span class="kw5">equ</span> <span class="nu0">0x3f</span>
+            TIMSK       <span class="kw5">equ</span> <span class="nu0">0x26</span>
+            TIFR        <span class="kw5">equ</span> <span class="nu0">0x25</span>
+            TCCR0A      <span class="kw5">equ</span> <span class="nu0">0x19</span>
+            TCCR0B      <span class="kw5">equ</span> <span class="nu0">0x18</span>
+            TCNT0       <span class="kw5">equ</span> <span class="nu0">0x17</span>
+            OCR0A       <span class="kw5">equ</span> <span class="nu0">0x16</span>
+            OCIE0A      <span class="kw5">equ</span> 0b00000010
+            IF          <span class="kw5">equ</span> <span class="nu0">7</span>
+            sem         <span class="kw5">equ</span> <span class="nu0">0x40</span> <span class="co1">; first valid memory address</span>
+&nbsp;
+            rjmp        RESET               <span class="co1">; Address 0x0000</span>
+            reti                            <span class="co1">; Address 0x0001</span>
+            reti                            <span class="co1">; Address 0x0002</span>
+            reti                            <span class="co1">; Address 0x0003</span>
+            reti                            <span class="co1">; Address 0x0004</span>
+            reti                            <span class="co1">; Address 0x0005</span>
+            reti                            <span class="co1">; Address 0x0006</span>
+            reti                            <span class="co1">; Address 0x0007</span>
+            reti                            <span class="co1">; Address 0x0008</span>
+            rjmp        TIM0_COMPA_ISR      <span class="co1">; Address 0x0009</span>
+            reti                            <span class="co1">; Address 0x000A</span>
+            reti                            <span class="co1">; Address 0x000B</span>
+            reti                            <span class="co1">; Address 0x000C</span>
+            reti                            <span class="co1">; Address 0x000D</span>
+            reti                            <span class="co1">; Address 0x000E</span>
+            reti                            <span class="co1">; Address 0x000F</span>
+            reti                            <span class="co1">; Address 0x0010</span>
+&nbsp;
+TIM0_COMPA_ISR<span class="sy1">:</span>
+            ldi         R16<span class="sy1">,</span> <span class="nu0">1</span>
+            sts         sem<span class="sy1">,</span> R16
+            reti
+&nbsp;
+RESET<span class="sy1">:</span>      <span class="co1">; Main program start</span>
+            <span class="co1">; Set up a timer to generate interrupts every 5 clock cycles.</span>
+&nbsp;
+            <span class="co1">; reset timer value</span>
+            ldi         R16<span class="sy1">,</span> <span class="nu0">0</span>
+            <span class="kw1">out</span>         TCNT0<span class="sy1">,</span> R16
+            <span class="co1">; set compare match value</span>
+            ldi         R16<span class="sy1">,</span> <span class="nu0">5</span>
+            <span class="kw1">out</span>         OCR0A<span class="sy1">,</span> R16
+            <span class="co1">; activate timer 0 compare match interrupts</span>
+            ldi         R16<span class="sy1">,</span> OCIE0A
+            <span class="kw1">out</span>         TIMSK<span class="sy1">,</span> R16
+            <span class="co1">; activate global interrupts</span>
+            sei
+            <span class="co1">; configure WGM0 as CTC mode</span>
+            ldi         R16<span class="sy1">,</span> 0b00000010
+            <span class="kw1">out</span>         TCCR0A<span class="sy1">,</span> R16
+            <span class="co1">; configure CS0 as clkIO/1</span>
+            ldi         R16<span class="sy1">,</span> 0b00000001
+            <span class="kw1">out</span>         TCCR0B<span class="sy1">,</span> R16
+&nbsp;
+_poll<span class="sy1">:</span>      <span class="kw1">lds</span>         R16<span class="sy1">,</span> sem
+            cpi         R16<span class="sy1">,</span> <span class="nu0">1</span>
+            brne        _poll
+&nbsp;
+            rjmp        RESET</pre>
+</dd></dl>
+<dl class="code">
+<dt><a href="http://elf.cs.pub.ro/cn/wiki/_export/code/lab/cn2/lab10?codeblock=2" title="Download Snippet" class="mediafile mf_">signal_diagram</a></dt>
+<dd><pre class="code none">cycle   1       2       3       4       5       6       7       8       9       10      11      12      13      14      15      16      17      18      19      20            31      32      33      34      35
+         ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___     ___          ___     ___     ___     ___     ___
+clk  ___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___/   \___(...)/   \___/   \___/   \___/   \___/   \___
+&nbsp;
+state     IF      ID      EX     MEM     WB      IF      ID      EX      MEM     WB      IF      ID      EX      MEM     WB      IF      ID      EX      MEM     WB           IF      ID      EX      MEM     WB
+&nbsp;
+     _   _____________________________________  _______________________________________  _______________________________________  _____________________________________       ______________________________________
+instr \ /           out TCCR0B, R16           \/             lds R16, sem              \/              cpi R16, 1               \/          virtual isr call           \(   )/                reti                  \
+     _/ \_____________________________________/\_______________________________________/\_______________________________________/\_____________________________________/(...)\______________________________________/
+&nbsp;
+                                  CS0 gets set to 1, timer starts
+      ________________________________________  _______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______  ______       ______  ______  ______  ______  ______
+                         0                    \/   1   \/  2   \/  3   \/  4   \/  5   \/  0   \/  1   \/  2   \/  3   \/  4   \/  0   \/  1   \/  2   \/  3   \/  4   \(   )/  0   \/  1   \/  2   \/  3   \/  4   \
+TCNT0 ________________________________________/\_______/\______/\______/\______/\______/\______/\______/\______/\______/\______/\______/\______/\______/\______/\______/(...)\______/\______/\______/\______/\______/
+&nbsp;
+                                                                              TCNT0 becomes equal to OCR0A
+      _________________________________________________________________________________  _______________________________________________________________________________     _______________________________________
+                                           0                                           \/                 1 &lt;&lt; OCF0A                                                    (...)                                       \
+TIFR  _________________________________________________________________________________/\_______________________________________________________________________________     _______________________________________/
+&nbsp;
+                                                                                  TIMSK, TIFR and SREG[I] are all active
+                                                                                                 _______________________________________________________
+irq   __________________________________________________________________________________________/                                                       \_______________(...)________________________________________
+&nbsp;
+      __________________________________________________________________________________________  ______________________________________________________________________     _______________________________________  ___
+                                                                                                \/          TIM0_COMPA_ISR                                              (   )                                       \/
+vector__________________________________________________________________________________________/\______________________________________________________________________(...)_______________________________________/\___
+&nbsp;
+                                                                                                                CPU only enters ISR after finishing current instruction
+                                                                                                                                  _____________________________________
+ack   ___________________________________________________________________________________________________________________________/                                     \(...)____________________________________________
+&nbsp;
+      __________________________________________________________________________________________________________________________________________________________                                                     ____
+SREG[I]                                                                                                                                                         \_______(...)_______________________________________/
+Not shown:
+    * OCR0A = 5
+    * TIMSK[OCIE0A] = 1</pre>
+</dd></dl>
+
+</div>
+
+<h2 class="sectionedit12" id="exercitii">9. Exercitii</h2>
+<div class="level2">
+<ol>
+<li class="level1"><div class="li"> <strong>(2p)</strong> Descarcati <a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet_lab10.zip" class="media mediafile mf_zip" title="lab:cn2:schelet_lab10.zip (838.8 KB)">scheletul de laborator</a>. In modulul <code>io_sram.v</code> a aparut un nou submodul numit <code>interrupt_controller.v</code>. Acesta are rolul de a genera un semnal (<code>irq</code>) catre CPU atunci cand un flag de intrerupere a fost setat si intreruperile sunt active. Rezolvati TODO-urile din acest modul, respectand indicatiile din el.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(4p)</strong> Urmariti indicatiile din <code>decode_unit.v</code> si <code>signal_generation_unit.v</code> si implementati instructiunile <code>sei</code>, <code>cli</code>, <code>call_isr</code> si <code>reti</code>. De asemenea, pentru ca aceste instructiuni sa functioneze corect, mai trebuie ajustata si logica din <code>control_unit,v</code>, asa ca va trebui sa urmati si TODO-urile de acolo.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(1p)</strong> Asamblati exemplul de cod de mai sus cu <a href="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux2" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux2" rel="nofollow">avrasm</a> si verificati in simulatorul ISim faptul ca intreruperile sunt generate in mod corect.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(1p)</strong> Atat instructiunea virtuala <code>call_isr</code> cat si <code>reti</code> trebuie sa acceseze memoria I/O de 3 ori: o data pentru citirea SP-ului, o data pentru scrierea SP-ului modificat, si inca o data pentru activarea/dezactivarea flagului de intreruperi, <code>I</code>, din registrul <code>SREG</code>. Acest lucru nu este posibil in formatul standard RISC de instructiune cu 5 etape. Va trebui sa modificati implementarea acestor instructiuni astfel incat sa le dati un <a href="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08#timing-ul-instructiunilor" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08#timing-ul-instructiunilor" rel="nofollow">timing neuniform</a>. Pentru referinta puteti studia grupul <code>TWO_CYCLE_MEM</code> din modulul <code>decode_unit.v</code>. Sunteti sfatuiti sa adaugati aceste doua instructiuni la un nou grup, <code>TWO_CYCLE_IO</code>. De asemenea, in <code>control_unit.v</code> va puteti folosi de semnalul <code>cycle_count</code> care specifica daca suntem la prima sau a doua iteratie in starea <code>STATE_WB</code>, cea in care se scrie in memoria I/O. In functie de acest semnal, va trebui sa aveti grija ca instructiunile vechi (cele cu timing uniform) sa mearga in continuare, iar celelalte, cu acces la I/O in doi cicli, sa acceseze in primul ciclu <code>SP</code>-ul, iar in al doilea <code>SREG</code>-ul. <strong>Atentie</strong>: nu uitati sa si modificati <code>SREG</code>-ul in cazul acestor doua instructiuni, activand flagul <code>I</code> pentru <code>reti</code> si dezactivandu-l pentru <code>call_isr</code>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(4p)</strong> Pe placutele Digilent Nexys, folosind afisajul cu 7 segmente <a href="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#exercitii" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#exercitii" rel="nofollow">conform laboratorului precedent</a>, afisati un ceas care se incrementeaza la fiecare secunda. Functia de afisare a unui caracter pe afisajul cu 7 segmente va rula intr-o intrerupere de timer, care trebuie sa ruleze la 60Hz (de 60 de ori pe secunda). Ora care se afiseaza trebuie luata dintr-o variabila globala din memorie. La fiecare 60 de apelari ale rutinei de tratare a intreruperilor, va trebui sa incrementati cu 1 ora pe care o afisati.</div>
+</li>
+</ol>
+
+<p>
+</p><p></p><div class="notewarning">
+Aveti grija ce combinatie intre valoarea lui <code>OCR0A</code> (perioada la care timerul da intreruperi) si prescaler folositi!<br>
+
+In general este bine sa folositi cel mai mic prescaler care “isi face treaba” (care, divizand ceasul, rezulta intr-o valoare maxima de numarat mai mica decat 256, maximul cat incape in <code>OCR0A</code>).<br>
+
+Spre exemplu, daca procesorul ar rula la 25MHz, iar noi am vrea sa generam intreruperi cu o frecventa de 5KHz, am putea sa folosim un prescaler de 1:1 si o valoare maxima de numarare de 5000, in mod ideal. Fiindca 5000 nu incape in <code>OCR0A</code>, a doua optiune ar fi un prescaler de 1:8 si o valoare maxima de numarare de 625.<br>
+
+Fiindca nici aceasta nu este buna, vom folosi o valoare de prescaler egala cu 1:64 si o valoare maxima de numarare egala cu 78.125. Fiindca pe aceasta din urma trebuie s-o rotunjim la o valoare intreaga, o vom rotunji la 78, dar acest lucru are ca efect o <strong>pierdere a rezolutiei</strong> timer-ului, si o generare a unei frecvente reale de 4.992KHz in loc de 5. Orice crestere mai mult decat atat a prescaler-ului doar va accentua aceasta granularizare a timpului si scadere a rezolutiei de masurare.<br>
+
+In cazul nostru practic, niste valori alese necorespunzator pentru prescaler si valoarea maxima de numarare vor genera drifting pentru ceasul nostru.<br>
+</div><p></p>
+<p></p>
+
+
+
+</div>
+
+<h2 class="sectionedit13" id="resurse">10. Resurse</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow"> Datasheet ATTiny20</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow"> Setul de Instructiuni AVR</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" rel="nofollow"> Datasheet Digilent Nexys3</a></div>
+</li>
+</ul>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab10.txt</bdi> · Last modified: 14.12.2015 by <bdi>Tudor Vișan</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 10 - Intreruperi [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 9 - Timer/Counter [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-12-08T23:06:14+0200">
+<meta name="keywords" content="lab,cn2,lab09">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab09">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab09","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab09"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#obiective">Obiective</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#timercounter">1. Timer/Counter</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#pwm">2. PWM</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#timere-si-attiny20">3. Timere si ATtiny20</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#exemple-de-utilizare-a-timerelor">4. Exemple de utilizare a timerelor</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#prezentarea-scheletului-de-laborator">5. Prezentarea scheletului de laborator</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#exercitii">6. Exercitii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#resurse">7. Resurse</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#linkuri-utile">8. Linkuri utile</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-9-timercounter">Laboratorul 9 - Timer/Counter</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:olteanv@gmail.com" class="mail" title="olteanv@gmail.com"> Vladimir Oltean</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 10.12.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 08.12.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="obiective">Obiective</h2>
+<div class="level2">
+
+<p>
+In acest laborator vom invata ce este si cum functioneaza un timer/counter si vom adauga un astfel de modul implementarii noastre a microcontroller-ului ATtiny20.<br>De asemenea, ca aplicatie practica, vom interfata afisajul cu 7 segmente de pe placuta FPGA Digilent Nexys 3, pentru a putea afisa din cod assembly AVR numere in format zecimal.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="timercounter">1. Timer/Counter</h2>
+<div class="level2">
+
+<p>
+In esenta, un timer este un simplu numarator implementat in hardware:<br>
+</p>
+<pre class="code verilog"><span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> counter<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">always</span> <span class="sy0">@</span><span class="br0">(</span><span class="kw1">posedge</span> clk<span class="br0">)</span>
+    <span class="kw1">if</span> <span class="br0">(</span>reset<span class="br0">)</span>
+        counter <span class="sy0">&lt;=</span> <span class="nu0">0</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+        counter <span class="sy0">&lt;=</span> counter <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span></pre>
+
+<p>
+Faptul ca este implementat in hardware inseamna ca incrementarea lui se face “in spate”, deci permitand programatorului de software sa faca cu totul alte activitati in cod in acest timp. In general, timerele sunt folosite pentru a tine evidenta timpului in aplicatii: spre exemplu, ele pot fi folosite cu rolul de “stopwatch”: sunt presetate la o anumita valoare, care, in momentul in care este atinsa, declanseaza un <em>eveniment</em> ce va trebui tratat de software.<br>Din faptul ca timerele pot genera intreruperi deducem ca ele sunt in stransa legatura cu conceptul de <em>intreruperi</em>: functii care sunt executate atunci cand un anumit eveniment are loc. In cadrul acestui laborator vom studia mecanismul detaliat prin care timerele functioneaza, insa nu le vom folosi (inca) impreuna cu conceptul de intreruperi.
+</p>
+
+<p>
+Un material foarte bun de documentare este acest <a href="http://www.scriptoriumdesigns.com/embedded/timers.php" class="urlextern" title="http://www.scriptoriumdesigns.com/embedded/timers.php" rel="nofollow"> tutorial de timer/counter</a>, pe care il recomandam pentru citire, insa il vom rezuma in continuare.<br>In principiu, orice timer ar trebui sa aiba:
+</p>
+<ul>
+<li class="level1"><div class="li"> o <strong>sursa de ceas</strong> in baza careia numara (in general, la fiecare tranzitie pozitiva a acesteia). Optional, aceasta sursa de ceas poate fi divizata, in prealabil (aplicat un prescaler), pentru a numara la intervale mai rare de timp.</div>
+</li>
+<li class="level1"><div class="li"> un registru in care este stocata <strong>valoarea curenta</strong> pana la care a apucat sa numere (in exemplul Verilog de mai sus, putem spune ca acest registru este <code>counter</code>). In functie de latimea<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fn__1" id="fnt__1" class="fn_top">1)</a></sup> acestui registru (ce poate fi pe 8 biti, pe 16 biti sau pe 32 de biti, indiferent de latimea registrelor ISA-ului), timer-ul poate numara pana la o valoare mai mica sau mai mare (255 pentru 8 biti, 65535 pentru 16 biti, etc). Odata ce a ajuns cu numaratoarea la aceasta valoare maxima, valoarea din contor se reseteaza la zero si numaratoarea se reia. <strong>Foarte important</strong>: de cele mai multe ori, atunci cand contorul se reseteaza la zero are loc si declansarea evenimentelor despre care vorbeam.</div>
+</li>
+<li class="level1"><div class="li"> in functie de latimea registrului contor prezentat mai sus, stabilim doua valori <strong>BOTTOM</strong> (care va fi intotdeauna zero) si <strong>TOP</strong>, care va fi valoarea maxim reprezentabila (spre exemplu, pentru un timer pe 8 biti, <strong>TOP</strong> va fi 255).</div>
+</li>
+<li class="level1"><div class="li"> pe langa valoarea <strong>TOP</strong> prezentata mai sus, introducem o alta valoare denumita <strong>MAX</strong><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fn__2" id="fnt__2" class="fn_top">2)</a></sup>, care poate lua orice valoare intre <strong>BOTTOM</strong> si <strong>TOP</strong>. Atunci cand numaratorul nostru intalneste aceasta valoare, se pot intampla mai multe lucruri, depinzand de modul in care este configurat:</div>
+<ul>
+<li class="level3"><div class="li"> 1. se reseteaza la 0 (ca si cum <strong>MAX</strong> ar fi fost egal cu <strong>TOP</strong>). In acest caz, counterul numara de la 0 pana la <strong>MAX</strong> - 1, dupa care se intoarce din nou la zero. Modificand valoarea lui <strong>MAX</strong> (pe a lui <strong>TOP</strong> nu o putem modifica fiindca este stabilita hardware), putem face numaratorul sa declanseze evenimente mai des sau mai rar. Stabilirea valorii <strong>MAX</strong> la zero ar trebui sa aiba ca efect dezactivarea lui (si resetarea se face doar cand contorul ajunge la <strong>TOP</strong>).</div>
+</li>
+<li class="level3"><div class="li"> 2. incepe sa numere in jos - vom vedea in continuare situatii in care acest lucru poate fi util</div>
+</li>
+<li class="level3"><div class="li"> 3. genereaza un eveniment (la fel ca in situatia 1.), insa nu se reseteaza, ci isi continua numaratul pana la <strong>TOP</strong>, de unde se reseteaza si numara din nou, si asa mai departe.</div>
+</li>
+<li class="level3"><div class="li"> 4. genereaza un eveniment si se opreste din numarat (se mai numeste si <em>one-shot timer</em>).</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+Pentru a vizualiza diferentele dintre modurile de numarare prezentate mai sus, va recomandam urmarirea <a href="http://cs.curs.pub.ro/wiki/pm/lab/lab2#moduri-de-functionare" class="urlextern" title="http://cs.curs.pub.ro/wiki/pm/lab/lab2#moduri-de-functionare" rel="nofollow">acestor imagini</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="pwm">2. PWM</h2>
+<div class="level2">
+
+<p>
+<a href="http://en.wikipedia.org/wiki/Pulse-width_modulation" class="urlextern" title="http://en.wikipedia.org/wiki/Pulse-width_modulation" rel="nofollow">Pulse-width modulation</a> este o tehnica foarte lo-fi de generare a unui semnal analogic pornind de la unul digital (adica de a inlocui un <a href="http://en.wikipedia.org/wiki/Digital-to-analog_converter" class="urlextern" title="http://en.wikipedia.org/wiki/Digital-to-analog_converter" rel="nofollow">DAC</a>).<br>Fiindca logica digitala nu poate genera la iesire decat tensiuni de Vcc sau de GND (ideal vorbind), tehnica PWM isi propune sa sintetizeze tensiuni cuprinse intre aceste valori prin comutarea foarte rapida intre cele doua. Spre exemplu (presupunand ca avem o tensiune Vcc de 5V si GND de 0V), daca am comuta <em>foarte</em> repede intre 0V si 5V iesirea, mentinand procentele egale de timp intre cele doua nivele logice (adica la fel de mult pe 1 ca si pe 0), atunci am putea spune ca, <strong>in medie</strong>, tensiunea noastra de iesire este de 2.5V. Asemanator, daca am pastra aceeasi frecventa de comutatie, insa am tine iesirea 75% din timp pe 1, si 25% din timp pe 0, atunci putem spune ca avem o iesire cu o tensiune medie de 0.75 * 5V + 0.25 * 0V = 3.75V.<br>Un material usor de lecturat (si din care este mai important mai mult desenul de la inceput) este acest <a href="http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM" class="urlextern" title="http://arduino.cc/en/Tutorial/SecretsOfArduinoPWM" rel="nofollow">tutorial Arduino pentru PWM</a>.<br>Putem spune, asadar, ca PWM se traduce prin “modulare in factor de umplere” (raportul dintre perioada cat sta semnalul pe 1 si perioada totala).<br>In realitate, pentru a nu fi dreptunghiular si a distorsiona foarte tare, un output PWM trebuie <strong>filtrat</strong>, fenomen care poate fi efectuat fie cu ajutorul <a href="http://en.wikipedia.org/wiki/Low-pass_filter" class="urlextern" title="http://en.wikipedia.org/wiki/Low-pass_filter" rel="nofollow">unui circuit dedicat</a>, fie se intampla din cauze naturale (diverse efecte capacitive parazite). De asemenea, cresterea frecventei la care comuta PWM-ul poate contribui foarte mult la “netezirea” semnalului rezultat.
+</p>
+
+<p>
+<strong>Ce legatura are PWM cu timerele?</strong>
+</p>
+
+<p>
+Daca va mai amintiti exemplul 3 din subcapitolul precedent, spuneam despre un timer care continua sa numere dupa ce intalneste valoarea din <strong>MAX</strong>. Grafic, este aceasta imagine (in desen, valoarea “MAX” este denumita “Compare”):<br><a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/basic-timer.png?id=lab%3Acn2%3Alab09" class="media" title="lab:cn2:basic-timer.png"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/basic-timer.png" class="mediacenter" alt="" width="500"></a>
+Asociat numaratorului se afla un output:<br>
+</p>
+<pre class="code verilog">    <span class="kw1">assign</span> out <span class="sy0">=</span> <span class="br0">(</span>counter <span class="sy0">&gt;=</span> compare<span class="br0">)</span><span class="sy0">;</span></pre>
+
+<p>
+Putem observa ca factorul de umplere al acestui semnal este direct proportional cu valoarea lui <code>compare</code>. Ca atare, putem genera un semnal PWM pornind de la modul 3. de configurare al timerelor, prezentat mai sus,
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="timere-si-attiny20">3. Timere si ATtiny20</h2>
+<div class="level2">
+
+<p>
+Pentru a particulariza cunostintele generale despre timere pentru arhitectura Atmel, ne vom folosi de <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow">datasheetul</a> procesorului nostru, pe care il deschidem la capitolul 11.<br>Un material secundar de documentare va fi si <a href="http://cs.curs.pub.ro/wiki/pm/lab/lab2#timer" class="urlextern" title="http://cs.curs.pub.ro/wiki/pm/lab/lab2#timer" rel="nofollow">laboratorul 2 de PM</a>, unde este prezentata arhitectura timerelor unui ATmega324 (insa multe din concepte se aplica si aici).<br>Ce trebuie sa retinem ca timerele Atmel au 3 registre foarte importante:
+</p>
+
+<p>
+<strong>1. TCNT0 (Timer/Counter 0)</strong>
+</p>
+
+<p>
+ATtiny20 are doua timere: unul pe 8 biti si unul pe 16 biti, denumite <code>TCNT0</code> si <code>TCNT1</code>. In cadrul laboratorului il vom implementa doar pe cel pe 8 biti, <code>TCNT0</code>.<br>Urmarind in permanenta datasheet-ul si la pagina 203, aflam din el ca <code>TCNT0</code> este denumirea registrului cu rolul <strong>contorului</strong> (ce tine valoarea curenta) din prezentarea generala. El este mapat in I/O space la adresa <code>0x17</code> si are o valoare pe 8 biti.<br>Interactiunea cu acest registru se face prin:
+</p>
+<ul>
+<li class="level1"><div class="li"> citirea valorii sale (printr-o instructiune de tip <code>in</code>)</div>
+</li>
+<li class="level1"><div class="li"> initializarea sa (in general cu 0, printr-o instructiune de tip <code>out</code>)</div>
+</li>
+</ul>
+
+<p>
+Incrementarea acestui registru se face <strong>automat</strong> de catre hardware!
+</p>
+
+<p>
+<strong>2. OCR0A / OCR0B (Output Compare Register 0, channel A/B)</strong>
+</p>
+
+<p>
+Aceste doua registre corespund lui “MAX” din descrierea generala: hardware-ul verifica la fiecare clock tick daca <code>TCNT0 == OCR0A</code> sau daca <code>TCNT0 == OCR0B</code> si semnaleaza acest lucru prin flag-urile <code>OCF0A</code> si <code>OCF0B</code> (output compare flag).<br>Registrele OCR pot fi folosite si pentru a genera semnal PWM. Ele sunt doua la numar pentru a putea genera doua canale de PWM (canalul A si canalul B) pornind de la acelasi registru numarator hardware (avantajul fiind ca cele doua semnale PWM vor fi intotdeauna in faza unul cu celalalt).<br>Din datasheet, pagina 203, aflam ca registrul <code>OCR0A</code> se afla mapat la adresa I/O <code>0x16</code>, iar <code>OCR0B</code> la adresa <code>0x15</code>.
+</p>
+
+<p>
+<strong>3. TCCR0A, TCCR0B (Timer/Counter Control Registers A and B)</strong>
+</p>
+
+<p>
+Acestea sunt registrele de control pentru modul de functionare al timerului 0 (note: literele A si B nu au nicio legatura cu canalele A si B de la registrul OCR, este doar o coincidenta nefericita). In realitate, cele doua alcatuiesc acelasi registru de control TCCR0, pe 16 biti.<br>Registrul respectiv contine multe informatii de configurare codificate in bitii sai. O lista completa a acestora puteti gasi in datasheet, capitolul 11.9.1 si 11.9.2 paginile 69-73, insa un rezumat scurt vom face aici.<br>Sa incepem cu registrul <code>TCCR0A</code> (care este mapat la adresa I/O <code>0x19</code>):
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/tccr0a.png?id=lab%3Acn2%3Alab09" class="media" title="lab:cn2:tccr0a.png"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/tccr0a.png" class="mediacenter" title="TCCR0A" alt="TCCR0A"></a>
+</p>
+
+<p>
+Sa remarcam faptul ca acest registru contine 3 sub-valori:
+</p>
+<ul>
+<li class="level1"><div class="li"> pe bitii 7:6 contine valoarea <code>COM0A</code> pe 2 biti, ce controleaza functia pinului de I/O <code>OC0A</code></div>
+</li>
+<li class="level1"><div class="li"> pe bitii 5:4 contine valoarea <code>COM0B</code> pe 2 biti, ce controleaza functia pinului de I/O <code>OC0B</code></div>
+</li>
+<li class="level1"><div class="li"> pe bitii 1:0 contine (o parte din) valoarea <code>WGM0</code> (waveform generation mode), un numar pe 3 biti<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fn__3" id="fnt__3" class="fn_top">3)</a></sup> care seteaza modul de functionare al timer-ului: normal, fast PWM, phase-correct PWM, CTC, etc. Vom vedea imediat ce face fiecare mod de functionare.</div>
+</li>
+<li class="level1"><div class="li"> bitii 3:2 au ramas neimplementati din diverse motive.</div>
+</li>
+</ul>
+
+<p>
+Registrul <code>TCCR0B</code> (mapat la adresa <code>0x18</code>) este un pic mai putin important, si contine:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/tccr0b.png?id=lab%3Acn2%3Alab09" class="media" title="lab:cn2:tccr0b.png"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/tccr0b.png" class="mediacenter" title="TCCR0B" alt="TCCR0B"></a>
+</p>
+<ul>
+<li class="level1"><div class="li"> bitul 2 din <code>WGM0</code>, nu are semnificatie de sine statatoare</div>
+</li>
+<li class="level1"><div class="li"> pe bitii 2:0 contine valoarea <code>CS0</code> (clock source) pe 3 biti, care dicteaza valoarea prescaler-ului (daca este cazul), respectiv daca timerul este pornit sau oprit. Descrierea completa a optiunilor lui <code>CS0</code> se afla la pagina 73, in tabelul 11-9, sectiunea 11.9.2.</div>
+</li>
+</ul>
+
+<p>
+<strong>Moduri de functionare</strong>
+</p>
+
+<p>
+Dupa cum spuneam, acum este momentul sa vedem toate modurile de functionare disponibile pentru un timer Atmel pe 8 biti. Dupa cum ne amintim din urma cu cateva randuri, modul de functionare poate fi setat modificand bitii <code>WGM0</code> din registrele <code>TCCR0A</code> si <code>TCCR0B</code>.<br>Atmel “were getting a little ahead of themselves” in datasheet atunci cand au prezentat modurile de functionare la pagina 64 din datasheet, inainte de a spune ca ele sunt setabile din registrul de configurare, prezentat la pagina 69.<br>Modurile de operare ale timerului 0 pot fi:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>normal</strong> (<code>WGM0 = 0</code>), corespunde unei situatii care nu a fost discutata in prezentarea generala, si anume cea in care counter-ul <code>TCNT0</code> “se da peste cap” atunci cand ajunge la 255, iar valorile din <code>OCR0A</code> si <code>OCR0B</code> sunt folosite doar pentru output compare. In urma resetarii la zero, este important de retinut ca se seteaza flag-ul de intrerupere <code>TOV0</code> (timer overflow). Acest mod de operare este cel mai putin configurabil: intervalul la care sunt generate evenimente nu poate fi schimbat decat prin schimbarea prescaler-ului (<code>TCCR0B</code>:<code>CS0</code>).</div>
+</li>
+<li class="level1"><div class="li"> <strong>CTC</strong><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fn__4" id="fnt__4" class="fn_top">4)</a></sup> (<code>WGM0 = 2</code>): aceasta corespunde situatiei 1. din prezentarea generala, in care counter-ul foloseste valoarea din <code>OCR0A</code> pe post de <strong>MAX</strong> si “se da peste cap” atunci cand o atinge. In urma resetarii in acest mod, timer-ul genereaza un eveniment prin flag-ul <code>OCF0A</code>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>fast PWM</strong> (<code>WGM0 = 3 sau 7</code>): conform cu situatia 3. La atingerea valorii “TOP”<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fn__5" id="fnt__5" class="fn_top">5)</a></sup>, timer-ul se reseteaza si genereaza intrerupere de tipul <code>TOV0</code>. Utilitatea este aceea ca pinii de output <code>OC0A</code> si <code>OC0B</code> vor comuta la depasirea valorii din <code>OCR0A</code>, respectiv <code>OCR0B</code>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>phase-correct PWM</strong> (<code>WGM0 = 1 sau 5</code>). In aceasta situatie, la atingerea valorii “TOP” (definita cu aceleasi mentiuni ca mai sus), timer-ul incepe sa se decrementeze, in loc sa se reseteze. Intreruperile de <code>TOV0</code> sunt generate de fiecare data cand timer-ul ajunge la 0 (de doua ori mai rar decat la fast PWM, de unde si denumirea).</div>
+</li>
+</ul>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/wgm.png?id=lab%3Acn2%3Alab09" class="media" title="lab:cn2:wgm.png"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/wgm.png" class="mediacenter" title="Moduri PWM" alt="Moduri PWM"></a>
+</p>
+
+<p>
+Fiindca o poza face cat 1000 de cuvinte, va recomandam din nou sa vizualizati <a href="http://cs.curs.pub.ro/wiki/pm/lab/lab2#moduri-de-functionare" class="urlextern" title="http://cs.curs.pub.ro/wiki/pm/lab/lab2#moduri-de-functionare" rel="nofollow">aceste imagini</a>.<br>
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="exemple-de-utilizare-a-timerelor">4. Exemple de utilizare a timerelor</h2>
+<div class="level2">
+
+<p>
+Timerul 0 se poate configura in modul normal astfel:<br>
+</p>
+<pre class="code asm">        <span class="co1">; configure timer 0</span>
+        ldi     r16<span class="sy1">,</span> 0b00000000    <span class="co1">; COM0A = 0 (normal port operation, OC0A disconnected)</span>
+        <span class="kw1">out</span>     tccr0a<span class="sy1">,</span> r16        <span class="co1">; WGM0[1:0] = 0 (normal mode operation)</span>
+&nbsp;
+        <span class="co1">; load value into timer 0 counter</span>
+        ldi     r16<span class="sy1">,</span> <span class="nu0">0</span>
+        <span class="kw1">out</span>     tcnt0<span class="sy1">,</span> r16
+&nbsp;
+        <span class="co1">; start timer 0 by setting the prescaler bits to non-zero</span>
+        ldi     r16<span class="sy1">,</span> 0b00000101    <span class="co1">; FOC0A, FOC0B = 0 (don't care anyway, not implemented)</span>
+        <span class="kw1">out</span>     tccr0b<span class="sy1">,</span> r16        <span class="co1">; CS0 = 5 (clkT = clkIO/1024 from prescaler)</span></pre>
+
+<p>
+Din punctul in care am scris ceva nenul pe bitii 2:0 din TCCR0B, timer-ul a pornit. Este important de realizat ca timer-ul nu este hardcodat sa fie pornit sau oprit, ci pur si simplu, daca <code>CS0</code> este 0 (atat cat este la startup), atunci modulul nu primeste clock, deci nu se poate incrementa.<br>Asadar, din momentul ultimei instructiuni, timer-ul incepe sa se incrementeze cu cate o valoare la fiecare 1024 de cicli de ceas.
+</p>
+
+<p>
+Pentru a putea citi valoarea din registru, putem face polling pe registrul de numarare:<br>
+</p>
+<pre class="code asm">_loop<span class="sy1">:</span>  <span class="kw1">in</span>      r16<span class="sy1">,</span> tcnt0
+        cpi     r16<span class="sy1">,</span> <span class="nu0">42</span>
+        brlo    _loop</pre>
+
+<p>
+De asemenea, putem face polling pe flag-ul de intrerupere asociat modului in care am configurat timer-ul, Fara a intra in prea multe detalii despre intreruperi acum, este suficient sa spunem ca flag-urile se gasesc in registrul <code>TIFR</code>, prezentat la pagina 75.<br>
+</p>
+<pre class="code asm">_loop<span class="sy1">:</span>  <span class="kw1">in</span>      r16<span class="sy1">,</span> tifr
+        andi    r16<span class="sy1">,</span> tov0
+        breq    _loop</pre>
+
+<p>
+Codul precedent citeste registrul cu flag-urile asociate intreruperile de timer, verifica doar flag-ul <code>TOV0</code> printr-o masca de “si”, si cicleaza daca bitul nu este setat (daca este zero).
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="prezentarea-scheletului-de-laborator">5. Prezentarea scheletului de laborator</h2>
+<div class="level2">
+
+<p>
+Spre deosebire de laboratoarele anterioare, scheletul de cod (care acum are <a href="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux1" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux1" rel="nofollow">pagina lui</a>) a suferit cateva schimbari:
+</p>
+<ul>
+<li class="level1"><div class="li"> top-module acum nu mai este <code>cpu.v</code>, ci un nou modul, <code>nexys_top.v</code>, care are deja conexiunile in fisierul .ucf facute cu (aproape) toate perifericele de pe placuta de dezvoltare. Noul top-module ar trebui sa permita schimbarea mai usoara a asignarilor dintre porturile microcontrollerului si pinii hardware ai FPGA-ului.</div>
+</li>
+<li class="level1"><div class="li"> pinii exteriori ai microcontroller-ului au fost redenumiti din <code>porta</code> si <code>portb</code> in <code>pa</code> si <code>pb</code>, in conformitate cu denumirile din datasheet. Numele <code>PORTA</code> si <code>PORTB</code> sunt folosite doar in contextul registrelor I/O de scriere, de la adresele <code>0x02</code> si <code>0x06</code>.</div>
+</li>
+<li class="level1"><div class="li"> au fost adaugate doua iesiri microcontroller-ului: <code>OC0A</code> si <code>OC0B</code>. Acestea sunt doua iesiri PWM generate de catre timerul 0 pe care voi trebuie sa-l implementati.</div>
+</li>
+<li class="level1"><div class="li"> modulul <code>gpio_sram.v</code> a fost total regandit si reimplementat. Cunoscut sub noua denumire, <code>io_sram</code> contine o memorie de 64 bytes cu toate registrele din spatiul I/O, asa cum sunt ele vizibile dinspre CPU la fiecare ciclu de ceas. Aceste registre pot fi atat citite, cat si scrise, atat de catre CPU, cat si de catre <code>io_sram</code> insusi.</div>
+<ul>
+<li class="level2"><div class="li"> Facem urmatoarea conventie: vom instantia mai multe sub-module in <code>io_sram</code> (timere, gpio) care au doua roluri:</div>
+<ul>
+<li class="level3"><div class="li"> au comportament de tip read-modify-write pentru valorile din memorie (pot scrie valori noi pe baza celor vechi, spre exemplu timer-ul poate incrementa registrul <code>TCNT0</code>)</div>
+</li>
+<li class="level3"><div class="li"> au acces la pinii exteriori ai MCU-ului.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> Inca o conventie: la scrierea inapoi in memorie, intotdeauna are prioritate CPU-ul, iar in situatiile de tip read-modify-write ale <code>io_sram</code>-ului in care CPU-ul intervine fix in timpul operatiei, pur si simplu valoarea din submodulul care voia sa scrie este discarded, in memorie ajungand valoarea scrisa de CPU.</div>
+</li>
+<li class="level2"><div class="li"> Modul de functionare al unui sub-modul din <code>io_sram</code> este: are o serie de input-uri care sunt citite din <code>io_sram</code> (care reprezinta interfata sub-modulului cu CPU-ul), si o serie de output-uri care merg tot catre <code>io_sram</code> (sau catre pinii exteriori ai MCU-ului, si carora <code>io_sram</code> stie sa le faca forwarding). Input-urile catre submodule incep cu <code>mem_</code> si sunt citite la fiecare ciclu de ceas din <code>io_sram</code>. Output-urile submodulelor sunt bufferate inapoi in <code>io_sram</code> in ciclul urmator de ceas. Practic, submodulele nu contin memorie permanenta, ci citesc la fiecare ciclu de ceas din <code>io_sram</code>, proceseaza si depun inapoi valorile.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> UAL-ul a suferit si el o mica modificare: Atmel mentioneaza in datasheet ca instructiunile <code>inc</code> si <code>dec</code> nu modifica registrul de carry (<code>C</code>), si am implementat acest lucru in <code>ual.v</code> cu ajutorul semnalului <code>alu_cout_en</code> (carry out enable). De asemenea, a mai aparut si semnalul <code>alu_cin_en</code> (carry in enable), pentru instructiuni precum <code>adc</code>.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit8" id="exercitii">6. Exercitii</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <strong>1. (5p)</strong>  Dupa ce descarcati <a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet_lab9.zip" class="media mediafile mf_zip" title="lab:cn2:schelet_lab9.zip (838.5 KB)">scheletul de laborator</a>, rezolvati TODO-urile din <code>io_sram.v</code> si submodulele sale. Ceea ce dorim sa avem functional este un timer in modurile normal, CTC si fast PWM. Va trebui sa construiti si logica de prescaling pentru ceasul timer-ului 0. Puteti consulta din nou sectiunea 3 si datasheet-ul la capitolul 11 pentru mai multe detalii. Adresele registrelor I/O noi (<code>TCCR0A</code>, <code>TCCR0B</code>, <code>TCNT0</code>, <code>OCR0A</code>, <code>OCR0B</code>) au fost deja trecute in <code>defines.vh</code>, insa pot fi gasite si in datasheet la pagina 203 daca este nevoie de ele.</div>
+</li>
+<li class="level1"><div class="li"> <strong>2. (3p)</strong> Daca nu aveti erori de compilare, scrieti un scurt program cu <a href="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux2" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux2" rel="nofollow">avrasm</a> care configureaza timer-ul 0 in modul fast PWM. Asignati pinul de PWM <code>OC0A</code> la unul din LED-urile de pe placuta Digilent Nexys. Dati-i lui <code>OCR0A</code> o valoare mica, astfel incat sa se vada ca LED-ul la care este asignat <code>OC0A</code> este mai putin luminos decat celelalte.</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+Daca scheletul nu pare ca functioneaza, folositi simulatorul pentru a depana sursa problemei. Urmati pasii de <a href="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux1#simulare-si-testare" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/aux/cn2/aux1#simulare-si-testare" rel="nofollow">aici</a> pentru a porni simularea. Scoateti toate semnalele inutile din diagrama de semnale si lasati-le doar pe cele din modulul <code>timer0.v</code>.<br>
+</div><p></p>
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>3. (4p)</strong> In acest exercitiu vom incerca sa interfatam afisajul cu 7 segmente al placutei de dezvoltare. In <a href="https://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm.pdf" class="urlextern" title="https://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm.pdf" rel="nofollow">datasheet-ul ei</a>, la paginile 5-6, este prezentat modul de lucru cu acesta:</div>
+<ol>
+<li class="level3"><div class="li"> exista 4 cifre diferite, fiecare cifra fiind compusa din cate 7 segmente (in realitate, 7 LED-uri). Fiecare LED are un anod si un catod. Pentru ca LED-ul sa fie aprins, trebuie ca anodul sa se afle la un potential electric mai mare decat catodul. Din schema remarcam faptul ca anodul este legat la un tranzistor PNP, iar catodul trage (sink) curentul din LED, deci atat anodul, cat si catodul sunt active low (trebuie sa scriem un zero logic si pe pinul corespunzator anodului, si pe pinul corespunzator catodului ca sa aprindem LED-ul).</div>
+</li>
+<li class="level3"><div class="li"> la o singura cifra, anodul este comun pentru toate cele 7 segmente: activarea anodul devine acum semnal de “activare a cifrei”. Cei 4 anozi se numesc AN0, AN1, AN2 si AN3.</div>
+</li>
+<li class="level3"><div class="li"> mai mult, catozii sunt comuni pentru toti anozii (desi avem 7 * 4 = 28 de LED-uri, avem doar 7 anozi si 4 catozi). Daca stabilim valorile catozilor intr-un anumit fel, atunci toate cifrele vor arata la fel (toate cifrele active, cel putin). Catozii sunt denumiti de la <code>CA</code> pana la <code>CG</code>. Mai exista un catod special, <code>DP</code>, care vine de la decimal point, si care aprinde punctul dintre doua cifre,</div>
+</li>
+<li class="level3"><div class="li"> pentru a aprinde toate cifrele si a afisa lucruri diferite pe ele, este clar ca nu putem face asta simultan. In datasheet, Digilent recomanda folosirea multiplexarii in timp: aprindem intai prima cifra pentru o perioada, apoi cifra a doua pentru o perioada, etc. Valoarea recomandata de Digilent pentru a nu fi observabil efectul de catre ochiul uman este de cel mult 60Hz.</div>
+</li>
+</ol>
+</li>
+</ul>
+
+<p>
+Sarcina voastra este sa scrieti un program care afiseaza ceva pe display-ul cu 7 segmente (ceva diferit pe fiecare cifra!). Intre afisari pe cifre consecutive trebuie apelata o functie de delay. Fiind vorba de o frecventa finala de 60 Hz, nu se pune problema de iterare dupa un registru precum <code>R16</code>, fiindca are o valoare mult prea mica comparativ cu timpul pe care trebuie sa il pierdem. Din acest motiv, va trebui ca in functia de delay sa configurati timerul 0 in modul CTC, cu prescaler-ul setat la maxim (1:1024) si la valoarea maxima de numarare (<code>OCR0A = 0xFF</code>). Pentru a depista cand a trecut timpul de delay, va trebui sa faceti polling pe intreruperea <code>OCF0A</code> din registrul <code>TIFR</code> (Timer Interrupt Flag Register). Atunci cand flag-ul este setat pe 1 de catre timer, va trebui sa il puneti voi la loc pe zero, pentru a permite si altor delay-uri sa fie executate in continuare.
+</p>
+
+<p>
+Puteti pleca de la urmatorul cod:<br>
+</p>
+<pre class="code asm">TCCR0A 	<span class="kw5">equ</span> <span class="nu0">0x19</span>
+TCCR0B 	<span class="kw5">equ</span> <span class="nu0">0x18</span>
+TCNT0 	<span class="kw5">equ</span> <span class="nu0">0x17</span>
+OCR0A 	<span class="kw5">equ</span> <span class="nu0">0x16</span>
+TIFR    <span class="kw5">equ</span> <span class="nu0">0x25</span>
+&nbsp;
+PORTA   <span class="kw5">equ</span> <span class="nu0">0x02</span>
+DDRA    <span class="kw5">equ</span> <span class="nu0">0x01</span>
+PORTB   <span class="kw5">equ</span> <span class="nu0">0x06</span>
+DDRB    <span class="kw5">equ</span> <span class="nu0">0x05</span>
+&nbsp;
+SPH     <span class="kw5">equ</span> <span class="nu0">0x3E</span>
+<span class="kw4">SPL</span>     <span class="kw5">equ</span> <span class="nu0">0x3D</span>
+RAMEND  <span class="kw5">equ</span> <span class="nu0">0xBF</span>
+&nbsp;
+rjmp        _start
+&nbsp;
+<span class="co1">; puteti definii functii aici</span>
+<span class="co1">; ...</span>
+&nbsp;
+<span class="co1">; initializari</span>
+_start<span class="sy1">:</span> 
+	ldi         R16<span class="sy1">,</span> <span class="nu0">0</span>
+     	<span class="kw1">out</span>         SPH<span class="sy1">,</span> R16
+    	ldi         R16<span class="sy1">,</span> RAMEND
+     	<span class="kw1">out</span>         <span class="kw4">SPL</span><span class="sy1">,</span> R16
+&nbsp;
+	<span class="co1">; setam PORTA(catod) si PORTB(anod) ca iesiri</span>
+	ldi r16<span class="sy1">,</span> 0b11111111
+	<span class="kw1">out</span> DDRA<span class="sy1">,</span> r16
+	<span class="kw1">out</span> PORTA<span class="sy1">,</span> r16
+&nbsp;
+	<span class="kw1">out</span> DDRB<span class="sy1">,</span> r16
+	<span class="kw1">out</span> PORTB<span class="sy1">,</span> r16
+&nbsp;
+<span class="co1">; programul vostru ...</span></pre>
+
+<p>
+</p><p></p><div class="noteclassic">
+Daca apelati functiile de afisare pe display-ul cu 7 segmente fara delay intre ele, cifrele se vor amesteca una peste alta si nu se va intelege nimic. In caz ca faceti debugging, puteti sa va folositi si de bitii de prescaler global ai procesorului (care sunt asignati by default la switch-urile <code>SW[4:0]</code>).<br>
+</div><p></p>
+<p></p>
+
+<p>
+</p><p></p><div class="notewarning">
+Este bine ca in programele pe care le scrieti sa respectati <a href="https://gcc.gnu.org/wiki/avr-gcc" class="urlextern" title="https://gcc.gnu.org/wiki/avr-gcc" rel="nofollow">ABI-ul de AVR</a>!<br>
+</div><p></p>
+<p></p>
+
+
+
+</div>
+
+<h2 class="sectionedit9" id="resurse">7. Resurse</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow"> Datasheet ATTiny20</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow"> Setul de Instructiuni AVR</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" rel="nofollow"> Datasheet Digilent Nexys 3 Spartan6</a></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit10" id="linkuri-utile">8. Linkuri utile</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/Images/doc2505.pdf" class="urlextern" title="http://www.atmel.com/Images/doc2505.pdf" rel="nofollow">Atmel AVR130: Setup and Use the AVR Timers</a><br>
+</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.engblaze.com/microcontroller-tutorial-avr-and-arduino-timer-interrupts/" class="urlextern" title="http://www.engblaze.com/microcontroller-tutorial-avr-and-arduino-timer-interrupts/" rel="nofollow">AVR and Arduino timer interrupts</a><br>
+</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.avrbeginners.net/architecture/timers/timers.html" class="urlextern" title="http://www.avrbeginners.net/architecture/timers/timers.html" rel="nofollow">Timer tutorial on AVRBeginners</a><br>
+</div>
+</li>
+<li class="level1"><div class="li"> <a href="http://digital.ni.com/public.nsf/allkb/294E67623752656686256DB800508989" class="urlextern" title="http://digital.ni.com/public.nsf/allkb/294E67623752656686256DB800508989" rel="nofollow">PWM intro</a></div>
+</li>
+</ul>
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+numarul de biti al</div>
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+sic: denumirile sunt in concordanta cu terminologia Atmel, in <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow">datasheet-ul ATtiny20</a>, pagina 60</div>
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+al carui bit 2 se intinde in registrul <code>TCCR0B</code> for reasons we fail to understand</div>
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+clear timer on compare match</div>
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#fnt__5" id="fn__5" class="fn_bot">5)</a></sup> 
+definita ca 0xFF in modul <code>WGM0</code> = 3 sau <code>OCR0A</code> in modul <code>WGM0</code> = 7</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab09.txt</bdi> · Last modified: 08.12.2015 by <bdi>Lucia Cojocaru</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 9 - Timer_Counter [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

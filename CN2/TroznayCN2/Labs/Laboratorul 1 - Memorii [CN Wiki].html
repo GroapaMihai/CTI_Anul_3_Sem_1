@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 1 - Memorii [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-10-11T18:27:13+0300">
+<meta name="keywords" content="lab,cn2,lab01">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab01">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 1 - Memorii [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab01","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 1 - Memorii [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab01"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#introducere">1. Introducere</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#criterii-de-clasificare">2. Criterii de clasificare</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#mod-de-acces">2.1. Mod de acces</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#posibilitatea-de-modificare-a-datelor">2.2. Posibilitatea de modificare a datelor</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#sincron-vs-asincron">2.3. Sincron vs asincron</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#static-vs-dinamic">2.4. Static vs dinamic</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#memorii-rom">3. Memorii ROM</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#memorii-sram-sincrone-ssram">4. Memorii SRAM sincrone (SSRAM)</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#descrierea-semnalelor">4.1. Descrierea semnalelor</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#registered-io">4.2. Registered I/O</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-implementarea-unei-memorii-sram">4.3. [1p] Implementarea unei memorii SRAM</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-interfatare-si-testare">4.4. [1p] Interfatare si testare</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-magistrale-de-date-multiplexate">4.5. [1p] Magistrale de date multiplexate</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-testare">4.6. [2p] Testare</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#aplicatie">5. Aplicatie</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-fsm">5.1. [3p] FSM</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#p-implementare-pe-placa">5.2. [2p] Implementare pe placa</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#bonus-2p-reimplementare-utilizand-sram">5.3. [BONUS 2p] Reimplementare utilizand SRAM</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#link-uri-utile">6. Link-uri utile</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-1-memorii">Laboratorul 1 - Memorii</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:olteanv@gmail.com" class="mail" title="olteanv@gmail.com">Vladimir Oltean</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 12.10.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 11.10.2015</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="introducere">1. Introducere</h2>
+<div class="level2">
+
+<p>
+Exista situatii in care vrem sa folosim logica secventiala pentru a stoca mai multa informatie decat simpla stare curenta a unui automat finit, ci mai degraba informatii/date de dimensiuni mari si uz general. Astfel au aparut aceste blocuri de circuite secventiale de dimensiuni mari, numite <strong>memorii</strong>, si caracterizate de urmatoarele trasaturi:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>dimensiune</strong> (masurata in biti (b), octeti (B), si multiplii acestora)</div>
+</li>
+<li class="level1"><div class="li"> <strong>timp de acces</strong> (masurat in submultipli ai secundei, in general nanosecunde)</div>
+</li>
+<li class="level1"><div class="li"> <strong>structura interna</strong> (sau cum un bloc mare de memorie este construit din mai multe chip-uri mai mici)</div>
+</li>
+<li class="level1"><div class="li"> <strong>volatilitatea datelor</strong> (datele raman scrise in memorie dupa un ciclu power on-off-on?)</div>
+</li>
+<li class="level1"><div class="li"> <strong>persistenta datelor</strong> (vom vedea mai tarziu)</div>
+</li>
+<li class="level1"><div class="li"> <strong>posibilitatea de modificare post-fabricatie a datelor</strong></div>
+</li>
+<li class="level1"><div class="li"> <strong>modul de acces al datelor</strong> (date care nu sunt in ordine in memorie se pot accesa consecutiv in timp?)</div>
+</li>
+<li class="level1"><div class="li"> <strong>pret</strong> ($)</div>
+</li>
+<li class="level1"><div class="li"> <strong>tehnologia de fabricatie</strong> (care, de fapt, joaca un rol important in determinarea tuturor celor de mai sus)</div>
+</li>
+<li class="level1"><div class="li"> <strong>numar de porturi</strong> (cate unitati hardware pot avea acces simultan la memorie, in acelasi ciclu de ceas)</div>
+</li>
+</ul>
+
+<p>
+Fiecare solutie este una de compromis<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#fn__1" id="fnt__1" class="fn_top">1)</a></sup> iar in aplicatiile de dimensiuni mari se adopta o tehnica hibrida, numita <strong>ierarhie de memorii</strong>: o memorie foarte rapida (dar extrem de mica, pentru a mentine costul scazut) este “backed up” de una de dimensiuni ceva mai mari, dar performante ceva mai mici, care este “backed up” la randul ei de alta de dimensiuni si mai mari si performante si mai mici, etc.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="criterii-de-clasificare">2. Criterii de clasificare</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit4" id="mod-de-acces">2.1. Mod de acces</h3>
+<div class="level3">
+
+<p>
+Unul din cele mai simple criterii de clasificare este cel dupa modul de acces. Astfel, exista memorii cu <strong>acces aleator</strong> (RAM - random access memory) si memorii cu <strong>acces secvential</strong> (spre exemplu benzile magnetice, care, pentru a accesa o anumita portiune a benzii necesita derularea acesteia). In cadrul acestui laborator ne vor interesa doar memoriile de tip RAM.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="posibilitatea-de-modificare-a-datelor">2.2. Posibilitatea de modificare a datelor</h3>
+<div class="level3">
+
+<p>
+Conform altui criteriu, exista memorii care au <strong>continut fixat</strong> din momentul fabricatiei (ROM - read only memory), care au un <strong>continut pseudo-fixat</strong> (dintre ele amintim EEPROM/Flash, o tehnologie pentru care scrierile degradeaza in timp celulele de memorie) si memorii care au un <strong>continut alterabil</strong>.
+</p>
+
+<p>
+Desi exista multe tipuri de memorie (categorie in care intra si device-urile de mass storage, precum HDD si SSD), in continuare ne vom concentra asupra memoriilor de tip RAM volatile (al caror continut se sterge dupa caderea tensiunii de alimentare). <br>
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="sincron-vs-asincron">2.3. Sincron vs asincron</h3>
+<div class="level3">
+
+<p>
+Din punctul de vedere al modalitatii de interfatare exista:
+</p>
+<ul>
+<li class="level1"><div class="li">  <strong>RAM asincron</strong>: raspunde la schimbari ale liniilor de adresa. Genereaza un semnal intern de ceas, care este folosit pentru a sincroniza circuitele interne in timpul unui ciclu de scriere sau de citire. Desi este un design comun, acesta are limitari mari atunci cand se doreste o performanta ridicata a accesului la memorie.</div>
+</li>
+<li class="level1"><div class="li"> <strong>RAM sincron</strong>: foloseste unul sau mai multe semnale externe de ceas pentru a sincroniza functionarea celulelor si a logicii de scriere/citire a modulului. Fiindca se poate obtine un control mult mai precis al timing-ului, timpii de acces pot fi redusi la valori comparabile cu ciclii de ceas ai CPU-ului. Din acest motiv cele mai rapide memorii sunt in general sincrone.</div>
+</li>
+</ul>
+
+<p>
+Toate memoriile pe care le vom implementa vor fi <strong>sincrone</strong>.
+</p>
+
+</div>
+
+<h3 class="sectionedit7" id="static-vs-dinamic">2.4. Static vs dinamic</h3>
+<div class="level3">
+
+<p>
+Din alt punct de vedere, de data aceasta unul strict tehnologic, exista:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>RAM static</strong>: fiecare bit de memorie este implementat folosind bistabile sau latch-uri. Acest design are un consum extrem de eficient in idle, insa acesta creste odata cu frecventa acceselor. Costul per bit este ridicat si densitatea de biti per chip este scazuta. Pentru fiecare bit de stocare sunt necesari intre 4 si 6 tranzistori pentru a implementa efectiv bistabilul care memoreaza starea.</div>
+</li>
+<li class="level1"><div class="li"> <strong>RAM dinamic</strong>: un bit de memorie este implementat folosind un tranzistor si un condensator. Conform principiului de functionare al condensatoarelor, acestea pot retine o sarcina electrica pe termen nedefinit asa ca, cel putin in teorie, un bit de 0 poate fi stocat ca un condensator descarcat (tensiune 0 intre borne) respectiv un bit de 1 ca un condensator incarcat (tensiune mare intre borne). Din cauza imperfectiunilor<sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#fn__2" id="fnt__2" class="fn_top">2)</a></sup> condensatoarele din chip-urile de RAM dinamic se descarca singure dupa un timp (de ordinul milisecundelor). Din acest motiv celulele trebuie citite periodic iar acelea care erau scrise cu “1” trebuie rescrise. Acest procedeu se numeste <strong>refresh</strong> si reprezinta un overhead necesar doar pentru intretinere, RAM-ul fiind indisponibil in acest timp pentru accese utile (“inchis pentru curatenie”). Pe de alta parte densitatea de biti per chip este mult mai buna decat la SRAM si se pot obtine memorii de ordinul sutelor de <abbr title="Megabyte">MB</abbr> (2<sup>27</sup> - 2<sup>29</sup>).</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit8" id="memorii-rom">3. Memorii ROM</h2>
+<div class="level2">
+
+<p>
+In realitate o memorie ROM cu continut cu adevarat nemodificabil nu este nimic altceva decat un circuit <strong>combinational</strong> care primeste ca input o adresa si scoate la output o valoare hardcodata pentru acea adresa. Codul de mai jos descrie o memorie ROM de dimensiune 16×8, adica 16 octeti. Pentru a adresa toti cei 16 octeti este nevoie de o latime a adreselor de 4 biti. Continutul memoriei este: {1, 2, 4, 8, 16, 32, 64, 128, 170, 85, 153, 0, 0, 0, 0, 0}.
+</p>
+<pre class="code Verilog"><span class="kw1">module</span> rom <span class="br0">(</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">3</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">,</span>
+        <span class="kw1">output</span> <span class="kw1">reg</span>  <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@*</span> <span class="kw1">begin</span>
+        <span class="kw1">case</span> <span class="br0">(</span>address<span class="br0">)</span>
+        <span class="re0">4'd0</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd1</span><span class="sy0">;</span>
+        <span class="re0">4'd1</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd2</span><span class="sy0">;</span>
+        <span class="re0">4'd2</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd4</span><span class="sy0">;</span>
+        <span class="re0">4'd3</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd8</span><span class="sy0">;</span>
+        <span class="re0">4'd4</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd16</span><span class="sy0">;</span>
+        <span class="re0">4'd5</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd32</span><span class="sy0">;</span>
+        <span class="re0">4'd6</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd64</span><span class="sy0">;</span>
+        <span class="re0">4'd7</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd128</span><span class="sy0">;</span>
+        <span class="re0">4'd8</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd170</span><span class="sy0">;</span>
+        <span class="re0">4'd9</span><span class="sy0">:</span>    data <span class="sy0">=</span> <span class="re0">8'd85</span><span class="sy0">;</span>
+        <span class="re0">4'd10</span><span class="sy0">:</span>   data <span class="sy0">=</span> <span class="re0">8'd153</span><span class="sy0">;</span>
+        <span class="kw1">default</span><span class="sy0">:</span> data <span class="sy0">=</span> <span class="re0">8'd0</span><span class="sy0">;</span>
+        <span class="kw1">endcase</span>
+    <span class="kw1">end</span>
+<span class="kw1">endmodule</span></pre>
+
+<p>
+</p><p></p><div class="notewarning">
+Semnalul <code>data</code> este declarat ca <code>reg</code> din cauza restrictiei sintactice a limbajului Verilog, ca toate semnalele atribuite in interiorul unui bloc <code>always</code> sa fie de tipul <code>reg</code>. Desi este declarat ca <code>reg</code>, el va fi sintetizat combinational, fiindca blocul este unul de tipul <code>always @*</code>, adica asincron fata de ceas. In realitate, memoria va fi sintetizata ca un mare multiplexor, cu intrarile hardcodate pentru fiecare selectie posibila.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit9" id="memorii-sram-sincrone-ssram">4. Memorii SRAM sincrone (SSRAM)</h2>
+<div class="level2">
+
+<p>
+In cadrul acestui laborator vom implementa o <strong>memorie RAM statica sincrona</strong>.
+</p>
+
+</div>
+
+<h3 class="sectionedit10" id="descrierea-semnalelor">4.1. Descrierea semnalelor</h3>
+<div class="level3">
+
+<p>
+Toate operatiile necesare pentru interfatarea unui chip SSRAM sunt controlate de unul sau mai multe semnale externe de ceas. Pentru a functiona corect toate semnalele de control trebuie sa fie valide atunci cand are loc tranzitia respectiva a ceasului, adica sa fie respectati timpii de setup si hold.
+</p>
+
+<p>
+Functionarea unui SSRAM poate fi descrisa prin urmatoarele semnale:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>Address (ADDR or SAx)</strong>: acest input este folosit pentru a selecta o locatie de memorie de pe chip. In realitate, pentru memorii mari construite din mai multe chip-uri, atunci cand selectam o adresa de fapt selectam mai multe celule de memorie, cate una pentru fiecare chip. Spre exemplu, intr-o memorie formata din 18 chip-uri, selectarea unei adrese conduce la 18 locatii de memorie simultan. Mai departe, distinctia dintre acestea se face decodificand bitii suplimentari ai adresei. Dimensiunea adresei depinde de marimea memoriei. De exemplu, o memorie SRAM de 32K x 36 va avea 15 biti de adresa (2<sup>15</sup> = 32K).</div>
+</li>
+<li class="level1"><div class="li"> <strong>Data Inputs and Outputs (DQs or I/Os)</strong>: Pinii de DQ sunt folositi pentru input si output de date. Pe unele memorii pinii de data input si data output sunt separati iar pe altele ei sunt multiplexati pe aceiasi pini. Spre exemplu, o memorie SRAM de 32K x 36 va avea 36 biti de date.</div>
+<ul>
+<li class="level3"><div class="li"> In timpul unei operatii de scriere un semnal de date se aplica pe pinii de data input. Aceste date sunt esantionate si stocate in celula de memorie selectata prin bitii de adresa.</div>
+</li>
+<li class="level3"><div class="li"> In timpul unei operatii de citire datele de la adresa de memorie selectata vor aparea pe pinii de data output odata ce accesul s-a incheiat si output-ul a fost activat.</div>
+</li>
+<li class="level3"><div class="li"> In majoritatea timpului pinii DQ sunt intr-o stare de impedanta marita, adica nu trag si nu dau curent. Ei nu prezinta niciun semnal catre exterior, ca si cand ar fi deconectati din circuit.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>Output Enable (OE or G)</strong>: (semnal descris in continuare ca activ high) atunci cand OE este 0 output-urile (DQ) sunt intotdeauna in stare de inalta impedanta. Cand OE este 1 output-urile sunt active iar datele pot aparea pe pini atunci cand sunt disponibile. OE este un semnal asincron: poate fi modificat in orice moment de timp iar SRAM-ul va raspunde imediat schimbarii. Folosirea acestui semnal, desi recomandata, este optionala.</div>
+<ul>
+<li class="level3"><div class="li"> In timpul unei operatii de citire acest semnal se foloseste pentru a bloca datele de a aparea la iesire pana atunci cand sunt necesare.</div>
+</li>
+<li class="level3"><div class="li"> Inaintea unei operatii de scriere acest semnal este uneori folosit pentru a evita coliziuni pe magistrala de date prin tri-state.</div>
+</li>
+<li class="level3"><div class="li"> In timpul operatiei de scriere propriu-zise semnalul OE este ignorat.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>Clock</strong>: La SRAM-urile cu un singur semnal de ceas acesta controleaza momentul cand semnalele de input sunt esantionate de catre memorie, la inceputul unui ciclu de citire sau scriere, si cand semnalele de output devin vizibile pe pini.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Chip Select (CS or SS)</strong>: (activ high) este folosit pentru a permite/bloca semnalele de input catre chip. Atunci cand CS este 0 semnalele de input aplicate pe pini sunt ignorate.</div>
+</li>
+<li class="level1"><div class="li"> <strong>Write Enable (WE or RW)</strong>: (activ high - 1 = write) semnalul este folosit pentru a alege dintre o operatie de citire sau de scriere. Atunci cand WE este 1 datele aplicate pe pinii de intrare sunt copiate in memorie. Cand WE este 0 se incepe un ciclu de citire iar datele de pe linia de date sunt ignorate.</div>
+</li>
+</ul>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/sram_block.png?id=lab%3Acn2%3Alab01" class="media" title="lab:cn2:sram_block.png"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/sram_block.png" class="media" title="Structura interioara a unui chip SRAM 2^h x g " alt="Structura interioara a unui chip SRAM 2^h x g " width="600"></a>
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Stabilirea nivelelor logice pe care sunt active semnalele este o chestiune ce tine strict de conventie, si este de preferat pastrarea aceleiasi conventii pe intreg parcursul unui proiect.<br>Pentru a asigura compatibilitatea intre module cu conventii diferite de polaritate, se pot utiliza porti logice inversoare.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit11" id="registered-io">4.2. Registered I/O</h3>
+<div class="level3">
+
+<p>
+In application note-ul IBM <a href="https://www.ece.cmu.edu/~ece548/localcpy/sramop.pdf" class="urlextern" title="https://www.ece.cmu.edu/~ece548/localcpy/sramop.pdf" rel="nofollow">Understanding SRAM operations</a> la paginile 7-8 se gasesc informatii despre tipurile de citire pentru un SRAM. Conform <a href="http://cdn.opencores.org/downloads/opencores_coding_guidelines.pdf" class="urlextern" title="http://cdn.opencores.org/downloads/opencores_coding_guidelines.pdf" rel="nofollow">guideline-urilor OpenCores pentru coding style</a> (pagina 10, Coding for synthesis, recomandarea 3) este bine ca toate input-urile si output-urile unui modul sa treaca intai prin registre, pentru a evita problemele de timing ce ar putea aparea.
+</p>
+
+<p>
+Mai precis, ne amintim formula aproximativa:<br>
+
+</p><center>t<sub>clock</sub> &gt;= t<sub>setup</sub> + t<sub>hold</sub> + t<sub>prop</sub> + t<sub>skew</sub></center><br>
+
+care descrie modul in care frecventa maxima la care poate fi operat un circuit depinde de:
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>t<sub>setup</sub>, t<sub>hold</sub></strong> - timpul minim cat un semnal de input trebuie mentinut activ <em>inainte</em>, respectiv <em>dupa</em> tranzitia semnalului de clock, adica de momentul cand acesta este esantionat. Violarea acestor timpi conduce la probleme de <a href="http://en.wikipedia.org/wiki/Metastability_in_electronics" class="urlextern" title="http://en.wikipedia.org/wiki/Metastability_in_electronics" rel="nofollow">metastabilitate</a>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>t<sub>skew</sub></strong> - din cauza ca retelele de distributie a semnalului de ceas sunt dificil de proiectat si firele pe care acesta circula au o capacitate nenula semnalul de ceas va ajunge decalat la diverse module din circuit, motiv pentru care perioada ceasului trebuie sa aiba o valoare suficient de mare incat sa mascheze aceste diferente.</div>
+</li>
+<li class="level1"><div class="li"> <strong>t<sub>prop</sub></strong> - este delay-ul cauzat de propagarea semnalului prin cel mai lung lant combinational. Aceasta este problema pe care registered I/O incearca sa o rezolve: chiar daca output-urile unui anumit modul combinational satisfac criteriile de timing la o anumita frecventa exista posibilitatea ca aceste output-uri sa fie inlantuite cu input-urile altui modul combinational delay-urile insumandu-se si putand conduce la o reducere semnificativa a frecventei de operare a circuitului per ansamblu. Solutia este “spargerea” lantului combinational in mai multe parti mai mici, separate intre ele de <em>buffere</em> implementate cu registre. Acestea au rolul de a “reseta” la zero toate delay-urile combinationale (pentru ciclul urmator de ceas), permitand obtinerea unor frecvente de operare mai mari. Presupunand ca avem un delay combinational de 50ns pentru un circuit, acesta isi poate termina executia fie intr-un singur ciclu de ceas cu durata de 50ns, fie poate fi spart in (de ex.) 5 cicli de ceas cu durata de 10ns fiecare. Desi timpul total in care se executa operatia este acelasi, primul circuit poate fi operat la 100 <abbr title="Megahertz">MHz</abbr>, in timp ce al doilea poate fi operat la 500 <abbr title="Megahertz">MHz</abbr>. Acesta este motivul pentru care CPU-urile care ruleaza la frecvente foarte mari (&gt; 2GHz) au pipeline-uri foarte adanci (&gt; 20 etape).</div>
+</li>
+</ul>
+
+<p>
+Ce trebuie sa retinem din application note este ca exista doua tipuri de citire pentru SRAM:
+</p>
+<ul>
+<li class="level1"><div class="li"> flow thru: output-ul apare pe pini in acelasi ciclu de ceas in care a fost solicitata citirea insa cu un delay combinational mare si, practic, nu poate fi citit decat in ciclul urmator de ceas</div>
+</li>
+<li class="level1"><div class="li"> pipeline: output-ul este bufferat la iesire printr-o serie de registre si nu este facut vizibil decat la inceputul urmatorului ciclu de ceas.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit12" id="p-implementarea-unei-memorii-sram">4.3. [1p] Implementarea unei memorii SRAM</h3>
+<div class="level3">
+
+<p>
+Intr-un proiect nou Xilinx ISE creati un modul Verilog care sa contina urmatoarea implementare:
+</p>
+<pre class="code Verilog"><span class="kw1">module</span> sram <span class="br0">(</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       clk<span class="sy0">,</span>     <span class="co1">// clock</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       oe<span class="sy0">,</span>      <span class="co1">// output enable, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       cs<span class="sy0">,</span>      <span class="co1">// chip select, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       we<span class="sy0">,</span>      <span class="co1">// write enable: 0 = read, 1 = write</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">,</span> <span class="co1">// adrese pentru 128 de intrari</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_in<span class="sy0">,</span> <span class="co1">// intrare de date de 8 biti</span>
+        <span class="kw1">output</span> <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_out <span class="co1">// iesire de date de 8 biti</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> memory<span class="br0">[</span><span class="nu0">0</span><span class="sy0">:</span><span class="nu0">6</span><span class="br0">]</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@</span><span class="br0">(</span><span class="kw1">negedge</span> clk<span class="br0">)</span>
+    <span class="kw1">begin</span>
+        <span class="kw1">if</span> <span class="br0">(</span>cs<span class="br0">)</span> <span class="kw1">begin</span>
+            <span class="kw1">if</span> <span class="br0">(</span>we<span class="br0">)</span> <span class="kw1">begin</span>
+                memory<span class="br0">[</span>address<span class="br0">]</span> <span class="sy0">&lt;=</span> data_in<span class="sy0">;</span>
+            <span class="kw1">end</span>
+        <span class="kw1">end</span>
+    <span class="kw1">end</span>
+&nbsp;
+    <span class="kw1">assign</span> data_out <span class="sy0">=</span> <span class="br0">(</span>oe <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span>we<span class="br0">)</span> <span class="sy0">?</span> memory<span class="br0">[</span>address<span class="br0">]</span> <span class="sy0">:</span> <span class="re0">8'bz</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+<p>
+Constatati faptul ca, in timp ce scrierile se fac sincron, citirile din memorie se efectueaza asincron. Din acest motiv tool-ul de sintetizare Xilinx va infera un bloc de LUT-uri pentru memoria noastra si nu un bloc SRAM.<br>De asemenea, presupunand ca logica ce interfateaza memoria noastra este activa pe frontul pozitiv al ceasului, memoria este activa pe fontul negativ, economisind ciclii de ceas necesari scrierii/citirii si evitand posibile race condition-uri in situatia in care adresele sau datele erau modificate in acelasi ciclu de ceas.
+</p>
+
+<p>
+In urma unei sintetizari corecte ar trebui sa obtineti urmatorul mesaj in consola Xilinx ISE:
+</p>
+<pre class="code">=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit &lt;sram2&gt;.
+INFO:Xst:3218 - HDL ADVISOR - The RAM &lt;Mram_memory&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 7-word x 8-bit                      |          |
+    |     clkA           | connected to signal &lt;clk&gt;           | fall     |
+    |     weA            | connected to signal &lt;we_0&gt;          | high     |
+    |     addrA          | connected to signal &lt;address&gt;       |          |
+    |     diA            | connected to signal &lt;data_in&gt;       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit &lt;sram2&gt; synthesized (advanced).</pre>
+
+<p>
+Acum implementati, intr-un fisier separat, pe care il setati ca top module, urmatorul cod Verilog:
+</p>
+<pre class="code Verilog"><span class="kw1">module</span> sram2 <span class="br0">(</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       clk<span class="sy0">,</span>     <span class="co1">// clock</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       oe<span class="sy0">,</span>      <span class="co1">// output enable, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       cs<span class="sy0">,</span>      <span class="co1">// chip select, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       we<span class="sy0">,</span>      <span class="co1">// write enable: 0 = read, 1 = write</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">,</span> <span class="co1">// adrese pentru 128 de intrari</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_in<span class="sy0">,</span> <span class="co1">// intrare de date de 8 biti</span>
+        <span class="kw1">output</span> <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_out <span class="co1">// iesire de date de 8 biti</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> memory<span class="br0">[</span><span class="nu0">0</span><span class="sy0">:</span><span class="nu0">6</span><span class="br0">]</span><span class="sy0">;</span>
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> buffer<span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@</span><span class="br0">(</span><span class="kw1">negedge</span> clk<span class="br0">)</span>
+    <span class="kw1">begin</span>
+        <span class="kw1">if</span> <span class="br0">(</span>cs<span class="br0">)</span> <span class="kw1">begin</span>
+            <span class="kw1">if</span> <span class="br0">(</span>we<span class="br0">)</span> <span class="kw1">begin</span>
+                memory<span class="br0">[</span>address<span class="br0">]</span> <span class="sy0">&lt;=</span> data_in<span class="sy0">;</span>
+            <span class="kw1">end</span> <span class="kw1">else</span> <span class="kw1">begin</span>
+                buffer <span class="sy0">&lt;=</span> memory<span class="br0">[</span>address<span class="br0">]</span><span class="sy0">;</span>
+            <span class="kw1">end</span>
+        <span class="kw1">end</span>
+    <span class="kw1">end</span>
+&nbsp;
+    <span class="kw1">assign</span> data_out <span class="sy0">=</span> <span class="br0">(</span>oe <span class="sy0">&amp;&amp;</span> <span class="sy0">!</span>we<span class="br0">)</span> <span class="sy0">?</span> buffer <span class="sy0">:</span> <span class="re0">8'bz</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+<p>
+Spre deosebire de situatia precedenta (SRAM fall thru) acum output-ul este citit si el sincron. Mesajul pe care ar trebui sa il primiti in consola este:
+</p>
+<pre class="code">=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit &lt;sram&gt;.
+INFO:Xst:3231 - The small RAM &lt;Mram_memory&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 7-word x 8-bit                      |          |
+    |     clkA           | connected to signal &lt;clk&gt;           | fall     |
+    |     weA            | connected to signal &lt;we_0&gt;          | high     |
+    |     addrA          | connected to signal &lt;address&gt;       |          |
+    |     diA            | connected to signal &lt;data_in&gt;       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit &lt;sram&gt; synthesized (advanced).</pre>
+
+<p>
+Cu alte cuvinte modulul va fi sintetizat tot sub forma de LUT-uri insa doar din cauza ca el este de dimensiuni prea mici pentru a folosi un bloc RAM.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="p-interfatare-si-testare">4.4. [1p] Interfatare si testare</h3>
+<div class="level3">
+
+<p>
+Studiati, din application note-ul IBM de la paginile 6 si 9, diagramele de semnale si pasii de urmat dintr-un ciclu de citire/scriere in SRAM. Folosind urmatorul modul de test:
+</p>
+<pre class="code Verilog"><span class="kw3">`timescale</span> <span class="re1">1ns</span> <span class="sy0">/</span> <span class="re1">1ps</span>
+&nbsp;
+<span class="kw1">module</span> test_sram<span class="sy0">;</span>
+&nbsp;
+   <span class="co1">// Inputs</span>
+   <span class="kw1">reg</span> clk<span class="sy0">;</span>
+   <span class="kw1">reg</span> oe<span class="sy0">;</span>
+   <span class="kw1">reg</span> cs<span class="sy0">;</span>
+   <span class="kw1">reg</span> we<span class="sy0">;</span>
+   <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">;</span>
+   <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_in<span class="sy0">;</span>
+&nbsp;
+   <span class="co1">// Outputs</span>
+   <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data_out<span class="sy0">;</span>
+&nbsp;
+   <span class="co1">// Instantiate the Unit Under Test (UUT)</span>
+   sram uut <span class="br0">(</span>
+      .clk<span class="br0">(</span>clk<span class="br0">)</span><span class="sy0">,</span> 
+      .oe<span class="br0">(</span>oe<span class="br0">)</span><span class="sy0">,</span> 
+      .cs<span class="br0">(</span>cs<span class="br0">)</span><span class="sy0">,</span> 
+      .we<span class="br0">(</span>we<span class="br0">)</span><span class="sy0">,</span> 
+      .address<span class="br0">(</span>address<span class="br0">)</span><span class="sy0">,</span> 
+      .data_in<span class="br0">(</span>data_in<span class="br0">)</span><span class="sy0">,</span> 
+      .data_out<span class="br0">(</span>data_out<span class="br0">)</span>
+   <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">initial</span> <span class="kw1">forever</span>
+        <span class="sy0">#</span><span class="nu0">5</span> clk <span class="sy0">=</span> <span class="sy0">~</span>clk<span class="sy0">;</span>
+&nbsp;
+   <span class="kw1">initial</span> <span class="kw1">begin</span>
+      <span class="co1">// Initialize Inputs</span>
+      clk <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      oe <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+      cs <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+&nbsp;
+      <span class="co1">// write mode</span>
+      we <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      data_in <span class="sy0">=</span> <span class="nu0">73</span><span class="sy0">;</span> <span class="co1">// mem[0] = 73;</span>
+      <span class="sy0">#</span><span class="nu0">15</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+      data_in <span class="sy0">=</span> <span class="nu0">19</span><span class="sy0">;</span> <span class="co1">// mem[1] = 19;</span>
+      <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+      data_in <span class="sy0">=</span> <span class="nu0">34</span><span class="sy0">;</span> <span class="co1">// mem[2] = 34;</span>
+      <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      we <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+      <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+      cs <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      address <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>
+      <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+      oe <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+      <span class="co1">// Add stimulus here</span>
+   <span class="kw1">end</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+<p>
+Studiati diagrama de semnale si explicati zonele albastre si rosii de pe linia <code>data_out</code> precum si duratele cat aceasta este verde si valorile pe care le ia. Comparati diagrama de semnale pentru cele doua implementari de SRAM.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Pentru a urmari mai usor valorile magistralelor puteti da click-dreapta pe un anumit semnal si sa selectati <code>Radix</code> → <code>Unsigned decimal</code>.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit14" id="p-magistrale-de-date-multiplexate">4.5. [1p] Magistrale de date multiplexate</h3>
+<div class="level3">
+
+<p>
+Implementarile de mai sus folosesc pini separati pentru <code>data_in</code> si <code>data_out</code> desi, din punct de vedere logic, acestea nu pot fi active si valide simultan (linia <code>write enable</code> poate fi 0 sau 1, dar nu ambele).<br>Stiind ca in Verilog pinii pot fi declarati atat <code>input</code>, <code>output</code>, cat si <code>inout</code> pentru un pin bidirectional, reproiectati memoria SRAM astfel incat sa aiba urmatoarea interfata:
+</p>
+<pre class="code Verilog"><span class="kw1">module</span> sram <span class="br0">(</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       clk<span class="sy0">,</span>     <span class="co1">// clock</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       oe<span class="sy0">,</span>      <span class="co1">// output enable, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       cs<span class="sy0">,</span>      <span class="co1">// chip select, active high</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       we<span class="sy0">,</span>      <span class="co1">// write enable: 0 = read, 1 = write</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">,</span> <span class="co1">// adrese pentru 128 de intrari</span>
+        <span class="kw1">inout</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data     <span class="co1">// magistrala de date de 8 biti bidirectionala</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+<span class="kw1">endmodule</span></pre>
+
+<p>
+Tineti cont ca, in starea de input, modulul <code>sram</code> ar trebui sa lase linia <code>data</code> in impedanta marita (sa nu traga/dea curent), pentru a nu produce coliziuni cu un eventual driver care vrea sa scrie o valoare pe acesti pini.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Trebuie sa stabiliti un protocol prin care cele doua module care comunica prin firul <code>data</code> sa nu vorbeasca in acelasi timp, altfel vor aparea coliziuni.
+<p></p>
+
+<p>
+<strong>Hint</strong>: Atunci cand semnalul <code>we</code> (write enable) este activ driver-ul semnalului <code>data</code> este modulul conectat la memorie (el este cel care scrie in memorie deci impune un set de date pe linia de date). Atunci cand <code>we</code> este inactiv driver-ul este insasi memoria fiindca a fost solicitata o data care trebuie pusa pe linia de date.
+</p>
+
+<p>
+Codul din memorie va trebui sa fie asemanator cu:
+</p>
+<pre class="code Verilog"><span class="kw1">assign</span> data <span class="sy0">=</span> <span class="br0">(</span>we <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span> <span class="sy0">?</span> buffer <span class="sy0">:</span> <span class="re0">8'bz</span><span class="sy0">;</span></pre>
+
+<p>
+Iar cel din driverul care interfateaza memoria (sau din modulul de test):
+</p>
+<pre class="code Verilog"><span class="kw1">assign</span> data <span class="sy0">=</span> <span class="br0">(</span>we <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">?</span> buffer <span class="sy0">:</span> <span class="re0">8'bz</span><span class="sy0">;</span></pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit15" id="p-testare">4.6. [2p] Testare</h3>
+<div class="level3">
+
+<p>
+Adaptati fisierul de simulare pentru acest nou modul si verificati functionarea lui corecta.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">
+Atentie! In modulul de test <code>data</code> va fi acum un wire. Asta inseamna ca nu vom mai putea face atriburi la <code>data</code> in interiorul blocului <code>initial…begin</code>. Va trebui sa gasiti o alta metoda de a-l modifica pe <code>data</code> care sa fie valida in interiorul acestui bloc.<br>
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit16" id="aplicatie">5. Aplicatie</h2>
+<div class="level2">
+
+<p>
+Pe placile de dezvoltare <a href="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" rel="nofollow">Digilent Nexys</a> ne propunem sa cream un joculet de lumini care citeste blocuri de 8 biti dintr-o memorie, fiecare bit fiind corespunzator starii unui LED (0 - stins, 1 - aprins), si alterneaza starile LED-urilor la intervale regulate de timp.<br>
+</p>
+
+</div>
+
+<h3 class="sectionedit17" id="p-fsm">5.1. [3p] FSM</h3>
+<div class="level3">
+
+<p>
+Creati un modul FSM care tine un contor pentru adrese, citeste din memorie si afiseaza pe LED-uri. FSM-ul va trebui sa stea un numar de cicli de ceas fara sa faca nimic fiindca FPGA-ul ruleaza la o frecventa mare (50 <abbr title="Megahertz">MHz</abbr>) si daca ar schimba valorile LED-urilor la aceasta frecventa nu s-ar observa nicio schimbare.
+</p>
+
+<p>
+Diagrama de stari poate fi:<br><a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/index3.png?id=lab%3Acn2%3Alab01" class="media" title="lab:cn2:index3.png"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/index3.png" class="media" title="FSM" alt="FSM" width="400"></a>
+</p>
+
+<p>
+Starile <strong>MEM1</strong> si <strong>MEM2</strong> sunt necesare pentru a accesa memoria. Intr-o prima faza vrem sa punem pe magistrala de adrese adresa de la care dorim date (starea <strong>MEM1</strong>). Apoi vrem sa preluam datele de pe magistrala de date cand acestea sunt disponibile (starea <strong>MEM2</strong>). Starea <strong>IDLE</strong> este pentru temporizare. Starea initiala este MEM1 fiindca dorim sa avem date valide inca de la prima afisare. 
+</p>
+
+<p>
+Puteti pleca de la urmatorul schelet de cod pentru FSM:
+</p>
+<pre class="code Verilog"><span class="kw3">`define</span> DEBUG
+&nbsp;
+<span class="kw1">module</span> fsm <span class="br0">(</span>
+<span class="kw3">`ifdef</span> DEBUG
+        <span class="kw1">output</span>      <span class="br0">[</span><span class="nu0">1</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> debug_state<span class="sy0">,</span>
+<span class="kw3">`endif</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> clk<span class="sy0">,</span>        <span class="co1">// clock</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> rst<span class="sy0">,</span>        <span class="co1">// reset</span>
+        <span class="kw1">output</span> <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> led<span class="sy0">,</span>
+        <span class="kw1">output</span> <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">3</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">,</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span>  state<span class="sy0">;</span>
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span>  next_state<span class="sy0">;</span>
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span>  led_reg<span class="sy0">;</span>
+    <span class="kw1">reg</span> <span class="br0">[</span><span class="nu0">31</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> idle_counter<span class="sy0">;</span>
+&nbsp;
+    localparam STATE_IDLE <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">,</span>
+               STATE_MEM1 <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">,</span>
+               STATE_MEM2 <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">,</span>
+               <span class="co1">// TODO:</span>
+               <span class="co1">// Counter reference used by the prescaler state, IDLE.</span>
+               <span class="co1">// This value may be too small. You might want to change it in </span>
+               <span class="co1">// ranges going from 0 to 5000000</span>
+               IDLE_COUNT <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">;</span> 
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@</span><span class="br0">(</span><span class="kw1">posedge</span> clk<span class="br0">)</span>
+        <span class="kw1">if</span> <span class="br0">(</span>rst<span class="br0">)</span>
+            state <span class="sy0">&lt;=</span> STATE_MEM1<span class="sy0">;</span>
+        <span class="kw1">else</span>
+            state <span class="sy0">&lt;=</span> next_state<span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@*</span> <span class="kw1">begin</span>
+        <span class="kw1">case</span> <span class="br0">(</span>state<span class="br0">)</span>
+        STATE_MEM1<span class="sy0">:</span>
+            <span class="co1">// TODO: memory access code goes here</span>
+            next_state <span class="sy0">=</span> STATE_MEM2<span class="sy0">;</span>
+        STATE_MEM2<span class="sy0">:</span>
+            <span class="co1">// TODO: code for getting data from memory goes here</span>
+            next_state <span class="sy0">=</span> STATE_IDLE<span class="sy0">;</span>
+        STATE_IDLE<span class="sy0">:</span>
+            next_state <span class="sy0">=</span> <span class="br0">(</span>idle_counter <span class="sy0">&lt;</span> IDLE_COUNT<span class="br0">)</span> <span class="sy0">?</span> STATE_IDLE <span class="sy0">:</span> STATE_MEM1<span class="sy0">;</span>
+        <span class="kw1">endcase</span>
+    <span class="kw1">end</span>
+&nbsp;
+    <span class="kw1">always</span> <span class="sy0">@</span><span class="br0">(</span><span class="kw1">posedge</span> clk<span class="br0">)</span>
+        <span class="kw1">if</span> <span class="br0">(</span>state <span class="sy0">==</span> STATE_IDLE<span class="br0">)</span>
+            idle_counter <span class="sy0">&lt;=</span> idle_counter <span class="sy0">+</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="kw1">else</span>
+            idle_counter <span class="sy0">&lt;=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">assign</span> led <span class="sy0">=</span> led_reg<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+<p>
+Ca top module veti folosi acest modul:
+</p>
+<pre class="code Verilog"><span class="kw1">module</span> led_game<span class="br0">(</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       clk<span class="sy0">,</span>
+        <span class="kw1">input</span>  <span class="kw1">wire</span>       rst<span class="sy0">,</span>
+        <span class="kw1">output</span> <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> led
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">3</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">;</span>
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data<span class="sy0">;</span>
+&nbsp;
+    fsm fsm1<span class="br0">(</span>
+        .clk<span class="br0">(</span>clk<span class="br0">)</span><span class="sy0">,</span>
+        .rst<span class="br0">(</span>rst<span class="br0">)</span><span class="sy0">,</span>
+        .led<span class="br0">(</span>led<span class="br0">)</span><span class="sy0">,</span>
+        .address<span class="br0">(</span>address<span class="br0">)</span><span class="sy0">,</span>
+        .data<span class="br0">(</span>data<span class="br0">)</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    rom rom1<span class="br0">(</span>
+        .address<span class="br0">(</span>address<span class="br0">)</span><span class="sy0">,</span>
+        .data<span class="br0">(</span>data<span class="br0">)</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+<p>
+</p><p></p><div class="notetip">
+Observati ca semnalele <code>address</code> si <code>data</code> asigura legatura dintre cele doua module. <code>Address</code> este <strong>output</strong> pentru FSM si <strong>input</strong> pentru memorie deoarece FSM-ul calculeaza adresa de la care doreste date iar memoria doar foloseste adresa pentru a cauta datele. <code>Data</code> este <strong>input</strong> pentru FSM si <strong>output</strong> pentru ROM. Memoria este cea care pune valori pe aceasta magistrala iar FSM-ul cel care le citeste.<br>
+</div><p></p>
+<p></p>
+
+<p>
+Ca modul de test pentru FSM puteti folosi:
+</p>
+<pre class="code Verilog"><span class="kw3">`timescale</span> <span class="re1">1ns</span> <span class="sy0">/</span> <span class="re1">1ps</span>
+<span class="kw3">`define</span> DEBUG
+&nbsp;
+<span class="kw1">module</span> test_fsm<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// Inputs</span>
+    <span class="kw1">reg</span> clk<span class="sy0">;</span>
+    <span class="kw1">reg</span> rst<span class="sy0">;</span>
+&nbsp;
+    <span class="co1">// Outputs</span>
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> led<span class="sy0">;</span>
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">6</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> address<span class="sy0">;</span>
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">7</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> data<span class="sy0">;</span>
+<span class="kw3">`ifdef</span> DEBUG
+    <span class="kw1">wire</span> <span class="br0">[</span><span class="nu0">1</span><span class="sy0">:</span><span class="nu0">0</span><span class="br0">]</span> debug_state<span class="sy0">;</span>
+<span class="kw3">`endif</span>
+&nbsp;
+    <span class="co1">// Instantiate the Unit Under Test (UUT)</span>
+    fsm uut <span class="br0">(</span>
+<span class="kw3">`ifdef</span> DEBUG
+        .debug_state<span class="br0">(</span>debug_state<span class="br0">)</span><span class="sy0">,</span>
+<span class="kw3">`endif</span>
+        .clk<span class="br0">(</span>clk<span class="br0">)</span><span class="sy0">,</span> 
+        .rst<span class="br0">(</span>rst<span class="br0">)</span><span class="sy0">,</span> 
+        .led<span class="br0">(</span>led<span class="br0">)</span><span class="sy0">,</span>
+        .address<span class="br0">(</span>address<span class="br0">)</span><span class="sy0">,</span>
+        .data<span class="br0">(</span>data<span class="br0">)</span>
+    <span class="br0">)</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">initial</span> <span class="kw1">forever</span>
+        <span class="sy0">#</span><span class="nu0">5</span> clk <span class="sy0">=</span> <span class="sy0">~</span>clk<span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">initial</span> <span class="kw1">begin</span>
+        <span class="co1">// Initialize Inputs</span>
+        clk <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+        rst <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span>
+        <span class="co1">// Wait 10 ns for global reset to finish</span>
+        <span class="sy0">#</span><span class="nu0">10</span><span class="sy0">;</span>
+        rst <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
+&nbsp;
+        <span class="co1">// Add stimulus here</span>
+&nbsp;
+    <span class="kw1">end</span>
+&nbsp;
+<span class="kw1">endmodule</span></pre>
+
+</div>
+
+<h3 class="sectionedit18" id="p-implementare-pe-placa">5.2. [2p] Implementare pe placa</h3>
+<div class="level3">
+
+<p>
+Din datasheet-ul placii <a href="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" class="urlextern" title="http://www.digilentinc.com/Data/Products/NEXYS3/Nexys3_rm_V2.pdf" rel="nofollow">Digilent Nexys</a>, de la pagina 18, extrageti informatia despre pinii la care sunt conectate LED-urile verzi de pe placa.
+</p>
+
+<p>
+Creati un fisier de constrangeri (.ucf) selectand din modul <code>Implementation</code>, <code>User Constraints</code> → <code>I/O Pin Planning (PlanAhead)</code>. Programati FSM-ul vostru pe placa folosind <a href="https://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" rel="nofollow">acest tutorial</a>.
+</p>
+
+</div>
+
+<h3 class="sectionedit19" id="bonus-2p-reimplementare-utilizand-sram">5.3. [BONUS 2p] Reimplementare utilizand SRAM</h3>
+<div class="level3">
+
+<p>
+Modulul de mai sus foloseste o memorie ROM pentru a stoca informatia LED-urilor. Inlocuiti-o cu una SRAM. Pentru simplitate puteti lega input-urile suplimentare ale acesteia (<code>cs</code> si <code>oe</code>) la 1.
+</p>
+
+<p>
+</p><p></p><div class="noteclassic">
+Va trebui sa creati mai multe stari initiale in FSM care initializeaza memoria SRAM prin scrieri succesive in ea. De asemenea linia <code>data</code> va trebui sa devina una bidirectionala.
+<p></p>
+
+<p>
+Pentru initializarea memoriei va trebui sa gasiti o formula de asignare a valorilor LED-urilor usor de vizualizat, spre exemplu <code>sram[i] = 2 * i</code>, unde <code>i</code> ia valori de la 0 la 127, si se va plasa pe linia de adrese, iar <code>sram[i]]</code> ia valori de la 0 la 255 si se va plasa pe linia de date.<br>
+</p></div><p></p>
+<p></p>
+
+
+
+</div>
+
+<h2 class="sectionedit20" id="link-uri-utile">6. Link-uri utile</h2>
+<div class="level2">
+
+<p>
+<a href="https://www.ece.cmu.edu/~ece548/localcpy/sramop.pdf" class="urlextern" title="https://www.ece.cmu.edu/~ece548/localcpy/sramop.pdf" rel="nofollow">Understanding SRAM Operation</a><br>
+
+<a href="http://en.wikipedia.org/wiki/Static_random-access_memory" class="urlextern" title="http://en.wikipedia.org/wiki/Static_random-access_memory" rel="nofollow">SRAM</a><br>
+
+<a href="http://cdn.opencores.org/downloads/opencores_coding_guidelines.pdf" class="urlextern" title="http://cdn.opencores.org/downloads/opencores_coding_guidelines.pdf" rel="nofollow">OpenCores coding guidelines</a><br>
+
+<a href="http://www-inst.eecs.berkeley.edu/~cs150/sp12/agenda/lec/sram2-proj2.pdf" class="urlextern" title="http://www-inst.eecs.berkeley.edu/~cs150/sp12/agenda/lec/sram2-proj2.pdf" rel="nofollow">SRAM lecture</a><br>
+
+<a href="http://stackoverflow.com/questions/7630797/better-way-of-coding-a-ram-in-verilog" class="urlextern" title="http://stackoverflow.com/questions/7630797/better-way-of-coding-a-ram-in-verilog" rel="nofollow">Coding RAM in Verilog</a><br>
+
+<a href="http://www.altera.com/support/examples/verilog/ver-single-port-ram.html" class="urlextern" title="http://www.altera.com/support/examples/verilog/ver-single-port-ram.html" rel="nofollow">Single-Port RAM</a><br>
+
+<a href="http://www.altera.com/support/examples/verilog/ver-single-clock-syncram.html" class="urlextern" title="http://www.altera.com/support/examples/verilog/ver-single-clock-syncram.html" rel="nofollow">Single clock Synchronous RAM</a><br>
+
+<a href="http://www.altera.com/literature/hb/qts/qts_qii51007.pdf" class="urlextern" title="http://www.altera.com/literature/hb/qts/qts_qii51007.pdf" rel="nofollow">Altera HDL coding guidelines</a><br>
+
+</p>
+
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+pret vs dimensiune vs performanta, choose any two, but not three</div>
+<div class="fn"><sup><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+dielectricul din care sunt fabricate condensatoarele nu este izolator perfect si exista curenti de scurgere</div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab01.txt</bdi> · Last modified: 11.10.2015 by <bdi>Lucia Cojocaru</bdi></div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 1 - Memorii [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

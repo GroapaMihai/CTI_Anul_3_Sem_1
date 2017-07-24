@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05 -->
+<html lang="en" dir="ltr" class="js desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2015-03-15T23:33:46+0200">
+<meta name="keywords" content="lab,cn2,lab05">
+<link rel="search" type="application/opensearchdescription+xml" href="http://elf.cs.pub.ro/cn/wiki/lib/exe/opensearch.php" title="CN Wiki">
+<link rel="start" href="http://elf.cs.pub.ro/cn/wiki/">
+<link rel="contents" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=index" title="Sitemap">
+<link rel="alternate" type="application/rss+xml" title="Recent changes" href="http://elf.cs.pub.ro/cn/wiki/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="http://elf.cs.pub.ro/cn/wiki/feed.php?mode=list&amp;ns=lab:cn2">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://elf.cs.pub.ro/cn/wiki/_export/xhtml/lab/cn2/lab05">
+<link rel="canonical" href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05">
+<link rel="stylesheet" type="text/css" href="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='lab:cn2';var JSINFO = {"id":"lab:cn2:lab05","namespace":"lab:cn2","isadmin":0,"isauth":0};
+/*!]]>*/</script><style type="text/css"></style>
+<script type="text/javascript" charset="utf-8" src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/js.php"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/favicon.ico">
+<link rel="apple-touch-icon" href="http://elf.cs.pub.ro/cn/wiki/lib/tpl/dokuwiki/images/apple-touch-icon.png">
+    </head>
+
+<body>
+    <!--[if lte IE 7 ]><div id="IE7"><![endif]--><!--[if IE 8 ]><div id="IE8"><![endif]-->
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    
+	showSidebar 
+	hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#dokuwiki__content">skip to content</a></li>
+        </ul>
+
+        <h1><a href="http://elf.cs.pub.ro/cn/wiki/home" accesskey="h" title="Home"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/logo.png" width="1242" height="407" alt=""></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=login&amp;sectok=a0d82294bf60552297e67b1fca60d14b" class="action login" rel="nofollow" title="Login">Login</a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Site Tools</h3>
+            <form action="http://elf.cs.pub.ro/cn/wiki/home" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="http://elf.cs.pub.ro/cn/wiki/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lab:cn2:lab05"><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Login</option></optgroup></select><input type="submit" value="&gt;" style="display: none;"></div></form>            </div>
+            <ul>
+                <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=media&amp;ns=lab%3Acn2" class="action media" rel="nofollow" title="Media Manager">Media Manager</a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=index" class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a></li>            </ul>
+        </div>
+
+    </div>
+
+    
+    <hr class="a11y">
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+		<div id="dokuwiki__aside"><div class="pad include group">
+                    <h3 class="toggle open" style="cursor: pointer; display: none;"><strong><span>−</span></strong>Sidebar</h3>
+                    <div class="content" style="">
+                                                                        
+<p aria-expanded="true" style="">
+
+</p><ul id="navbar" aria-expanded="true" style="">
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#">Laboratoare CN1</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_15176734456d54cdeab3d0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab00" class="wikilink1" title="lab:cn1:lab00">Laboratorul 0 - Introducere in logica digitala. Falstad</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab01" class="wikilink1" title="lab:cn1:lab01">Laboratorul 1 - Introducere in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab02_nou" class="wikilink1" title="lab:cn1:lab02_nou">Laboratorul 2 - Tipuri de descriere a modulelor in Verilog</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab03" class="wikilink1" title="lab:cn1:lab03">Laboratorul 3 - FPGA - laborator introductiv</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab04" class="wikilink1" title="lab:cn1:lab04">Laboratorul 4 - Automate cu stări simple</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab05" class="wikilink1" title="lab:cn1:lab05">Laboratorul 5 - FSM 2: afisajul cu 7 segmente</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab06" class="wikilink1" title="lab:cn1:lab06">Laboratorul 6 - FSM 3: UART</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab07" class="wikilink1" title="lab:cn1:lab07">Laboratorul 7 - Sumatoare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab08" class="wikilink1" title="lab:cn1:lab08">Laboratorul 8 - Sumatorul Carry-Lookahead</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab09" class="wikilink1" title="lab:cn1:lab09">Laboratorul 9 - Unitatea aritmetică logică</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/lab10" class="wikilink1" title="lab:cn1:lab10">Laboratorul 10 - Tetris</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn1/labr" class="wikilink1" title="lab:cn1:labr">Laborator de recapitulare - Putting it all together: A simple processor</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#">Laboratoare CN2</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_64635894056d54cdf01d37" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab00" class="wikilink1" title="lab:cn2:lab00">Laboratorul 0 - Recapitulare</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab01" class="wikilink1" title="lab:cn2:lab01">Laboratorul 1 - Memorii</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab02" class="wikilink1" title="lab:cn2:lab02">Laboratorul 2 - Instruction Set Architecture 1</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab03" class="wikilink1" title="lab:cn2:lab03">Laboratorul 3 - Instruction Set Architecture 2</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="wikilink1" title="lab:cn2:lab04">Laboratorul 4 - Instruction Set Architecture 3</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab06" class="wikilink1" title="lab:cn2:lab06">Laboratorul 6 - GPIO 1: Output</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab07" class="wikilink1" title="lab:cn2:lab07">Laboratorul 7 - GPIO 2: Input</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab08" class="wikilink1" title="lab:cn2:lab08">Laboratorul 8 - Recapitulare si completari</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab09" class="wikilink1" title="lab:cn2:lab09">Laboratorul 9 - Timer/Counter</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab10" class="wikilink1" title="lab:cn2:lab10">Laboratorul 10 - Intreruperi</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab11" class="wikilink1" title="lab:cn2:lab11">Laboratorul 11 - Recapitulare</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#">Tutoriale</a>
+
+<p></p>
+
+<div><div id="nojs_indexmenu_78829373456d54cdf865e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx" role="tree">
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/constraints-ise" class="wikilink1" title="tutoriale:constraints-ise">Asignarea pinilor de IO în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/debug-ise" class="wikilink1" title="tutoriale:debug-ise">Debugging folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/install-ise" class="wikilink1" title="tutoriale:install-ise">Instalarea Xilinx ISE WebPACK</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/programare-ise" class="wikilink1" title="tutoriale:programare-ise">Programarea FPGA-ului folosind Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/proiect-ise" class="wikilink1" title="tutoriale:proiect-ise">Crearea unui proiect în Xilinx ISE</a></div></li>
+<li class="level1" role="treeitem"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/tutoriale/simulare-ise" class="wikilink1" title="tutoriale:simulare-ise">Simularea unui modul în Xilinx ISE</a></div></li>
+</ul>
+</div></div>
+
+<p>
+
+</p></li>
+
+
+<li>
+<a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#">Resurse</a>
+<ul>
+<li><a class="media mediafile mf_pdf" href="http://www.ece.uvic.ca/~fayez/courses/ceng465/vlogref.pdf"> Verilog Cheatsheet</a></li>
+<li><a class="media mediafile mf_pdf" href="http://verilog.renerta.com/"> Verilog Language Reference</a></li>
+<li><a class="media mediafile mf_pdf" href="http://www.digilentinc.com/Data/Products/NEXYS/Nexys_rm.pdf"> Digilent Nexys Board Manual</a></li>
+</ul>
+</li>
+
+</ul>
+
+<p aria-expanded="true" style=""></p>
+                                            </div>
+		</div></div><!-- /aside -->
+            
+	    <!-- BREADCRUMBS -->
+	    		<div class="breadcrumbs">
+		    			<div class="youarehere"><span class="bchead">You are here: </span><span class="home"><bdi><a href="http://elf.cs.pub.ro/cn/wiki/home" class="wikilink1" title="home">Calculatoare Numerice</a></bdi></span> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/home" class="wikilink2" title="lab:home" rel="nofollow">lab</a></bdi> » <bdi><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/home" class="wikilink2" title="lab:cn2:home" rel="nofollow">cn2</a></bdi> » <bdi><span class="curid"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05" class="wikilink1" title="lab:cn2:lab05">Laboratorul 5 - Instruction Set Architecture 4</a></span></bdi></div>
+		    		    		</div>
+	    
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+
+                <div class="page group" style="min-height: 37px;">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc">
+<h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+<div>
+
+<ul class="toc" aria-expanded="true" style="">
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#functii">1. Functii</a></div></li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#stiva">2. Stiva</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#implementarea-efectiva-a-unui-apel">Implementarea efectiva a unui apel</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#instructiuni-avr">3. Instructiuni AVR</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#rcall">RCALL</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#ret">RET</a></div></li>
+<li class="level2"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#push-pop">PUSH, POP</a></div></li>
+</ul>
+</li>
+<li class="level1"><div class="li"><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#exercitii">4. Exercitii</a></div></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="laboratorul-5-instruction-set-architecture-4">Laboratorul 5 - Instruction Set Architecture 4</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Responsabil: <a href="mailto:andrei.musat@cti.pub.ro" class="mail" title="andrei.musat@cti.pub.ro">Mușat Andrei</a></div>
+</li>
+<li class="level0"><div class="li"> Data publicării: 09.11.2014</div>
+</li>
+<li class="level0"><div class="li"> Data ultimei modificări: 15.03.2015</div>
+</li>
+</ul>
+
+<p>
+In <a href="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" class="urlextern" title="https://elf.cs.pub.ro/cn/wiki/lab/cn2/lab04" rel="nofollow">laboratorul 4</a> am mentionat ca din categoria instructiunilor de salt fac parte si instructiunile ce apeleaza rutine. In continuare vom studia aceste instructiuni, dar si alte instructiuni si notiuni necesare atunci cand lucram cu functii.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="functii">1. Functii</h2>
+<div class="level2">
+
+<p>
+Functiile sunt un element important in orice limbaj de programare, deoarece ofera suport pentru abstractizarea si refolosirea codului. Pentru a folosi o functie, avem nevoie de prototipul ei - numele, numarul si tipul argumentelor, respectiv tipul valorii intoarse.<br>Pentru a vedea cum se implementeaza functiile si apelul lor, trebuie intai sa stabilim ce se intampla atunci cand apelam o functie. Vom lua un exemplu simplu, o functie recursiva scrisa in C care calculeaza factorialul unui numar:
+</p>
+<pre class="code C"><span class="kw4">int</span> fact<span class="br0">(</span><span class="kw4">int</span> n<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">if</span> <span class="br0">(</span>n <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span>
+        <span class="kw1">return</span> <span class="nu0">1</span><span class="sy0">;</span>
+    <span class="kw1">else</span>
+        <span class="kw1">return</span> fact<span class="br0">(</span>n <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span> <span class="sy0">*</span> n<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+Se declara parametrul n, de tip intreg. Aceasta variabila si oricare alta variabila pe care am folosi-o trebuie sa fie locala functiei, si sa nu existe conflicte cu alte variabile din alte functii, chiar daca acolo se vor folosi aceleasi nume ca aici. De fapt, mai mult decat atat, aceste variabile nu trebuie sa existe conflicte nici macar cu alte copii ale lor (exact cum se intampla la un apel recursiv).
+</p>
+
+<p>
+Pentru a putea implementa asa ceva, pentru fiecare apel al functiei fact, se realizeaza o copie intr-o zona de memorie diferita pentru variabila n, la fel ca si pentru tot corpul functiei. Vom avea nevoie de o zona continua de memorie, separata de restul programului, in care vom realiza aceste operatii cu functii, si pe care o vom numi stiva, deoarece implementarea ei este asemanatoare cu a structurii de date cu acelasi nume.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="stiva">2. Stiva</h2>
+<div class="level2">
+
+<p>
+Stiva este o zona rezervata din memorie, continua, cu ajutorul careia este implementata ideea de functie si apel de functie.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="implementarea-efectiva-a-unui-apel">Implementarea efectiva a unui apel</h3>
+<div class="level3">
+
+<p>
+Se alege prima oara o zona de memorie arbritrara care va fi stiva. Pentru fiecare apel de functie, va exista o sectiune pe stiva rezervata pentru acea functie, numita “stack frame”. <br>Sa luam urmatorul exemplu de cod in C:
+</p>
+<pre class="code C"><span class="kw4">int</span> main<span class="br0">(</span><span class="kw4">void</span><span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw4">int</span> a <span class="sy0">=</span> <span class="nu0">5</span><span class="sy0">,</span> b <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">,</span> c<span class="sy0">;</span>
+    c <span class="sy0">=</span> foo<span class="br0">(</span>a<span class="sy0">,</span> b<span class="br0">)</span><span class="sy0">;</span>
+    <span class="kw1">return</span> <span class="nu0">0</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+<span class="kw4">int</span> foo<span class="br0">(</span><span class="kw4">int</span> a<span class="sy0">,</span> <span class="kw4">int</span> b<span class="br0">)</span>
+<span class="br0">{</span>
+    <span class="kw1">return</span> a <span class="sy0">+</span> b<span class="sy0">;</span>
+<span class="br0">}</span></pre>
+
+<p>
+La intrarea in main(), stack-ul va contine doar frame-ul functiei main. Apoi, se ajunge la apelul functiei foo(), care ia 2 argumente. Metoda folosita de a trimite argumentele din main in functia foo este sa le incarci pe stiva, lasand spatiu totodata si pentru valoarea de return a functiei foo(), spatiu din memorie care va fi incarcat odata ce foo() se termina. Stiva arata acum asa:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/main_stack_frame.png?id=lab%3Acn2%3Alab05" class="media" title="lab:cn2:main_stack_frame.png"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/main_stack_frame.png" class="media" alt="" width="350"></a>
+</p>
+
+<p>
+Dupa cum se vede, dupa ce am incarcat pe stiva argumentele si valoarea de return pentru functia pe care o vom apela, “stack frame-ul” pentru main a crescut. Practic ce s-a intampla a fost sa micsoram valoarea lui SP (stack-pointer - care de obicei arata ori spre prima zona de memorie neinitializata/nefolosita din stiva, ori spre ultima zona initializata/folosita)
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Argumentele si valoare de return a unei functii nu fac parte din stack frame-ul acesteia!
+</div><p></p>
+<p></p>
+
+<p>
+Cand ajungem in corpul functiei foo(), aceasta e posibil sa aiba nevoie de spatiu pentru variabile locale (in cazul de fata nu), caz in care se modifica SP-ul pentru a creste “stack-frame-ul” lui foo() (operatie echivalenta cu un PUSH). Stiva arata acum asa:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/main_and_foo_stack_frame.png?id=lab%3Acn2%3Alab05" class="media" title="lab:cn2:main_and_foo_stack_frame.png"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/main_and_foo_stack_frame.png" class="media" alt="" width="350"></a>
+</p>
+
+<p>
+Se observa ca a aparut un nou pointer, FP - frame pointer, care arata spre zona de memorie unde arata SP-ul inainte ca foo() sa il mute pentru a face loc variabilelor sale locale. Acest nou pointer ne va ajuta sa calculam locatia in memorie pentru argumentele sau variabilele locale functiei (calculele de adresa pentru diferite variabile se vor face relativ la acest FP). Cand functia foo() s-a terminat, tot ce trebuie facut este ca SP-ul sa fie pus sa arate spre locatie de memorie pointata de FP (echivalent cu un POP). Astfel, dupa ce iesim din foo(), stiva arata la fel cum arata inainte de a apela foo(), doar ca acum zona de memorie care a fost rezervata pentru valoare de return o contine pe aceasta:
+</p>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_detail/lab/cn2/ret_stack.png?id=lab%3Acn2%3Alab05" class="media" title="lab:cn2:ret_stack.png"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/ret_stack.png" class="media" alt="" width="350"></a>
+</p>
+
+<p>
+Dupa ce main() salveaza valoarea de return, creste SP-ul astfel incat dupa ce se face POP la aceasta si la argumente, stiva va arata exact ca la inceput.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="instructiuni-avr">3. Instructiuni AVR</h2>
+<div class="level2">
+
+<p>
+Instructiunile ce ne intereseaza in mod special sunt RCALL, RET, POP si PUSH.
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="rcall">RCALL</h3>
+<div class="level3">
+
+<p>
+RCALL este un salt relativ de la adresa curenta la adresa specificata ca parametru. Atunci cand se realizeaza un apel de functie folosind RCALL, adresa instructiunii ce urmeaza dupa RCALL este salvata pe stiva. Aceasta adresa se numeste <code>return addres</code>. Este important sa memoram aceasta adresa deoarece, la iesirea din functie, dorim sa continuam executia normala a programului. In plus, la realizarea unui apel de functie, pe stiva se rezerva 2 octeti.
+</p>
+
+<p>
+Motivul pentru care RCALL realizeaza un salt relativ si avem nevoie sa retinem adresa de revenire este urmatorul: codul unei functii/proceduri se poate afla oriunde in memorie. Aceasta poate fi situata la inceputul sau la sfarsitul memoriei, intr-o zona in care exista deja si o parte din codul unei alte functii (spre exemplu <code>main()</code>) sau intr-o zona aleatoare izolata.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Datasheet-ul AVR ofera doua implementari pentru RCALL: pe 16 si 22 de biti. Implementarea folosita de noi este cea pe 16 biti!
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit7" id="ret">RET</h3>
+<div class="level3">
+
+<p>
+Instructiunea RET realizeaza revenirea dintr-o rutina/functie la codul. Practic, marcheaza sfarsitul zonei de memorie de unde se citeste si executa codul functiei.
+</p>
+
+<p>
+RET este o instructiune cu 0 operanzi. Operanzii nu sunt necesari deoarece adresa la care trebuie sa revina PC-ul pentru a continua executia normala a programului se afla salvata pe stiva. In urma apelului RET, se vor elibera 2 octeti de pe stiva (se decrementeaza stack pointer).
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Atentie! Daca cineva modifica adresa de revenire salvata pe stiva la apelul unei functii, programul va continua de la acea adresa modificata daca ea este valida. Astfel, o functie poate fi fortata sa apeleze alte functii la revenire.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit8" id="push-pop">PUSH, POP</h3>
+<div class="level3">
+
+<p>
+Aceasta pereche de instructiuni este folosita pentru a pune si a extrage date de pe stiva.<br>PUSH pune la pozitia curenta de pe stiva octetul aflat in registrul Rr si apoi decrementeaza stack pointer-ul cu 1.<br>POP incrementeaza stack pointer-ul cu 1 si apoi pune in Rd valoarea de la pozitia curenta din stiva.
+</p>
+
+<p>
+Asa cum este implementata stiva in AVR, index-ul cel mai mare este la baza stivei, iar cel mai mic in varful acestia. Initial, stack pointer-ul se afla la baza stivei (valoarea cea mai mare). Atunci cand se pun un octet pe stiva, stack pointer-ul este mutat catre varf, adica se decrementeaza. Daca realizam operatia inversa, stack pointer-ul se muta catre baza, deci este incrementat.
+</p>
+
+<p>
+</p><p></p><div class="noteimportant">Stack pointer-ul se va afla tot timpul pe pozitia libera cea mai apropiata de baza stivei.
+</div><p></p>
+<p></p>
+
+</div>
+
+<h2 class="sectionedit9" id="exercitii">4. Exercitii</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" class="urlextern" title="http://www.atmel.com/Images/Atmel-8235-8-bit-AVR-Microcontroller-ATtiny20_Datasheet.pdf" rel="nofollow">Datasheet ATTiny20</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="http://www.atmel.com/images/doc0856.pdf" class="urlextern" title="http://www.atmel.com/images/doc0856.pdf" rel="nofollow"> Setul de Instructiuni AVR</a></div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> <strong>(2 p)</strong> Implementati instructiunea PUSH. Consideram ca stiva incepe la cea mai mare adresa din RAM (127) si creste spre adresa 0.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(2 p)</strong> Implementati instructiunea POP.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(1 p)</strong> Creati un program pentru testarea instructiunilor implementate mai devreme. Programul trebuie sa incarce datele <code>1</code>, <code>2</code> si <code>3</code> pe stiva folosind intructiunea PUSH, apoi sa le descarce folosind POP in registrele R20, R21 si R22.</div>
+</li>
+<li class="level1"><div class="li"> <strong>(2 p)</strong> Implementati instructiunea RCALL. Folositi varianta (I) a instructiunii (pentru dispozitive cu PC pe 16 biti).</div>
+</li>
+<li class="level1"><div class="li"> <strong>(2 p)</strong> Implementati instructiunea RET. Folositi varianta (I) a instructiunii (pentru dispozitive cu PC pe 16 biti).</div>
+</li>
+<li class="level1"><div class="li"> <strong>(1 p)</strong> Creati un program pentru testarea instructiunilor implementate mai devreme. Programul trebuie sa apeleze o functie care incarca constanta <code>66</code> in registrul R20).</div>
+</li>
+<li class="level1"><div class="li"> <strong>(Bonus 2 p)</strong> Creati un program care calculeaza suma primelor <code>n</code> numere naturale si o stocheaza in registrul R20. Programul va citi parametrul <code>n</code> de la o adresa fixa de memorie (pe care o stabiliti cand creati programul). Trebuie sa calculati suma folosind o functie recursiva (<code>sum(n) = n + sum(n - 1)</code>).</div>
+</li>
+</ol>
+
+<p>
+<a href="http://elf.cs.pub.ro/cn/wiki/_media/lab/cn2/schelet_lab_5.zip" class="media mediafile mf_zip" title="lab:cn2:schelet_lab_5.zip (39 KB)"> Schelet laborator 5</a>
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lab/cn2/lab05.txt</bdi> · Last modified: 15.03.2015 (external edit)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y">
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Page Tools</h3>
+                <div class="tools">
+                    <ul>
+                        <li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]"><span>Old revisions</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05?do=backlink" class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li><li><a href="http://elf.cs.pub.ro/cn/wiki/lab/cn2/lab05#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]"><span>Back to top</span></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/cc-by-nc-sa.png" alt="CC Attribution-Noncommercial-Share Alike 3.0 Unported"></a>        <a href="http://www.dokuwiki.org/donate" title="Donate"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/button-donate.gif" width="80" height="15" alt="Donate"></a>
+        <a href="http://www.php.net/" title="Powered by PHP"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+        <a href="http://validator.w3.org/check/referer" title="Valid HTML5"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/button-html5.png" width="80" height="15" alt="Valid HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+        <a href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="./Laboratorul 5 - Instruction Set Architecture 4 [CN Wiki]_files/indexer.php" width="2" height="1" alt=""></div>
+    <div id="screen__mode" class="no"></div>    <!--[if ( lte IE 7 | IE 8 ) ]></div><![endif]-->
+
+
+</body></html>

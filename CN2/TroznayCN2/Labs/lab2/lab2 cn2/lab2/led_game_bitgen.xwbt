@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\student\Desktop\lab2 CN2\lab2\led_game.ncd
+OUTFILE=C:\Users\student\Desktop\lab2 CN2\lab2\led_game.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\student\Desktop\lab2 CN2\lab2
+LICENSE=WebPack
+USER_INFO=__0_0_0
